@@ -1,0 +1,8 @@
+[09-Nov-2024 12:07:19 UTC] PHP Warning:  include(bootstrap.php): failed to open stream: No such file or directory in /home/snamaa/public_html/helpers/QueueNotfications.php on line 3
+[09-Nov-2024 12:07:19 UTC] PHP Warning:  include(): Failed opening 'bootstrap.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/snamaa/public_html/helpers/QueueNotfications.php on line 3
+[09-Nov-2024 12:07:19 UTC] PHP Warning:  require_once(admin/models/QueueTable.php): failed to open stream: No such file or directory in /home/snamaa/public_html/helpers/QueueNotfications.php on line 17
+[09-Nov-2024 12:07:19 UTC] PHP Fatal error:  require_once(): Failed opening required 'admin/models/QueueTable.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/snamaa/public_html/helpers/QueueNotfications.php on line 17
+[09-Nov-2024 12:10:14 UTC] PHP Warning:  include(bootstrap.php): failed to open stream: No such file or directory in /home/snamaa/public_html/helpers/QueueNotfications.php on line 3
+[09-Nov-2024 12:10:14 UTC] PHP Warning:  include(): Failed opening 'bootstrap.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/snamaa/public_html/helpers/QueueNotfications.php on line 3
+[09-Nov-2024 12:10:14 UTC] PHP Warning:  require_once(admin/models/QueueTable.php): failed to open stream: No such file or directory in /home/snamaa/public_html/helpers/QueueNotfications.php on line 17
+[09-Nov-2024 12:10:14 UTC] PHP Fatal error:  require_once(): Failed opening required 'admin/models/QueueTable.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/snamaa/public_html/helpers/QueueNotfications.php on line 17

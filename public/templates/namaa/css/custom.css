@@ -1,0 +1,455 @@
+/* start profile  ---------------------------------------- */
+#register a {
+    color: #208fee !important;
+}
+
+.card-user,
+.card-navbar {
+    box-shadow: 8px 3px 3px #87a745ad !important;
+}
+
+.card-navbar a {
+    color: #444444;
+    list-style: none;
+}
+
+.item-count {
+    border: 1px solid #f8f9fa;
+    background: #f2f2f2;
+    padding: 20px 30px;
+    position: relative;
+    min-height: 180px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    text-align: right;
+    color: #76933a;
+    border-radius: 30px;
+}
+
+.item-count .icon {
+    bottom: 20px;
+    right: auto;
+    left: 15px;
+    position: absolute;
+    font-size: 3.0rem;
+}
+
+.profile-icon {
+    color: #76933a;
+}
+
+/* end profile  ---------------------------------------- */
+
+/* start payment cards ---------------------------------------- */
+.payment-card input {
+    border-radius: 15px;
+}
+
+.payment-card label,
+.edit-mobile label {
+    color: #0769a7;
+    font-size: 0.85rem;
+}
+
+.payment-card .card-type {
+    position: relative;
+}
+
+.payment-card,
+.edit-mobile, .bank-transfer {
+    text-align: right;
+    border-radius: 12px;
+    background-color: #f2f2f2;
+}
+.payment-white{
+    background-color: #FFF;
+}
+
+.submit-button {
+    background-color: #76933a;
+    color: white;
+}
+
+.submit-button:hover {
+    background-color: #a0ba67;
+    color: white;
+}
+
+.payment-card .card-icon {
+    align-items: center;
+    background: #e9ecef;
+    border-end-end-radius: 4px;
+    border-inline-start: 2px solid #d1d1d1;
+    border-radius: 0.65rem 0 0 0.65rem !important;
+    border-start-end-radius: 4px;
+    display: flex;
+    height: 35px;
+    inset-block-start: 0.9px;
+    inset-inline-end: 0;
+    justify-content: center;
+    position: absolute;
+}
+
+.payment-card .expiry-dates .card-dates #expMonth {
+    border-end-end-radius: 0;
+    border-start-end-radius: 0;
+    width: 35%;
+}
+
+.payment-card .expiry-dates .card-dates #expYear {
+    border-end-start-radius: 0;
+    border-start-start-radius: 0;
+    margin-inline-start: -2px;
+    width: 35%;
+}
+
+.payment-card .card-image {
+    vertical-align: middle;
+    margin: auto;
+}
+
+@media (max-width: 600px) {
+
+    .edit-mobile .g-recaptcha,
+    .edit-mobile .g-recaptcha div {
+        max-width: 170px;
+    }
+
+    .edit-mobile iframe {
+        width: 170px;
+    }
+}
+.project-card .payment-card, .project-card .bank-transfer{
+    border: solid 1px #ddc3c3;
+}
+
+/* end payment cards ---------------------------------------- */
+/* start slider  ---------------------------------------- */
+.banar-social {
+    top: 55%;
+}
+
+.banar-box {
+    left: 1.3%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .banar-social {
+        top: 10%;
+    }
+
+    .banar-box {
+        left: 2%;
+    }
+}
+
+@media (max-width: 767px) {
+    .banar-social {
+        top: 0%;
+    }
+
+    .banar-box {
+        left: 2%;
+    }
+}
+
+/* end slider  ---------------------------------------- */
+/* start visa cards ---------------------------------------- */
+.cards .card-start {
+    position: relative;
+    display: flex;
+    transition: all 0.5s;
+    height: 190px;
+}
+
+.cards .card {
+    position: absolute;
+    flex-basis: auto;
+    flex-grow: 1;
+    min-width: 318px;
+    height: 180px;
+    background-color: #fff;
+    border-radius: 18px;
+    z-index: 2;
+    box-shadow: 0px 0 15px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    color: #7b7b7b;
+    overflow: hidden;
+    transition: all 0.5s ease-out;
+}
+
+.our-work .box:hover:before {
+    transform: translateX(0);
+}
+
+.icon-visa {
+    width: 64px;
+    height: 20px;
+    /* background-position-y: -32px; */
+}
+
+.cards .icon {
+    display: inline-block;
+    background-image: url("https://i.ibb.co/Kh1dDt6/sprite-min.png");
+    background-repeat: no-repeat;
+}
+
+.cards .card-active::after,
+.cards .card-active::before {
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: #ededf8;
+    opacity: 0.25;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    z-index: -1;
+}
+
+.cards .card-active::after {
+    top: 19px;
+    left: 60px;
+}
+
+.cards .card-active::before {
+    top: -126px;
+    left: 148px;
+}
+
+.cards .card .card-numbers {
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.cards .card .card-numbers .dots {
+    display: flex;
+}
+
+.cards .card .card-numbers .dots .dot {
+    width: 6px;
+    height: 6px;
+    background-color: #7b7b7b;
+    border-radius: 50%;
+}
+
+.cards .card .card-numbers .dots .dot:not(:last-child) {
+    margin-right: 5px;
+}
+
+.cards .card .card-date {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cards .card .card-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cards .card .card-info .card-info__balance {
+    font-size: 18px;
+    color: #5f2967;
+    font-weight: 900;
+    margin-top: 10px;
+}
+
+.cards .card-behind {
+    z-index: 1;
+    position: absolute;
+    height: 110px;
+    opacity: 0.65;
+}
+
+.cards .card-verified {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: -2px;
+    display: block;
+    width: 24px;
+    height: 24px;
+}
+
+.cards .card-slider {
+    display: flex;
+    justify-content: center;
+}
+
+.cards .card-slider .card-slider__item {
+    width: 6px;
+    height: 6px;
+    background-color: #7b7b7b;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.cards .card-slider .card-slider__item:not(:first-child) {
+    margin-left: 14px;
+}
+
+.cards .card-slider .card-slider__item-active {
+    background-color: #00789c;
+}
+
+.card-info__title,
+.card-info__balance {
+    margin-bottom: 0.5rem !important;
+}
+
+@media (max-width: 400px) {
+    .cards .card {
+        min-width: 270px;
+    }
+}
+
+.cards .card-start:hover .card {
+    transform: scale(1.1) !important;
+    background-color: black;
+    color: white;
+    z-index: 3;
+}
+
+
+.card-start .card-hover:before {
+    padding: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* .card-start .card-hover:before{
+    content: attr(data-work);
+    position: absolute;
+    background-color: transparent;
+    border-radius: 18px;
+    width: calc(100% + 8px);
+    height: calc(100% - 32px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    transition: 0.3s;
+    font-size: 1.5rem;
+    transform: translateX(calc(-100% - 5px));
+    z-index: -1;
+}
+.card-start .card-hover:hover:before{
+    transform: translateX(0);
+    display: block;
+    z-index: 4;
+
+
+} */
+/* end visa cards ---------------------------------------- */
+.project-social .nav-link:hover {
+    color: #FFF !important;
+}
+
+.project-social .nav-link {
+    background-color: #dadae282;
+}
+
+/* Start cart --------------------- */
+/* .cart .img-section {
+    display: flex;
+    justify-content: center;
+    width: 130px;
+} */
+
+/* .cart .img-section img {
+    width: 130px;
+} */
+.cart .img-section  {
+    padding: 0 15px 0 0;
+}
+
+.cart img {
+    border-radius: 0 15px 15px 0;
+}
+.cart .card {
+    background-color: #4e4e4e1a;
+    border-color: #4e4e4e1a;
+    border-radius: 15px;
+}
+
+.cart .a {
+    color: #208fee;
+}
+.green-text{
+    color: #6f822b;
+}
+
+@media (min-width: 1025px) {
+    .h-custom {
+        height: 100vh !important;
+    }
+}
+@media (max-width: 767px) {
+    .cart [class*="col-"] {
+      margin-top: 10px;
+    }
+}
+
+.payment-card img:hover {
+    animation: img-rotate 3s both infinite;
+}
+@keyframes img-rotate {
+    from {
+      transform: rotateY(0);
+    }
+  
+    to {
+      transform: rotateY(360deg);
+    }
+  }
+
+/* end cat --------------------- */
+@media (max-width: 767px) {
+    .card-payment{
+        position: relative;
+        width: 390px;
+        right: -18%;
+    }
+    .cart-container a {
+        white-space: nowrap;
+    }
+    .sec-dev{
+        margin-top: 2rem;
+    }
+    .payments_methods label{
+        width: 95%;
+        padding:2px;
+    }
+    .payments_methods{
+        margin: 0 5px 0 5px;
+    }
+    .footer-area .social  .nav-link {
+        padding: .2rem 0.3rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 767px) {
+    .cart-container, .checkout-container {
+        margin-top: 3.5rem;
+        margin-bottom: 1rem;
+    }
+  
+}
+
+@media (max-width: 400px) {
+    .payment-card .card-body {
+        padding: 0px;
+    }
+}
+
+.footer-area .social  .nav-link {
+    padding: .5rem 0.5rem;
+}
+
+

@@ -1,0 +1,129 @@
+.eladha-tracking .container{
+    /* background-color: #f9f4ed; */
+    background-image: url('/templates/namaa/images/tracking/background.png');
+}
+.eladha .logo{
+    width: 35%;
+    margin: 23px 0px 0px 33px;
+}
+
+.eladha .title{
+    float: right;
+    margin: 5% 15% 0 0;
+    /* width: 20%; */
+}
+.eladha .title h3{
+    font-size: 4rem;
+    font-weight: 600;
+}
+.tracking{
+    margin-top: 6rem !important;
+}
+.tracking .progress-bar{
+    /* background-color: #3c9014 !important; */
+    background-image: linear-gradient(to right, #4cd964, #3c9014, #4cd964, #3c9014, #4cd964, #3c9014);
+
+
+}
+.tracking .progress{
+    height: 0.8rem !important;
+    background-color: #cccccc !important;
+    
+}
+.box-icon {
+    margin: 10px auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.box-icon img{
+    width: 10%;
+}
+.box-icon p{
+    width: 55%;
+    text-align: center;
+    font-weight: 600;
+}
+.box-prog {
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.box-prog .progress {
+    width: 82%;
+    flex-grow: 0.8;
+}
+.box-prog{
+    margin-top: 6%;
+}
+.box-play {
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 1% 8% 0 1%;
+}
+.box-play a {
+    color: #777;
+    font-size: 15px;
+}
+.box-play i {
+    color: #777;
+    width: 45px;
+    text-align: center;
+    border-radius: 2px;
+    padding: 5px 10px;
+    border: 1px solid #777;
+}
+
+@media (max-width: 767px) {
+    .tracking .row{
+        height: 100px;
+    }
+    .eladha-tracking .container{
+        background-image: url('/templates/namaa/images/tracking/background-mobile.png');
+    }
+    .eladha{
+        padding-top: 5%;
+    }
+    .box-icon{
+        margin: 17% 0px 0px 0px !important;
+    }
+    .box-prog {
+        margin-top: 15%;
+    }
+    .tracking {
+        margin-top: 2rem !important;
+    }
+    .eladha .title h3{
+        font-size: 2rem;
+    }
+    .eladha .logo {
+        width: 80%;
+        margin-left: 0px;
+        margin-top: 5px;
+    }
+    .tracking .progress {
+        height: 0.5rem !important;
+    }
+    .progress-icon img{
+        margin-left: 5px;
+    }
+    .box-play a {
+        font-size: 13px;
+    }
+    .box-icon img{
+        width: 32%;
+    }
+    .box-icon p {
+        width: 100%;
+        font-weight: 500;
+        font-size: 10px;
+    }
+   
+}
+
+

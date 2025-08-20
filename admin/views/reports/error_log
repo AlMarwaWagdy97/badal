@@ -1,0 +1,4 @@
+[22-Oct-2024 08:42:02 UTC] PHP Warning:  Use of undefined constant ADMINURL - assumed 'ADMINURL' (this will throw an Error in a future version of PHP) in /home/snamaa/public_html/admin/views/reports/index.php on line 17
+[22-Oct-2024 08:42:02 UTC] PHP Warning:  Use of undefined constant ADMINROOT - assumed 'ADMINROOT' (this will throw an Error in a future version of PHP) in /home/snamaa/public_html/admin/views/reports/index.php on line 19
+[22-Oct-2024 08:42:02 UTC] PHP Warning:  require(ADMINROOT/views/inc/header.php): failed to open stream: No such file or directory in /home/snamaa/public_html/admin/views/reports/index.php on line 19
+[22-Oct-2024 08:42:02 UTC] PHP Fatal error:  require(): Failed opening required 'ADMINROOT/views/inc/header.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/snamaa/public_html/admin/views/reports/index.php on line 19

@@ -1,0 +1,3 @@
+media/**
+!media/**/
+media/**/*.{jpg,jpeg,png,gif,svg,webp,bmp,heic,pdf}
