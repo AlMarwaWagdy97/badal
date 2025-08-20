@@ -12245,3 +12245,143 @@ Stack trace:
 [23-Feb-2025 06:58:44 Asia/Kuwait] PHP Warning:  First parameter must either be an object or the name of an existing class in /home/snamaa/public_html/libraries/CoreAdmin.php on line 119
 [23-Feb-2025 06:58:44 Asia/Kuwait] PHP Warning:  First parameter must either be an object or the name of an existing class in /home/snamaa/public_html/libraries/CoreAdmin.php on line 119
 [23-Feb-2025 08:39:54 Asia/Kuwait] PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in /home/snamaa/public_html/helpers/htmlpurifier/HTMLPurifier/Encoder.php on line 162
+[20-Aug-2025 18:20:40 Asia/Kuwait] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'e1s_badal.users' doesn't exist in /home/e1s/public_html/demo/badal/libraries/Database.php:97
+Stack trace:
+#0 /home/e1s/public_html/demo/badal/libraries/Database.php(97): PDOStatement->execute()
+#1 /home/e1s/public_html/demo/badal/libraries/Database.php(114): Database->excute()
+#2 /home/e1s/public_html/demo/badal/admin/models/User.php(152): Database->single()
+#3 /home/e1s/public_html/demo/badal/admin/controllers/Users.php(434): User->findUserByEmail('a6e6s1@gmail.co...')
+#4 /home/e1s/public_html/demo/badal/libraries/CoreAdmin.php(59): Users->login()
+#5 /home/e1s/public_html/demo/badal/admin/index.php(20): CoreAdmin->__construct()
+#6 {main}
+  thrown in /home/e1s/public_html/demo/badal/libraries/Database.php on line 97
+[20-Aug-2025 18:33:04 Asia/Kuwait] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1176 Key 'create_date' doesn't exist in table 'ds' in /home/e1s/public_html/demo/badal/libraries/Database.php:97
+Stack trace:
+#0 /home/e1s/public_html/demo/badal/libraries/Database.php(97): PDOStatement->execute()
+#1 /home/e1s/public_html/demo/badal/libraries/Database.php(105): Database->excute()
+#2 /home/e1s/public_html/demo/badal/libraries/ModelAdmin.php(324): Database->resultSet()
+#3 /home/e1s/public_html/demo/badal/admin/models/Donation.php(39): ModelAdmin->getAll('SELECT ds.* ,or...', '', 'LIMIT 0 , :perp...', Array)
+#4 /home/e1s/public_html/demo/badal/admin/controllers/Donations.php(92): Donation->getDonations(' WHERE ds.statu...', '', 'LIMIT 0 , :perp...', Array)
+#5 /home/e1s/public_html/demo/badal/libraries/CoreAdmin.php(59): Donations->index()
+#6 /home/e1s/public_html/demo/badal/admin/index.php(20): CoreAdmin->__construct()
+#7 {main}
+  thrown in /home/e1s/public_html/demo/badal/libraries/Database.php on line 97
+[20-Aug-2025 18:33:57 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$show_video in /home/e1s/public_html/demo/badal/admin/views/settings/app.php on line 82
+[20-Aug-2025 18:33:57 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$show_video in /home/e1s/public_html/demo/badal/admin/views/settings/app.php on line 85
+[20-Aug-2025 18:33:58 Asia/Kuwait] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'e1s_badal.notifications' doesn't exist in /home/e1s/public_html/demo/badal/libraries/Database.php:97
+Stack trace:
+#0 /home/e1s/public_html/demo/badal/libraries/Database.php(97): PDOStatement->execute()
+#1 /home/e1s/public_html/demo/badal/libraries/ModelAdmin.php(341): Database->excute()
+#2 /home/e1s/public_html/demo/badal/admin/models/Notification.php(49): ModelAdmin->countAll('WHERE status <>...', '')
+#3 /home/e1s/public_html/demo/badal/admin/controllers/Notifications.php(61): Notification->allNotificationsCount('WHERE status <>...', '')
+#4 /home/e1s/public_html/demo/badal/libraries/CoreAdmin.php(59): Notifications->index()
+#5 /home/e1s/public_html/demo/badal/admin/index.php(20): CoreAdmin->__construct()
+#6 {main}
+  thrown in /home/e1s/public_html/demo/badal/libraries/Database.php on line 97
+[20-Aug-2025 18:35:09 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$show_video in /home/e1s/public_html/demo/badal/admin/views/settings/app.php on line 82
+[20-Aug-2025 18:35:09 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$show_video in /home/e1s/public_html/demo/badal/admin/views/settings/app.php on line 85
+[20-Aug-2025 18:35:14 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$type in /home/e1s/public_html/demo/badal/admin/views/badalreview/index.php on line 89
+[20-Aug-2025 18:35:14 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$type_id in /home/e1s/public_html/demo/badal/admin/views/badalreview/index.php on line 90
+[20-Aug-2025 18:35:14 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$type in /home/e1s/public_html/demo/badal/admin/views/badalreview/index.php on line 89
+[20-Aug-2025 18:35:14 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$type_id in /home/e1s/public_html/demo/badal/admin/views/badalreview/index.php on line 90
+[20-Aug-2025 18:35:14 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$type in /home/e1s/public_html/demo/badal/admin/views/badalreview/index.php on line 89
+[20-Aug-2025 18:35:14 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$type_id in /home/e1s/public_html/demo/badal/admin/views/badalreview/index.php on line 90
+[20-Aug-2025 18:35:14 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$type in /home/e1s/public_html/demo/badal/admin/views/badalreview/index.php on line 89
+[20-Aug-2025 18:35:14 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$type_id in /home/e1s/public_html/demo/badal/admin/views/badalreview/index.php on line 90
+[20-Aug-2025 18:35:14 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$type in /home/e1s/public_html/demo/badal/admin/views/badalreview/index.php on line 89
+[20-Aug-2025 18:35:14 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$type_id in /home/e1s/public_html/demo/badal/admin/views/badalreview/index.php on line 90
+[20-Aug-2025 18:35:14 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$type in /home/e1s/public_html/demo/badal/admin/views/badalreview/index.php on line 89
+[20-Aug-2025 18:35:14 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$type_id in /home/e1s/public_html/demo/badal/admin/views/badalreview/index.php on line 90
+[20-Aug-2025 18:35:14 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$type in /home/e1s/public_html/demo/badal/admin/views/badalreview/index.php on line 89
+[20-Aug-2025 18:35:14 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$type_id in /home/e1s/public_html/demo/badal/admin/views/badalreview/index.php on line 90
+[20-Aug-2025 18:35:14 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$type in /home/e1s/public_html/demo/badal/admin/views/badalreview/index.php on line 89
+[20-Aug-2025 18:35:14 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$type_id in /home/e1s/public_html/demo/badal/admin/views/badalreview/index.php on line 90
+[20-Aug-2025 18:35:14 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$type in /home/e1s/public_html/demo/badal/admin/views/badalreview/index.php on line 89
+[20-Aug-2025 18:35:14 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$type_id in /home/e1s/public_html/demo/badal/admin/views/badalreview/index.php on line 90
+[20-Aug-2025 18:35:14 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$type in /home/e1s/public_html/demo/badal/admin/views/badalreview/index.php on line 89
+[20-Aug-2025 18:35:14 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$type_id in /home/e1s/public_html/demo/badal/admin/views/badalreview/index.php on line 90
+[20-Aug-2025 18:35:14 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$type in /home/e1s/public_html/demo/badal/admin/views/badalreview/index.php on line 89
+[20-Aug-2025 18:35:14 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$type_id in /home/e1s/public_html/demo/badal/admin/views/badalreview/index.php on line 90
+[20-Aug-2025 18:35:14 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$type in /home/e1s/public_html/demo/badal/admin/views/badalreview/index.php on line 89
+[20-Aug-2025 18:35:14 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$type_id in /home/e1s/public_html/demo/badal/admin/views/badalreview/index.php on line 90
+[20-Aug-2025 18:35:14 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$type in /home/e1s/public_html/demo/badal/admin/views/badalreview/index.php on line 89
+[20-Aug-2025 18:35:14 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$type_id in /home/e1s/public_html/demo/badal/admin/views/badalreview/index.php on line 90
+[20-Aug-2025 18:35:14 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$type in /home/e1s/public_html/demo/badal/admin/views/badalreview/index.php on line 89
+[20-Aug-2025 18:35:14 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$type_id in /home/e1s/public_html/demo/badal/admin/views/badalreview/index.php on line 90
+[20-Aug-2025 18:35:14 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$type in /home/e1s/public_html/demo/badal/admin/views/badalreview/index.php on line 89
+[20-Aug-2025 18:35:14 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$type_id in /home/e1s/public_html/demo/badal/admin/views/badalreview/index.php on line 90
+[20-Aug-2025 18:35:14 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$type in /home/e1s/public_html/demo/badal/admin/views/badalreview/index.php on line 89
+[20-Aug-2025 18:35:14 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$type_id in /home/e1s/public_html/demo/badal/admin/views/badalreview/index.php on line 90
+[20-Aug-2025 18:35:14 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$type in /home/e1s/public_html/demo/badal/admin/views/badalreview/index.php on line 89
+[20-Aug-2025 18:35:14 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$type_id in /home/e1s/public_html/demo/badal/admin/views/badalreview/index.php on line 90
+[20-Aug-2025 18:35:14 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$type in /home/e1s/public_html/demo/badal/admin/views/badalreview/index.php on line 89
+[20-Aug-2025 18:35:14 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$type_id in /home/e1s/public_html/demo/badal/admin/views/badalreview/index.php on line 90
+[20-Aug-2025 18:35:14 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$type in /home/e1s/public_html/demo/badal/admin/views/badalreview/index.php on line 89
+[20-Aug-2025 18:35:14 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$type_id in /home/e1s/public_html/demo/badal/admin/views/badalreview/index.php on line 90
+[20-Aug-2025 18:35:14 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$type in /home/e1s/public_html/demo/badal/admin/views/badalreview/index.php on line 89
+[20-Aug-2025 18:35:14 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$type_id in /home/e1s/public_html/demo/badal/admin/views/badalreview/index.php on line 90
+[20-Aug-2025 18:35:14 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$type in /home/e1s/public_html/demo/badal/admin/views/badalreview/index.php on line 89
+[20-Aug-2025 18:35:14 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$type_id in /home/e1s/public_html/demo/badal/admin/views/badalreview/index.php on line 90
+[20-Aug-2025 18:35:14 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$type in /home/e1s/public_html/demo/badal/admin/views/badalreview/index.php on line 89
+[20-Aug-2025 18:35:14 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$type_id in /home/e1s/public_html/demo/badal/admin/views/badalreview/index.php on line 90
+[20-Aug-2025 18:35:14 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$type in /home/e1s/public_html/demo/badal/admin/views/badalreview/index.php on line 89
+[20-Aug-2025 18:35:14 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$type_id in /home/e1s/public_html/demo/badal/admin/views/badalreview/index.php on line 90
+[20-Aug-2025 18:35:14 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$type in /home/e1s/public_html/demo/badal/admin/views/badalreview/index.php on line 89
+[20-Aug-2025 18:35:14 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$type_id in /home/e1s/public_html/demo/badal/admin/views/badalreview/index.php on line 90
+[20-Aug-2025 18:35:14 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$type in /home/e1s/public_html/demo/badal/admin/views/badalreview/index.php on line 89
+[20-Aug-2025 18:35:14 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$type_id in /home/e1s/public_html/demo/badal/admin/views/badalreview/index.php on line 90
+[20-Aug-2025 18:35:14 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$type in /home/e1s/public_html/demo/badal/admin/views/badalreview/index.php on line 89
+[20-Aug-2025 18:35:14 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$type_id in /home/e1s/public_html/demo/badal/admin/views/badalreview/index.php on line 90
+[20-Aug-2025 18:35:14 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$type in /home/e1s/public_html/demo/badal/admin/views/badalreview/index.php on line 89
+[20-Aug-2025 18:35:14 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$type_id in /home/e1s/public_html/demo/badal/admin/views/badalreview/index.php on line 90
+[20-Aug-2025 19:00:47 Asia/Kuwait] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1176 Key 'create_date' doesn't exist in table 'ds' in /home/e1s/public_html/demo/badal/libraries/Database.php:97
+Stack trace:
+#0 /home/e1s/public_html/demo/badal/libraries/Database.php(97): PDOStatement->execute()
+#1 /home/e1s/public_html/demo/badal/libraries/Database.php(105): Database->excute()
+#2 /home/e1s/public_html/demo/badal/libraries/ModelAdmin.php(324): Database->resultSet()
+#3 /home/e1s/public_html/demo/badal/admin/models/Donation.php(39): ModelAdmin->getAll('SELECT ds.* ,or...', '', 'LIMIT 0 , :perp...', Array)
+#4 /home/e1s/public_html/demo/badal/admin/controllers/Donations.php(92): Donation->getDonations(' WHERE ds.statu...', '', 'LIMIT 0 , :perp...', Array)
+#5 /home/e1s/public_html/demo/badal/libraries/CoreAdmin.php(59): Donations->index()
+#6 /home/e1s/public_html/demo/badal/admin/index.php(20): CoreAdmin->__construct()
+#7 {main}
+  thrown in /home/e1s/public_html/demo/badal/libraries/Database.php on line 97
+[20-Aug-2025 19:00:48 Asia/Kuwait] PHP Warning:  require_once(models/Store.php): failed to open stream: No such file or directory in /home/e1s/public_html/demo/badal/libraries/ControllerAdmin.php on line 34
+[20-Aug-2025 19:00:48 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'models/Store.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/e1s/public_html/demo/badal/libraries/ControllerAdmin.php on line 34
+[20-Aug-2025 19:00:59 Asia/Kuwait] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1176 Key 'create_date' doesn't exist in table 'ds' in /home/e1s/public_html/demo/badal/libraries/Database.php:97
+Stack trace:
+#0 /home/e1s/public_html/demo/badal/libraries/Database.php(97): PDOStatement->execute()
+#1 /home/e1s/public_html/demo/badal/libraries/Database.php(105): Database->excute()
+#2 /home/e1s/public_html/demo/badal/libraries/ModelAdmin.php(324): Database->resultSet()
+#3 /home/e1s/public_html/demo/badal/admin/models/Donation.php(39): ModelAdmin->getAll('SELECT ds.* ,or...', '', 'LIMIT 0 , :perp...', Array)
+#4 /home/e1s/public_html/demo/badal/admin/controllers/Donations.php(92): Donation->getDonations(' WHERE ds.statu...', '', 'LIMIT 0 , :perp...', Array)
+#5 /home/e1s/public_html/demo/badal/libraries/CoreAdmin.php(59): Donations->index()
+#6 /home/e1s/public_html/demo/badal/admin/index.php(20): CoreAdmin->__construct()
+#7 {main}
+  thrown in /home/e1s/public_html/demo/badal/libraries/Database.php on line 97
+[20-Aug-2025 19:03:40 Asia/Kuwait] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1176 Key 'create_date' doesn't exist in table 'ds' in /home/e1s/public_html/demo/badal/libraries/Database.php:97
+Stack trace:
+#0 /home/e1s/public_html/demo/badal/libraries/Database.php(97): PDOStatement->execute()
+#1 /home/e1s/public_html/demo/badal/libraries/Database.php(105): Database->excute()
+#2 /home/e1s/public_html/demo/badal/libraries/ModelAdmin.php(324): Database->resultSet()
+#3 /home/e1s/public_html/demo/badal/admin/models/Donation.php(39): ModelAdmin->getAll('SELECT ds.* ,or...', '', 'LIMIT 0 , :perp...', Array)
+#4 /home/e1s/public_html/demo/badal/admin/controllers/Donations.php(92): Donation->getDonations(' WHERE ds.statu...', '', 'LIMIT 0 , :perp...', Array)
+#5 /home/e1s/public_html/demo/badal/libraries/CoreAdmin.php(59): Donations->index()
+#6 /home/e1s/public_html/demo/badal/admin/index.php(20): CoreAdmin->__construct()
+#7 {main}
+  thrown in /home/e1s/public_html/demo/badal/libraries/Database.php on line 97
+[20-Aug-2025 19:03:48 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$show_video in /home/e1s/public_html/demo/badal/admin/views/settings/app.php on line 82
+[20-Aug-2025 19:03:48 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$show_video in /home/e1s/public_html/demo/badal/admin/views/settings/app.php on line 85
+[20-Aug-2025 19:24:14 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$response_code in /home/e1s/public_html/demo/badal/admin/views/orders/index.php on line 219
+[20-Aug-2025 19:25:03 Asia/Kuwait] PHP Notice:  Undefined offset: 0 in /home/e1s/public_html/demo/badal/libraries/ModelAdmin.php on line 424
+[20-Aug-2025 19:25:03 Asia/Kuwait] PHP Notice:  Trying to get property 'value' of non-object in /home/e1s/public_html/demo/badal/admin/models/Order.php on line 351
+[20-Aug-2025 19:25:03 Asia/Kuwait] PHP Notice:  Trying to get property 'specialenabled' of non-object in /home/e1s/public_html/demo/badal/admin/models/Order.php on line 352
+[20-Aug-2025 19:25:04 Asia/Kuwait] PHP Warning:  require_once(/home/e1s/public_html/demo/badal/admin/models/QueueTable.php): failed to open stream: No such file or directory in /home/e1s/public_html/demo/badal/admin/controllers/Orders.php on line 560
+[20-Aug-2025 19:25:04 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required '/home/e1s/public_html/demo/badal/admin/models/QueueTable.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/e1s/public_html/demo/badal/admin/controllers/Orders.php on line 560
+[20-Aug-2025 19:25:28 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$response_code in /home/e1s/public_html/demo/badal/admin/views/orders/index.php on line 219
+[20-Aug-2025 19:26:18 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$response_code in /home/e1s/public_html/demo/badal/admin/views/orders/index.php on line 219
+[20-Aug-2025 19:27:41 Asia/Kuwait] PHP Notice:  Undefined offset: 0 in /home/e1s/public_html/demo/badal/libraries/ModelAdmin.php on line 424
+[20-Aug-2025 19:27:41 Asia/Kuwait] PHP Notice:  Trying to get property 'value' of non-object in /home/e1s/public_html/demo/badal/admin/models/Order.php on line 351
+[20-Aug-2025 19:27:41 Asia/Kuwait] PHP Notice:  Trying to get property 'specialenabled' of non-object in /home/e1s/public_html/demo/badal/admin/models/Order.php on line 352
+[20-Aug-2025 19:27:42 Asia/Kuwait] PHP Warning:  require_once(/home/e1s/public_html/demo/badal/admin/models/QueueTable.php): failed to open stream: No such file or directory in /home/e1s/public_html/demo/badal/admin/controllers/Orders.php on line 560
+[20-Aug-2025 19:27:42 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required '/home/e1s/public_html/demo/badal/admin/models/QueueTable.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/e1s/public_html/demo/badal/admin/controllers/Orders.php on line 560
+[20-Aug-2025 19:30:47 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$response_code in /home/e1s/public_html/demo/badal/admin/views/orders/index.php on line 219

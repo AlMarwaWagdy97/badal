@@ -373,3 +373,18 @@
 [12-Jul-2024 11:20:30 Asia/Kuwait] PHP Warning:  Invalid argument supplied for foreach() in /home/snamaa/public_html/admin/helpers/filemanager/execute.php on line 113
 [26-Sep-2024 13:33:16 Asia/Kuwait] PHP Warning:  Invalid argument supplied for foreach() in /home/snamaa/public_html/admin/helpers/filemanager/execute.php on line 113
 [16-Oct-2024 10:02:23 Asia/Kuwait] PHP Warning:  Invalid argument supplied for foreach() in /home/snamaa/public_html/admin/helpers/filemanager/execute.php on line 113
+[20-Aug-2025 18:33:58 Asia/Kuwait] PHP Warning:  scandir(../../../media/images/): failed to open dir: No such file or directory in /home/e1s/public_html/demo/badal/admin/helpers/filemanager/dialog.php on line 612
+[20-Aug-2025 18:33:58 Asia/Kuwait] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/e1s/public_html/demo/badal/admin/helpers/filemanager/dialog.php on line 612
+[20-Aug-2025 18:33:58 Asia/Kuwait] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/e1s/public_html/demo/badal/admin/helpers/filemanager/dialog.php on line 615
+[20-Aug-2025 18:33:58 Asia/Kuwait] PHP Warning:  Invalid argument supplied for foreach() in /home/e1s/public_html/demo/badal/admin/helpers/filemanager/dialog.php on line 624
+[20-Aug-2025 18:33:58 Asia/Kuwait] PHP Warning:  Invalid argument supplied for foreach() in /home/e1s/public_html/demo/badal/admin/helpers/filemanager/dialog.php on line 1234
+[20-Aug-2025 18:35:10 Asia/Kuwait] PHP Warning:  scandir(../../../media/images/): failed to open dir: No such file or directory in /home/e1s/public_html/demo/badal/admin/helpers/filemanager/dialog.php on line 612
+[20-Aug-2025 18:35:10 Asia/Kuwait] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/e1s/public_html/demo/badal/admin/helpers/filemanager/dialog.php on line 612
+[20-Aug-2025 18:35:10 Asia/Kuwait] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/e1s/public_html/demo/badal/admin/helpers/filemanager/dialog.php on line 615
+[20-Aug-2025 18:35:10 Asia/Kuwait] PHP Warning:  Invalid argument supplied for foreach() in /home/e1s/public_html/demo/badal/admin/helpers/filemanager/dialog.php on line 624
+[20-Aug-2025 18:35:10 Asia/Kuwait] PHP Warning:  Invalid argument supplied for foreach() in /home/e1s/public_html/demo/badal/admin/helpers/filemanager/dialog.php on line 1234
+[20-Aug-2025 19:03:49 Asia/Kuwait] PHP Warning:  scandir(../../../media/images/): failed to open dir: No such file or directory in /home/e1s/public_html/demo/badal/admin/helpers/filemanager/dialog.php on line 612
+[20-Aug-2025 19:03:49 Asia/Kuwait] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/e1s/public_html/demo/badal/admin/helpers/filemanager/dialog.php on line 612
+[20-Aug-2025 19:03:49 Asia/Kuwait] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/e1s/public_html/demo/badal/admin/helpers/filemanager/dialog.php on line 615
+[20-Aug-2025 19:03:49 Asia/Kuwait] PHP Warning:  Invalid argument supplied for foreach() in /home/e1s/public_html/demo/badal/admin/helpers/filemanager/dialog.php on line 624
+[20-Aug-2025 19:03:49 Asia/Kuwait] PHP Warning:  Invalid argument supplied for foreach() in /home/e1s/public_html/demo/badal/admin/helpers/filemanager/dialog.php on line 1234

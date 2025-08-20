@@ -39,9 +39,9 @@
 
 
 define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASS', '');
-define('DB_NAME', 'namaa_test');
+define('DB_USER', 'e1s_badal');
+define('DB_NAME', 'e1s_badal');
+define('DB_PASS', 'bK=75DBPEAt$oUvf');
 
 
 define('VERSION', '2.0.0');
@@ -56,7 +56,7 @@ define('APPROOT', dirname(dirname(__FILE__)));
 
 // domain
 
-define('DOMAIN', 'http://namaa_cloud.test');
+define('DOMAIN', 'https://badal.e1s.me');
 // define('DOMAIN', 'http://localhost:8000');
 
 

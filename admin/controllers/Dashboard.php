@@ -7,7 +7,7 @@
  * it under the terms of the GNU General Public License
  * @license    https://opensource.org/licenses/GPL-3.0
  *
- * @package    Easy CMS MVC framework
+ * @package    Easy CMS MVC frameworkdonorCount
  * @author     Ahmed Elmahdy
  * @link       https://ahmedx.com
  *
@@ -30,9 +30,8 @@ class Dashboard extends ControllerAdmin
         $data = [
             'header' => '',
             'orderCount' => $this->orderModel->countAll('WHERE status = 0','')->count,
-            'donorCount' => $this->orderModel->countAll('','','donors')->count,
-            'contactsCount' => $this->orderModel->countAll('WHERE status = 1','','contacts')->count,
-            'projectsCount' => $this->orderModel->countAll('','','projects')->count,
+            'donorCount' => $this->orderModel->countAll('WHERE status != 2','','donors')->count,
+            'projectsCount' => $this->orderModel->countAll('WHERE status != 2','','projects')->count,
             'orders' => $this->orderModel->getAll('SELECT total, quantity, from_unixtime(create_date,"%Y-%m-%d") as create_date FROM orders WHERE status = 1 AND create_date <= ' . time() . ' AND create_date >= ' . (time() - 2592000) ." ORDER BY create_date DESC" ),
             'title' => 'لوحة التحكم',
             'footer' => ''

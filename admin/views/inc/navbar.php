@@ -32,50 +32,14 @@
                         <ul class="nav child_menu">
                             <li><a href="<?php echo ADMINURL; ?>/groups">المجموعات والصلاحيات</a></li>
                             <li><a href="<?php echo ADMINURL; ?>/users">المستخدمين</a></li>
-                            <li><a href="<?php echo ADMINURL; ?>/menus">القوائم</a></li>
-                            <li><a href="<?php echo ADMINURL; ?>/pages">الصفحات</a></li>
-                            <li><a href="<?php echo ADMINURL; ?>/articles">الاخبار والمقالات</a></li>
-                            <li><a href="<?php echo ADMINURL; ?>/slides">الاسلايدر</a></li>
-                            <li><a href="<?php echo ADMINURL; ?>/contacts">اتصل بنا</a></li>
                         </ul>
                     </li>
-                    <li><a><i class="glyphicon glyphicon-grain "></i> المشاريع الخيرية <span class="fa fa-chevron-down"></span></a>
-                        <ul class="nav child_menu">
-                            <li><a href="<?php echo ADMINURL; ?>/projectcategories">اقسام المشروعات</a></li>
-                            <li><a href="<?php echo ADMINURL; ?>/projects">المشروعات الخيرية </a></li>
-                            <li><a href="<?php echo ADMINURL; ?>/projecttags">الوسوم </a></li>
-                        </ul>
-                    </li>
+             
                     <li><a><i class="glyphicon glyphicon-gift"></i> التبرعات <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                             <li><a href="<?php echo ADMINURL; ?>/orders">عمليات التبرع </a></li>
-                            <li><a href="<?php echo ADMINURL; ?>/donations">سجل التبرعات</a></li>
+                            <!--<li><a href="<?php echo ADMINURL; ?>/donations">سجل التبرعات</a></li>-->
                             <li><a href="<?php echo ADMINURL; ?>/donors">قائمة المتبرعين </a></li>
-                            <li><a href="<?php echo ADMINURL; ?>/statuses">حالات التبرع </a></li>
-                            <li><a href="<?php echo ADMINURL; ?>/inkindes">التبرعات العينية </a></li>
-                            <li><a href="<?php echo ADMINURL; ?>/beneficiaries">المستفيدون </a></li>
-                            <li><a href="<?php echo ADMINURL; ?>/gifted">بيانات الاهداء </a></li>
-                        </ul>
-                    </li>
-                    <li><a><i class="glyphicon glyphicon-shopping-cart "></i> المتاجر الفرعية <span class="fa fa-chevron-down"></span></a>
-                        <ul class="nav child_menu">
-                            <li><a href="<?php echo ADMINURL; ?>/stores">قائمة المتاجر</a></li>
-                            <li><a href="<?php echo ADMINURL; ?>/stores/add">اضافة متجر </a></li>
-                            <li><a href="<?php echo ADMINURL; ?>/Hits">عرض الزوار  </a></li>
-                            <li><a href="<?php echo ADMINURL; ?>/managers">ادارة مديري المتاجر </a></li>
-                        </ul>
-                    </li>
-                    <li><a><i class="glyphicon glyphicon-user "></i> حملة المتوفي <span class="fa fa-chevron-down"></span></a>
-                        <ul class="nav child_menu">
-                            <li><a href="<?php echo ADMINURL; ?>/deceaseds">طلبات المشاريع </a></li>
-                            <li><a href="<?php echo ADMINURL; ?>/settings/edit/14">الأعدادات</a></li>
-                        </ul>
-                    </li>
-                    <li><a><i class="glyphicon glyphicon-heart "></i> التطوع <span class="fa fa-chevron-down"></span></a>
-                        <ul class="nav child_menu">
-                            <li><a href="<?php echo ADMINURL; ?>/volunteers">طلبات التطوع </a></li>
-                            <li><a href="<?php echo ADMINURL; ?>/volunteerpages">حملات التطوع </a></li>
-                            <li><a href="<?php echo ADMINURL; ?>/volunteerings">سجل التطوع </a></li>
                         </ul>
                     </li>
                     <li><a><i class="fa fa-gears"></i> الإعدادات <span class="fa fa-chevron-down"></span></a>
@@ -93,10 +57,8 @@
                     </li>
                     <li><a><i class="fa fa-android"></i> التطبيق <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                            <li><a href="<?php echo ADMINURL; ?>/appsections">الاقسام</a></li>
-                            <li><a href="<?php echo ADMINURL; ?>/apparticles">الموضوعات</a></li>
                             <li><a href="<?php echo ADMINURL; ?>/settings/edit/11">اعدادات التطبيق</a></li>
-                            <li><a href="<?php echo ADMINURL; ?>/notifications">رسائل التنبيهات</a></li>
+                            <!--<li><a href="<?php echo ADMINURL; ?>/notifications">رسائل التنبيهات</a></li>-->
                             <li>
                                 <form action="<?= ADMINURL ?>/orders" method="POST">
                                     <input type="hidden" name="search[submit]">
@@ -119,28 +81,8 @@
                             <li><a href="<?php echo ADMINURL; ?>/settings/edit/15">اعدادات البدل </a></li>
                         </ul>
                     </li>
-                    <li><a>
-                    <i class="fa fa-github-alt" aria-hidden="true"></i>
-
-                         الاضحية <span class="fa fa-chevron-down"></span></a>
-                        <ul class="nav child_menu">
-                            <li><a href="<?php echo ADMINURL; ?>/settings/edit/17"> اعدادات اليوم الاول  </a></li>
-                            <li><a href="<?php echo ADMINURL; ?>/settings/edit/19"> اعدادات اليوم الثاني  </a></li>
-                            <li><a href="<?php echo ADMINURL; ?>/settings/edit/20"> اعدادات اليوم الثالث  </a></li>
-                            <!--<li><a href="#">3تقارير </a></li> -->
-                        </ul>
-                    </li>
-                    <li><a><i class="fa fa-file"></i> التقييم <span class="fa fa-chevron-down"></span></a>
-                        <ul class="nav child_menu">
-                            <li><a href="<?php echo ADMINURL; ?>/EvaluationsAnswers"> طلبات التقييم </a></li>
-                        </ul>
-                    </li>
-                    <li><a><i class="fa fa-puzzle-piece"></i> الالغاز <span class="fa fa-chevron-down"></span></a>
-                        <ul class="nav child_menu">
-                            <li><a href="<?php echo ADMINURL; ?>/puzzels">الالغاز</a></li>
-                            <li><a href="<?php echo ADMINURL; ?>/players">نتائج المشاركين</a></li>
-                        </ul>
-                    </li>
+                    
+                   
                 </ul>
             </div>
         </div>

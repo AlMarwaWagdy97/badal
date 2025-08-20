@@ -52,15 +52,7 @@ require ADMINROOT . '/views/inc/header.php';
                 <p class="tiles text-right"><a class="white" href="<?php echo ADMINURL; ?>/donors">عرض المزيد</a></p>
             </div>
         </div>
-        <div class="wiget animated flipInY col-lg-3 col-md-6 col-xs-12 ">
-            <div class="tile-stats bg-purple">
-                <div class="icon"><i class="glyphicon glyphicon-envelope white"></i>
-                </div>
-                <div class="count"><?php echo $data['contactsCount']; ?></div>
-                <h3 class=" white">رسالة جديدة</h3>
-                <p class="tiles text-right"><a class="white" href="<?php echo ADMINURL; ?>/contacts">عرض المزيد</a></p>
-            </div>
-        </div>
+    
 
 
         <div class="wiget animated flipInY col-lg-3 col-md-6 col-xs-12 ">
@@ -69,7 +61,7 @@ require ADMINROOT . '/views/inc/header.php';
                 </div>
                 <div class="count"><?php echo $data['projectsCount']; ?></div>
                 <h3 class=" white">مشروع خيري</h3>
-                <p class="tiles text-right"><a class="white" href="<?php echo ADMINURL; ?>/projects">عرض المزيد</a></p>
+                <p class="tiles text-right"><a class="white" href="<?php echo ADMINURL; ?>/albadal">عرض المزيد</a></p>
             </div>
         </div>
     </div>

@@ -82,6 +82,7 @@ class Projects extends ApiController
         $types = [];
         if ($setting->haij_status) $types[] = "'hajj'";
         if ($setting->umrah_status) $types[] = "'umrah'";
+        
         if ($types && $response = $this->model->getTableEdits($types)) {
             foreach ($response as $project) {
                 $galery = str_replace('&quot;', '', trim(trim($project->image, ']'), '['));
