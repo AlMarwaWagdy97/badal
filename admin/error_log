@@ -12385,3 +12385,28 @@ Stack trace:
 [20-Aug-2025 19:27:42 Asia/Kuwait] PHP Warning:  require_once(/home/e1s/public_html/demo/badal/admin/models/QueueTable.php): failed to open stream: No such file or directory in /home/e1s/public_html/demo/badal/admin/controllers/Orders.php on line 560
 [20-Aug-2025 19:27:42 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required '/home/e1s/public_html/demo/badal/admin/models/QueueTable.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/e1s/public_html/demo/badal/admin/controllers/Orders.php on line 560
 [20-Aug-2025 19:30:47 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$response_code in /home/e1s/public_html/demo/badal/admin/views/orders/index.php on line 219
+[25-Aug-2025 14:31:10 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$response_code in /home/e1s/public_html/demo/badal/admin/views/orders/index.php on line 219
+[25-Aug-2025 15:11:11 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$response_code in /home/e1s/public_html/demo/badal/admin/views/orders/index.php on line 219
+[25-Aug-2025 15:14:29 Asia/Kuwait] PHP Notice:  Undefined index: meta in /home/e1s/public_html/demo/badal/admin/controllers/Paymentmethods.php on line 213
+[25-Aug-2025 15:14:29 Asia/Kuwait] PHP Warning:  Invalid argument supplied for foreach() in /home/e1s/public_html/demo/badal/admin/controllers/Paymentmethods.php on line 213
+[25-Aug-2025 15:14:29 Asia/Kuwait] PHP Notice:  Undefined index: meta in /home/e1s/public_html/demo/badal/admin/controllers/Paymentmethods.php on line 225
+[25-Aug-2025 15:14:29 Asia/Kuwait] PHP Warning:  move_uploaded_file(/home/e1s/public_html/demo/badal/admin/../media/images/image_9739d.png): failed to open stream: No such file or directory in /home/e1s/public_html/demo/badal/helpers/upload_helper.php on line 125
+[25-Aug-2025 15:14:29 Asia/Kuwait] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpzZ1aGa' to '/home/e1s/public_html/demo/badal/admin/../media/images/image_9739d.png' in /home/e1s/public_html/demo/badal/helpers/upload_helper.php on line 125
+[25-Aug-2025 15:14:29 Asia/Kuwait] PHP Notice:  Trying to access array offset on value of type null in /home/e1s/public_html/demo/badal/admin/controllers/Paymentmethods.php on line 244
+[25-Aug-2025 15:16:30 Asia/Kuwait] PHP Notice:  Undefined index: meta in /home/e1s/public_html/demo/badal/admin/controllers/Paymentmethods.php on line 213
+[25-Aug-2025 15:16:30 Asia/Kuwait] PHP Warning:  Invalid argument supplied for foreach() in /home/e1s/public_html/demo/badal/admin/controllers/Paymentmethods.php on line 213
+[25-Aug-2025 15:16:30 Asia/Kuwait] PHP Notice:  Undefined index: meta in /home/e1s/public_html/demo/badal/admin/controllers/Paymentmethods.php on line 225
+[25-Aug-2025 15:16:30 Asia/Kuwait] PHP Warning:  imagejpeg(/home/e1s/public_html/demo/badal/admin/../media/images/../thumbs/image_6238f.jpg): failed to open stream: No such file or directory in /home/e1s/public_html/demo/badal/helpers/upload_helper.php on line 408
+[25-Aug-2025 16:04:24 Asia/Kuwait] PHP Notice:  Undefined index: meta in /home/e1s/public_html/demo/badal/admin/controllers/Paymentmethods.php on line 213
+[25-Aug-2025 16:04:24 Asia/Kuwait] PHP Warning:  Invalid argument supplied for foreach() in /home/e1s/public_html/demo/badal/admin/controllers/Paymentmethods.php on line 213
+[25-Aug-2025 16:04:24 Asia/Kuwait] PHP Notice:  Undefined index: meta in /home/e1s/public_html/demo/badal/admin/controllers/Paymentmethods.php on line 225
+[25-Aug-2025 16:04:24 Asia/Kuwait] PHP Warning:  imagejpeg(/home/e1s/public_html/demo/badal/admin/../media/images/../thumbs/image_4d40f.jpg): failed to open stream: No such file or directory in /home/e1s/public_html/demo/badal/helpers/upload_helper.php on line 408
+[25-Aug-2025 16:47:02 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$response_code in /home/e1s/public_html/demo/badal/admin/views/orders/index.php on line 219
+[25-Aug-2025 16:47:28 Asia/Kuwait] PHP Notice:  Undefined index: meta in /home/e1s/public_html/demo/badal/admin/controllers/Paymentmethods.php on line 213
+[25-Aug-2025 16:47:28 Asia/Kuwait] PHP Warning:  Invalid argument supplied for foreach() in /home/e1s/public_html/demo/badal/admin/controllers/Paymentmethods.php on line 213
+[25-Aug-2025 16:47:28 Asia/Kuwait] PHP Notice:  Undefined index: meta in /home/e1s/public_html/demo/badal/admin/controllers/Paymentmethods.php on line 225
+[25-Aug-2025 16:47:28 Asia/Kuwait] PHP Warning:  imagepng(/home/e1s/public_html/demo/badal/admin/../media/images/../thumbs/image_717d1.png): failed to open stream: No such file or directory in /home/e1s/public_html/demo/badal/helpers/upload_helper.php on line 408
+[25-Aug-2025 17:03:05 Asia/Kuwait] PHP Warning:  Use of undefined constant MEDIAPATH - assumed 'MEDIAPATH' (this will throw an Error in a future version of PHP) in /home/e1s/public_html/demo/badal/libraries/ModelAdmin.php on line 390
+[25-Aug-2025 17:03:05 Asia/Kuwait] PHP Warning:  move_uploaded_file(MEDIAPATH/image_274d6.jpg): failed to open stream: No such file or directory in /home/e1s/public_html/demo/badal/helpers/upload_helper.php on line 125
+[25-Aug-2025 17:03:05 Asia/Kuwait] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phppIJU8c' to 'MEDIAPATH/image_274d6.jpg' in /home/e1s/public_html/demo/badal/helpers/upload_helper.php on line 125
+[25-Aug-2025 17:03:05 Asia/Kuwait] PHP Notice:  Trying to access array offset on value of type null in /home/e1s/public_html/demo/badal/libraries/ModelAdmin.php on line 405
