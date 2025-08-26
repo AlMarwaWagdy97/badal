@@ -148,6 +148,7 @@ class Albadal extends ControllerAdmin
      */
     public function add()
     {
+        $categories = $this->projectModel->categoriesList(' WHERE status <> 2 ');
         // if (!$categories = $this->projectModel->categoriesList(' WHERE status <> 2 ')) {
         //     flash('project_msg', 'برجاء انشاء قسم اولا حتي تتمكن من انشاء مشروع جديد ', 'alert alert-danger');
         //     redirect('albadal');
@@ -342,6 +343,7 @@ class Albadal extends ControllerAdmin
      */
     public function edit($id)
     {
+        $categories = $this->projectModel->categoriesList(' WHERE status <> 2 ');
         // if (!$categories = $this->projectModel->categoriesList(' WHERE status <> 2 ')) {
         //     flash('project_msg', 'برجاء انشاء قسم اولا حتي تتمكن من انشاء مشروع جديد ', 'alert alert-danger');
         //     redirect('albadal');
