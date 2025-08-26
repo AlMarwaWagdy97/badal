@@ -1,4 +1,10 @@
 <IfModule mod_rewrite.c>
+  Options -Indexes
+  Options -Multiviews
+</IfModule>
+
+
+<IfModule mod_rewrite.c>
 
   Options -Indexes
 
@@ -7,11 +13,5 @@
   RewriteEngine On
 
   RewriteBase /badal/api
-
-  RewriteCond %{REQUEST_FILENAME} !-d
-
-  RewriteCond %{REQUEST_FILENAME} !-f
-
-  RewriteRule  ^(.*)$ index.php?url=$1 [QSA,L]
 
 </IfModule>
