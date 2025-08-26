@@ -30,9 +30,9 @@ class Core
     {
      
         $url = $this->getUrl();
-        // if ($url[0] != 'admin'  ) {
-        //     $this->apiRoute($url);
-        // }
+        if ($url[0] != 'admin'  ) {
+            $this->apiRoute($url);
+        }
      
         //look in controller for the controller existing and instantiate it
         if (file_exists('../app/controllers/' . ucfirst($url[0]) . '.php')) {
