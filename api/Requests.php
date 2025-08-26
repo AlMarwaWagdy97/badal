@@ -101,7 +101,7 @@ class Requests extends ApiController
                 'notify'                => "يرغب في تنفيذ طلبكم",
             ];
             // send messages
-            $this->messaging->sendNotfication($sendData, 'newRequest');
+            // $this->messaging->sendNotfication($sendData, 'newRequest');
             //retrive all data
             $this->response("Request added successfully");
         } else {
