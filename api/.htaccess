@@ -1,11 +1,9 @@
 <IfModule mod_rewrite.c>
-
   Options -Indexes
-
   Options -Multiviews
 
   RewriteEngine On
 
-  RewriteBase /badal
-
+  RewriteBase /badal/api
+  
 </IfModule>
