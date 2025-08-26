@@ -148,10 +148,10 @@ class Albadal extends ControllerAdmin
      */
     public function add()
     {
-        if (!$categories = $this->projectModel->categoriesList(' WHERE status <> 2 ')) {
-            flash('project_msg', 'برجاء انشاء قسم اولا حتي تتمكن من انشاء مشروع جديد ', 'alert alert-danger');
-            redirect('albadal');
-        }
+        // if (!$categories = $this->projectModel->categoriesList(' WHERE status <> 2 ')) {
+        //     flash('project_msg', 'برجاء انشاء قسم اولا حتي تتمكن من انشاء مشروع جديد ', 'alert alert-danger');
+        //     redirect('albadal');
+        // }
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $description = $this->projectModel->cleanHTML($_POST['description']);
             // sanitize POST array
@@ -342,10 +342,10 @@ class Albadal extends ControllerAdmin
      */
     public function edit($id)
     {
-        if (!$categories = $this->projectModel->categoriesList(' WHERE status <> 2 ')) {
-            flash('project_msg', 'برجاء انشاء قسم اولا حتي تتمكن من انشاء مشروع جديد ', 'alert alert-danger');
-            redirect('albadal');
-        }
+        // if (!$categories = $this->projectModel->categoriesList(' WHERE status <> 2 ')) {
+        //     flash('project_msg', 'برجاء انشاء قسم اولا حتي تتمكن من انشاء مشروع جديد ', 'alert alert-danger');
+        //     redirect('albadal');
+        // }
         $id = (int) $id;
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             // sanitize POST array
