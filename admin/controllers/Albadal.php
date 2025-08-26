@@ -30,7 +30,7 @@ class Albadal extends ControllerAdmin
     public function index($current = '', $perpage = 50)
     {
         // get projects
-        $cond = 'WHERE projects.status <> 2 AND badal = 1 ';
+        $cond = 'WHERE projects.status <> 2 AND badal = 1 AND project_categories.category_id = projects.category_id ';
         $bind = [];
 
         //check user action if the form has submitted
