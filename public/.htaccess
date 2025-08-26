@@ -6,7 +6,7 @@
 
   RewriteEngine On
 
-  RewriteBase /public
+  RewriteBase /badal/public
 
   RewriteCond %{REQUEST_FILENAME} !-d
 
