@@ -6,7 +6,7 @@
 
   RewriteEngine On
 
-  RewriteBase /badal
+  RewriteBase /badal/api
 
   RewriteCond %{REQUEST_FILENAME} !-d
 
