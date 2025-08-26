@@ -30,10 +30,11 @@ class Core
     {
      
         $url = $this->getUrl();
-        if ($url[0] != 'admin'  ) {
+        if ($url[0] == 'api') {
             $this->apiRoute($url);
+            return;
         }
-     
+        
         //look in controller for the controller existing and instantiate it
         if (file_exists('../app/controllers/' . ucfirst($url[0]) . '.php')) {
             $this->currentController = ucwords($url[0]);
