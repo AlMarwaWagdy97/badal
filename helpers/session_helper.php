@@ -57,7 +57,7 @@ function logout()
 {
     unset($_SESSION['memberLogged']);
     unset($_SESSION['donorLogged']);
-    unset($_SESSION['user']);
+    unset($_SESSION['admin']);
     unset($_SESSION['group']);
     unset($_SESSION['filemanage']);
     session_destroy();

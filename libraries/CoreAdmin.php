@@ -96,9 +96,9 @@ class CoreAdmin
         $status = ['publish', 'unpublish', 'featured', 'unfeatured', 'arrangement', 'send', 'orders', 'projects', 'addprojects'];
         in_array($method, $status) ? $method = 'status' : '';
         // check if user logged in
-        if (isset($_SESSION['user'])) {
+        if (isset($_SESSION['admin'])) {
             //check if user is blocked
-            if ($_SESSION['user']->status != 1) {
+            if ($_SESSION['admin']->status != 1) {
                 logout();
                 flash('user_msg', 'لا تملك صلاحية الدخول حيث ان الحساب الخاص بك محظور', 'alert alert-warning');
                 redirect('users/error');

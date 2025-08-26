@@ -195,7 +195,7 @@ class User extends ModelAdmin
     public function createUserSession($userinfo)
     {
         // adding user information to session
-        $_SESSION['user'] = $userinfo['user'];
+        $_SESSION['admin'] = $userinfo['user'];
         $_SESSION['group'] = $userinfo['group'];
         // adding permission object to session
         $_SESSION['permissions'] = json_decode(strtolower($userinfo['group']->permissions));

@@ -30,8 +30,8 @@ class Log
 
     public function setUser()
     {
-        if (@$_SESSION['user']) {
-            $this->user = $_SESSION['user'];
+        if (@$_SESSION['admin']) {
+            $this->user = $_SESSION['admin'];
         }
     }
     public function setModel()

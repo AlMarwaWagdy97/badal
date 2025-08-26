@@ -7,11 +7,11 @@
         <!-- menu profile quick info -->
         <div class="profile clearfix">
             <div class="profile_pic">
-                <img src="<?php echo empty($_SESSION['user']->image) ? MEDIAURL . '/userdefault.jpg' : MEDIAURL . '/' . $_SESSION['user']->image; ?>" class="img-circle profile_img">
+                <img src="<?php echo empty($_SESSION['admin']->image) ? MEDIAURL . '/userdefault.jpg' : MEDIAURL . '/' . $_SESSION['admin']->image; ?>" class="img-circle profile_img">
             </div>
             <div class="profile_info">
                 <span>مرحبا ,</span>
-                <h2><?php echo $_SESSION['user']->name; ?></h2>
+                <h2><?php echo $_SESSION['admin']->name; ?></h2>
             </div>
             <div class="clearfix"></div>
         </div>
@@ -25,7 +25,7 @@
                     <li><a><i class="fa fa-home"></i> الرئيسية <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                             <li><a href="<?php echo ADMINURL; ?>/dashboard/index">لوحة التحكم</a></li>
-                            <li><a href="<?php echo ADMINURL; ?>/users/show/<?php echo $_SESSION['user']->user_id; ?>">الملف الشخصي</a></li>
+                            <li><a href="<?php echo ADMINURL; ?>/users/show/<?php echo $_SESSION['admin']->user_id; ?>">الملف الشخصي</a></li>
                         </ul>
                     </li>
                     <li><a><i class="fa fa-th-large"></i> النظام <span class="fa fa-chevron-down"></span></a>
@@ -121,11 +121,11 @@
             <ul class="nav navbar-nav navbar-right">
                 <li class="">
                     <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                        <img src="<?php echo empty($_SESSION['user']->image) ? MEDIAURL . '/userdefault.jpg' : MEDIAURL . '/' . $_SESSION['user']->image; ?>"><?php echo $_SESSION['user']->name; ?>
+                        <img src="<?php echo empty($_SESSION['admin']->image) ? MEDIAURL . '/userdefault.jpg' : MEDIAURL . '/' . $_SESSION['admin']->image; ?>"><?php echo $_SESSION['admin']->name; ?>
                         <span class=" fa fa-angle-down"></span>
                     </a>
                     <ul class="dropdown-menu dropdown-usermenu pull-right">
-                        <li><a href="<?php echo ADMINURL . '/users/show/' . $_SESSION['user']->user_id; ?>"><i class="fa fa-user pull-left"></i> الملف الشخصي</a></li>
+                        <li><a href="<?php echo ADMINURL . '/users/show/' . $_SESSION['admin']->user_id; ?>"><i class="fa fa-user pull-left"></i> الملف الشخصي</a></li>
                         <li><a href="<?php echo ADMINURL; ?>/settings"><i class="fa fa-gear pull-left"></i> الأعدادات</a></li>
                         <li><a target="_blank" href="http://ahmedx.com/easycms"><i class="fa fa-life-bouy pull-left"></i> المساعدة</a></li>
                         <li><a href="<?php echo ADMINURL; ?>/users/logout"><i class="fa fa-sign-out pull-left"></i> تسجيل خروج</a></li>
