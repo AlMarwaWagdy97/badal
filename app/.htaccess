@@ -1,11 +1,1 @@
-<IfModule mod_rewrite.c>
-
-  Options -Indexes
-
-  Options -Multiviews
-
-  RewriteEngine On
-
-  RewriteBase /badal
-
-</IfModule>
+Options -Indexes
