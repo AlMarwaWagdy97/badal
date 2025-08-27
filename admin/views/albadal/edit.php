@@ -89,9 +89,7 @@ require ADMINROOT . '/views/inc/header.php';
                             <?php endforeach; ?>
                         </select>
                     </div>
-              
-                    </div>
-
+            
                     <div class="form-group <?php echo (empty($data['secondary_image_error'])) ?: 'has-error'; ?>">
                         <label class="control-label" for="imageUpload"> صورة المشروع الخارجية : </label>
                         <div class="has-feedback input-group">

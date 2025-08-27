@@ -38,12 +38,7 @@ require ADMINROOT . '/views/inc/header.php';
                     <?php echo $data['project']->name; ?>
                 </h3>
             </div>
-            <div class="form-group">
-                <h3 class="prod_title">
-                    <label class="control-label">الرابط : </label>
-                    <a href="<?php echo URLROOT . '/albadal/show/' . $data['project']->project_id; ?>"><?php echo URLROOT . '/albadal/show/' . $data['project']->project_id; ?></a>
-                </h3>
-            </div>
+
             
             <div class="well img-thumbnail col-md-6 col-sm-6">
                 <label class="control-label">الصورة الخارجية : </label>
