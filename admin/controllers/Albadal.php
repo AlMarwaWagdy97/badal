@@ -439,6 +439,18 @@ class Albadal extends ControllerAdmin
                 $image = $this->projectModel->validateImage('secondary_image');
                 ($image[0]) ? $data['secondary_image'] = $image[1] : $data['secondary_image_error'] = $image[1];
             }
+             // validate image
+             if (!empty($_FILES['secondary_image'])) {
+                $image = uploadImage('secondary_image', ADMINROOT . '/../media/images/', 5000000, true);
+                if (empty($image['error'])) {
+                    $data['secondary_image'] = $image['filename'];
+                } else {
+                    if (!isset($image['error']['nofile'])) {
+                        $data['secondary_image_error'] = implode(',', $image['error']);
+                    }
+                }
+            }
+
             // validate start and end date
             if ($data['end_date'] < 0 || $data['end_date'] > 2147483648) $data['end_date'] = 0;
             if ($data['start_date'] < 0 || $data['start_date'] > 2147483648) $data['start_date'] = 0;
@@ -463,7 +475,7 @@ class Albadal extends ControllerAdmin
             ) {
                 //validated
                 if (isset($_POST['save_new'])) {
-                    $data['secondary_image'] = $_POST['s_image'];
+                    // $data['secondary_image'] = $_POST['s_image'];
                     if ($this->projectModel->addProject($data)) {
                         $this->projectModel->insertTags($data['tags'], $this->projectModel->lastId());
                         flash('project_msg', 'تم الحفظ بنجاح');
