@@ -110,6 +110,8 @@ class Rite extends ModelAdmin
 
         $query .= ' WHERE `rite_id` = :rite_id';
 
+        if($data['time_taken'] == "") $data['time_taken'] = 0;
+        
         $this->db->query($query);
         $this->db->bind(':title', $data['title']);
         $this->db->bind(':project_id', $data['project_id']);
