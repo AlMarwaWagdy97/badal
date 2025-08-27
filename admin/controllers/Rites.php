@@ -130,7 +130,7 @@ class Rites extends ControllerAdmin
                 'proof'                     => trim($_POST['proof']),
                 'status'                    => trim($_POST['status']),
                 'arrangement'               => $_POST['arrangement'],
-                'time_taken'               => $_POST['time_taken']??0,
+                'time_taken'               => $_POST['time_taken'] ?? 0,
                 'title_error'               => '',
                 'project_id_error'          => '',
                 'proof_error'               => '',

@@ -114,7 +114,7 @@ class Rite extends ModelAdmin
         $this->db->bind(':title', $data['title']);
         $this->db->bind(':project_id', $data['project_id']);
         $this->db->bind(':arrangement', $data['arrangement']);
-        $this->db->bind(':time_taken', $data['time_taken']);
+        $this->db->bind(':time_taken', $data['time_taken'] ?? 0);
         $this->db->bind(':proof', $data['proof']);
         $this->db->bind(':status', $data['status']);
         $this->db->bind(':modified_date', time());
