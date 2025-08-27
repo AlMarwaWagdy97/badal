@@ -89,31 +89,9 @@ require ADMINROOT . '/views/inc/header.php';
                             <?php endforeach; ?>
                         </select>
                     </div>
-                    <div class="">
-                        <a class="btn-danger btn-sm btn pull-left" onclick="$('#galery').val('');">حذف الصور &nbsp<i class="fa fa-close"></i></a>
-                        <label class="control-label clearfix" for="imageUpload">صور المشروع :
-                        </label>
-
-                        <div class="glr-group row">
-                            <a data-toggle="modal" href="javascript:;" data-target="#myModal" class="glr-btn col-xs-2" type="button">اختيار</a>
-                            <input id="galery" readonly name="image" class="glr-control  col-xs-10" type="text" value="<?php echo $data['image']; ?>">
-                        </div>
-                        <!-- /.modal -->
-                        <div class="modal fade" id="myModal" style=" margin-left: 0px;">
-                            <div class="modal-dialog" style="width: 80%;">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                        <h4 class="modal-title">اختيار الصور</h4>
-                                    </div>
-                                    <div class="modal-body">
-                                        <iframe width="100%" height="500" src="<?php echo ADMINURL; ?>/helpers/filemanager/dialog.php?type=2&field_id=galery&relative_url=1" frameborder="0" style="overflow: scroll; overflow-x: hidden; overflow-y: scroll; "></iframe>
-                                    </div>
-                                </div><!-- /.modal-content -->
-                            </div><!-- /.modal-dialog -->
-                        </div>
-                        <!-- /.modal -->
+              
                     </div>
+
                     <div class="form-group <?php echo (empty($data['secondary_image_error'])) ?: 'has-error'; ?>">
                         <label class="control-label" for="imageUpload"> صورة المشروع الخارجية : </label>
                         <div class="has-feedback input-group">

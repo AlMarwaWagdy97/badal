@@ -44,18 +44,7 @@ require ADMINROOT . '/views/inc/header.php';
                     <a href="<?php echo URLROOT . '/albadal/show/' . $data['project']->project_id; ?>"><?php echo URLROOT . '/albadal/show/' . $data['project']->project_id; ?></a>
                 </h3>
             </div>
-            <div class="well img-thumbnail col-md-6 col-sm-6">
-                <label class="control-label">الصورة الرئيسية : </label>
-                <?php if (!empty($data['project']->image)) :
-                    $galery = explode(',', $data['project']->image);
-                    foreach ($galery as $img) {
-                        $img = MEDIAURL . '/' . str_replace('&#34;', '', trim(trim($img, ']'), '['));
-                        echo
-                            ' <img src="' . $img . '" class="img-responsive img-rounded"> ';
-                    }
-                endif; ?>
-                <img src="<?php echo empty($data['project']->image) ? MEDIAURL . '/default.jpg' : ''; ?>" />
-            </div>
+            
             <div class="well img-thumbnail col-md-6 col-sm-6">
                 <label class="control-label">الصورة الخارجية : </label>
                 <img class="img-responsive img-rounded" src="<?php echo empty($data['project']->secondary_image) ? MEDIAURL . '/default.jpg' : MEDIAURL . '/' . $data['project']->secondary_image; ?>" />
