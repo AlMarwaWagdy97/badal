@@ -1,7 +1,9 @@
 <div class="col-md-3 left_col">
     <div class="left_col scroll-view">
         <div class="navbar nav_title">
-            <a target="_blank" href="<?php echo URLROOT; ?>" class="site_title"> <i class="glyphicon glyphicon-grain"></i> <span><?php echo SITENAME; ?></span></a>
+            <a target="_blank" href="<?php echo URLROOT; ?>" class="site_title"> 
+                <img src="<?php echo URLROOT . '/templates/namaa/images/logo.jpg' ?>" >
+            </a>
         </div>
         <div class="clearfix"></div>
         <!-- menu profile quick info -->
