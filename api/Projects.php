@@ -84,15 +84,15 @@ class Projects extends ApiController
         if ($setting->umrah_status) $types[] = "'umrah'";
         
         if ($types && $response = $this->model->getTableEdits($types)) {
-            foreach ($response as $project) {
+            // foreach ($response as $project) {
                 // $galery = str_replace('&quot;', '', trim(trim($project->image, ']'), '['));
                 // $galery = str_replace('&#34;', '', trim(trim($galery, ']'), '['));
                 // $galery = MEDIAURL . '/' . $galery;
                 // $galery = str_replace(',', ',' . MEDIAURL . '/', trim($galery));
                 // $project->image = array_filter(explode(',', $galery), 'strlen');
-                $projects[] = $project;
-            }
-            $this->response($projects);
+                // $projects[] = $project;
+            // }
+            $this->response($response);
         } else {
             $this->error('Not found');
         }
