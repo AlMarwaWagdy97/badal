@@ -40,10 +40,19 @@ require ADMINROOT . '/views/inc/header.php';
             </div>
 
             
-            <div class="well img-thumbnail col-md-6 col-sm-6">
+            <div class="well img-thumbnail col-md-4 col-sm-6">
                 <label class="control-label">الصورة الخارجية : </label>
-                <img class="img-responsive img-rounded" src="<?php echo empty($data['project']->secondary_image) ? MEDIAURL . '/default.jpg' : MEDIAURL . '/' . $data['project']->secondary_image; ?>" />
+                <img class="img-responsive img-rounded" width="150px" style="height:150px" src="<?php echo empty($data['project']->secondary_image) ? MEDIAURL . '/default.jpg' : MEDIAURL . '/' . $data['project']->secondary_image; ?>" />
             </div>
+            <div class="well img-thumbnail col-md-4 col-sm-6">
+                <label class="control-label">الصورة الداخلية : </label>
+                <img class="img-responsive img-rounded" width="150px" style="height:150px" src="<?php echo empty($data['project']->image) ? MEDIAURL . '/default.jpg' : MEDIAURL . '/' . $data['project']->image; ?>" />
+            </div>
+            <div class="well img-thumbnail col-md-4 col-sm-6">
+                <label class="control-label">الصورة الخلفية  : </label>
+                <img class="img-responsive img-rounded" width="150px" style="height:150px" src="<?php echo empty($data['project']->background_image) ? MEDIAURL . '/default.jpg' : MEDIAURL . '/' . $data['project']->background_image; ?>" />
+            </div>
+            
             <div class="form-group col-md-6 col-xs-6">
                 <label class="control-label">الوصف : </label>
                 <p><?php echo $data['project']->description ?: 'لا يوجد'; ?></p>
@@ -60,8 +69,7 @@ require ADMINROOT . '/views/inc/header.php';
                 <label class="control-label">الترتيب : </label>
                 <p><?php echo $data['project']->arrangement; ?></p>
             </div>
-            <div class="form-group col-md-6 col-xs-6">
-            </div>
+         
             <div class="form-group col-md-6 col-xs-6">
                 <label class="control-label">وسائل الدفع المدعومة : </label>
                 <ul class="list-group">
