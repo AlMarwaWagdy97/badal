@@ -12410,3 +12410,31 @@ Stack trace:
 [25-Aug-2025 17:03:05 Asia/Kuwait] PHP Warning:  move_uploaded_file(MEDIAPATH/image_274d6.jpg): failed to open stream: No such file or directory in /home/e1s/public_html/demo/badal/helpers/upload_helper.php on line 125
 [25-Aug-2025 17:03:05 Asia/Kuwait] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phppIJU8c' to 'MEDIAPATH/image_274d6.jpg' in /home/e1s/public_html/demo/badal/helpers/upload_helper.php on line 125
 [25-Aug-2025 17:03:05 Asia/Kuwait] PHP Notice:  Trying to access array offset on value of type null in /home/e1s/public_html/demo/badal/libraries/ModelAdmin.php on line 405
+[09-Sep-2025 12:29:59 Asia/Kuwait] PHP Notice:  Undefined index: image in /home/e1s/public_html/demo/badal/admin/controllers/Albadal.php on line 365
+[09-Sep-2025 12:30:08 Asia/Kuwait] PHP Notice:  Undefined index: image in /home/e1s/public_html/demo/badal/admin/controllers/Albadal.php on line 365
+[09-Sep-2025 12:30:19 Asia/Kuwait] PHP Notice:  Undefined index: image in /home/e1s/public_html/demo/badal/admin/controllers/Albadal.php on line 365
+[09-Sep-2025 12:30:19 Asia/Kuwait] PHP Warning:  Use of undefined constant MEDIAPATH - assumed 'MEDIAPATH' (this will throw an Error in a future version of PHP) in /home/e1s/public_html/demo/badal/libraries/ModelAdmin.php on line 390
+[09-Sep-2025 12:30:19 Asia/Kuwait] PHP Warning:  move_uploaded_file(MEDIAPATH/image_e127a.png): failed to open stream: No such file or directory in /home/e1s/public_html/demo/badal/helpers/upload_helper.php on line 125
+[09-Sep-2025 12:30:19 Asia/Kuwait] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpNZGytO' to 'MEDIAPATH/image_e127a.png' in /home/e1s/public_html/demo/badal/helpers/upload_helper.php on line 125
+[09-Sep-2025 12:30:19 Asia/Kuwait] PHP Notice:  Trying to access array offset on value of type null in /home/e1s/public_html/demo/badal/libraries/ModelAdmin.php on line 405
+[09-Sep-2025 12:30:55 Asia/Kuwait] PHP Notice:  Undefined index: image in /home/e1s/public_html/demo/badal/admin/controllers/Albadal.php on line 365
+[09-Sep-2025 12:30:55 Asia/Kuwait] PHP Warning:  Use of undefined constant MEDIAPATH - assumed 'MEDIAPATH' (this will throw an Error in a future version of PHP) in /home/e1s/public_html/demo/badal/libraries/ModelAdmin.php on line 390
+[09-Sep-2025 12:30:55 Asia/Kuwait] PHP Warning:  move_uploaded_file(MEDIAPATH/image_8cc65.png): failed to open stream: No such file or directory in /home/e1s/public_html/demo/badal/helpers/upload_helper.php on line 125
+[09-Sep-2025 12:30:55 Asia/Kuwait] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpqa8du4' to 'MEDIAPATH/image_8cc65.png' in /home/e1s/public_html/demo/badal/helpers/upload_helper.php on line 125
+[09-Sep-2025 12:30:55 Asia/Kuwait] PHP Notice:  Trying to access array offset on value of type null in /home/e1s/public_html/demo/badal/libraries/ModelAdmin.php on line 405
+[09-Sep-2025 12:33:16 Asia/Kuwait] PHP Notice:  Undefined index: image in /home/e1s/public_html/demo/badal/admin/controllers/Albadal.php on line 365
+[09-Sep-2025 12:33:16 Asia/Kuwait] PHP Warning:  Use of undefined constant MEDIAPATH - assumed 'MEDIAPATH' (this will throw an Error in a future version of PHP) in /home/e1s/public_html/demo/badal/libraries/ModelAdmin.php on line 390
+[09-Sep-2025 12:33:16 Asia/Kuwait] PHP Warning:  move_uploaded_file(MEDIAPATH/image_a583c.jpg): failed to open stream: No such file or directory in /home/e1s/public_html/demo/badal/helpers/upload_helper.php on line 125
+[09-Sep-2025 12:33:16 Asia/Kuwait] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpcMJqsg' to 'MEDIAPATH/image_a583c.jpg' in /home/e1s/public_html/demo/badal/helpers/upload_helper.php on line 125
+[09-Sep-2025 12:33:16 Asia/Kuwait] PHP Notice:  Trying to access array offset on value of type null in /home/e1s/public_html/demo/badal/libraries/ModelAdmin.php on line 405
+[09-Sep-2025 16:08:46 Asia/Kuwait] PHP Notice:  Undefined index: image in /home/e1s/public_html/demo/badal/admin/controllers/Albadal.php on line 365
+[09-Sep-2025 16:12:43 Asia/Kuwait] PHP Notice:  Undefined index: image_error in /home/e1s/public_html/demo/badal/admin/views/albadal/add.php on line 110
+[09-Sep-2025 16:13:39 Asia/Kuwait] PHP Notice:  Undefined index: image in /home/e1s/public_html/demo/badal/admin/controllers/Albadal.php on line 169
+[09-Sep-2025 16:13:39 Asia/Kuwait] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/e1s/public_html/demo/badal/admin/controllers/Albadal.php:169) in /home/e1s/public_html/demo/badal/admin/views/albadal/add.php on line 19
+[09-Sep-2025 16:13:39 Asia/Kuwait] PHP Notice:  Undefined index: image_error in /home/e1s/public_html/demo/badal/admin/views/albadal/add.php on line 110
+[09-Sep-2025 16:14:58 Asia/Kuwait] PHP Notice:  Undefined index: image in /home/e1s/public_html/demo/badal/admin/controllers/Albadal.php on line 169
+[09-Sep-2025 16:14:58 Asia/Kuwait] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/e1s/public_html/demo/badal/admin/controllers/Albadal.php:169) in /home/e1s/public_html/demo/badal/admin/views/albadal/add.php on line 19
+[09-Sep-2025 16:17:34 Asia/Kuwait] PHP Notice:  Undefined index: image in /home/e1s/public_html/demo/badal/admin/views/albadal/add.php on line 106
+[09-Sep-2025 16:17:46 Asia/Kuwait] PHP Notice:  Undefined index: image in /home/e1s/public_html/demo/badal/admin/models/Project.php on line 95
+[09-Sep-2025 16:19:09 Asia/Kuwait] PHP Notice:  Undefined index: image in /home/e1s/public_html/demo/badal/admin/controllers/Albadal.php on line 382
+[09-Sep-2025 16:22:18 Asia/Kuwait] PHP Notice:  Undefined index: image_error in /home/e1s/public_html/demo/badal/admin/views/albadal/add.php on line 110

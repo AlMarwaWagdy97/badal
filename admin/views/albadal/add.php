@@ -98,7 +98,17 @@ require ADMINROOT . '/views/inc/header.php';
                 </div>
 
 
-
+                <div class="form-group <?php echo (empty($data['image_error'])) ?: 'has-error'; ?>">
+                    <label class="control-label" for="imageUpload"> صورة المشروع الداخلية : </label>
+                    <div class="has-feedback input-group">
+                        <span class="input-group-btn">
+                            <span class="btn btn-dark" onclick="$(this).parent().find('input[type=file]').click();">اختار الملف</span>
+                            <input name="image" value="<?php echo ($data['image']); ?>" onchange="$(this).parent().parent().find('.form-control').html($(this).val().split(/[\\|/]/).pop());" style="display: none;" type="file">
+                        </span>
+                        <span class="form-control"><small><?php echo empty($data['image']) ? 'قم بأختيار صورة مناسبة' : $data['image']; ?></small></span>
+                    </div>
+                    <div class="help-block"><?php echo $data['image_error']; ?></div>
+                </div>
 
                 <div class="form-group">
                     <label class="control-label">وصف المشروع : </label>

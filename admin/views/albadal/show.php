@@ -138,7 +138,7 @@ require ADMINROOT . '/views/inc/header.php';
                 </div>
             </div>
             <div class="form-group col-xs-12">
-                <a class="btn btn-info" href="<?php echo ADMINURL . '/albadal/edit/' . $data['project']->category_id; ?>">تعديل</a>
+                <a class="btn btn-info" href="<?php echo ADMINURL . '/albadal/edit/' . $data['project']->project_id; ?>">تعديل</a>
             </div>
 
 

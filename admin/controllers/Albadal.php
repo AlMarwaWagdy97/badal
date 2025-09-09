@@ -166,7 +166,7 @@ class Albadal extends ControllerAdmin
                 'beneficiary' => trim($_POST['beneficiary']),
                 'alias' => preg_replace("([~!@#$%^&*()_+=`{}\[\]\|\\:;'<>,.\/? ])", "-", $_POST['name']),
                 'description' => $description,
-                'image' => trim($_POST['image']),
+                'secondary_image' => '',
                 'secondary_image' => '',
                 'enable_cart' => 0,
                 'gift' => 0,
@@ -213,6 +213,7 @@ class Albadal extends ControllerAdmin
                 'donation_type_error' => '',
                 'payment_methods_error' => '',
                 'secondary_image_error' => '',
+                'image_error' => '',
                 'background_image_error' => '',
                 'status_error' => '',
                 'badal_type_error' => '',
@@ -237,21 +238,51 @@ class Albadal extends ControllerAdmin
             // validate payment methods
             empty($_POST['payment_methods']) ? $data['payment_methods_error'] = 'يجب اختيار وسيلة دفع واحدة علي الأقل' : $data['payment_methods'] = $_POST['payment_methods'];
 
-            // validate secondary image
-            $image = $this->projectModel->validateImage('secondary_image');
-            ($image[0]) ? $data['secondary_image'] = $image[1] : $data['secondary_image_error'] = $image[1];
-
-            // validate background image
-            $image = $this->projectModel->validateImage('background_image');
-            ($image[0]) ? $data['background_image'] = $image[1] : $data['background_image_error'] = $image[1];
+            // validate image
+            if (!empty($_FILES['secondary_image'])) {
+                $image = uploadImage('secondary_image', ADMINROOT . '/../media/images/', 5000000, true);
+                if (empty($image['error'])) {
+                    $data['secondary_image'] = $image['filename'];
+                } else {
+                    if (!isset($image['error']['nofile'])) {
+                        $data['secondary_image_error'] = implode(',', $image['error']);
+                    }
+                }
+            }
+            
+          // validate image
+            if (!empty($_FILES['background_image'])) {
+                $image = uploadImage('background_image', ADMINROOT . '/../media/images/', 5000000, true);
+                if (empty($image['error'])) {
+                    $data['background_image'] = $image['filename'];
+                } else {
+                    if (!isset($image['error']['nofile'])) {
+                        $data['background_image_error'] = implode(',', $image['error']);
+                    }
+                }
+            }
+            
+            // validate image
+            if (!empty($_FILES['image'])) {
+                $image = uploadImage('image', ADMINROOT . '/../media/images/', 5000000, true);
+                if (empty($image['error'])) {
+                    $data['image'] = $image['filename'];
+                } else {
+                    if (!isset($image['error']['nofile'])) {
+                        $data['image_error'] = implode(',', $image['error']);
+                    }
+                }
+            }
 
             // validate start and end date
             if ($data['end_date'] < 0 || $data['end_date'] > 2147483648) $data['end_date'] = 0;
             if ($data['start_date'] < 0 || $data['start_date'] > 2147483648) $data['start_date'] = 0;
+            
             // validate status
             if (isset($_POST['status'])) {
                 $data['status'] = trim($_POST['status']);
             }
+            
             if ($data['status'] == '') {
                 $data['status_error'] = 'من فضلك اختار حالة النشر';
             }
@@ -327,6 +358,7 @@ class Albadal extends ControllerAdmin
                 'project_number_error' => '',
                 'status_error' => '',
                 'secondary_image_error' => '',
+                'image_error' => '',
                 'payment_methods_error' => '',
                 'background_image_error' => '',
                 'badal_type_error' => '',
@@ -409,6 +441,7 @@ class Albadal extends ControllerAdmin
                 'donation_type_error' => '',
                 'payment_methods_error' => '',
                 'secondary_image_error' => '',
+                'image_error' => '',
                 'background_image_error' => '',
                 'status_error' => '',
                 'badal_type_error' => '',
@@ -434,13 +467,14 @@ class Albadal extends ControllerAdmin
             // validate payment methods
             empty($_POST['payment_methods']) ? $data['payment_methods_error'] = 'يجب اختيار وسيلة دفع واحدة علي الأقل' : $data['payment_methods'] = $_POST['payment_methods'];
 
-            // validate secondary image 
-            if ($_FILES['secondary_image']['error'] != 4) { // no file has uploaded
-                $image = $this->projectModel->validateImage('secondary_image');
-                ($image[0]) ? $data['secondary_image'] = $image[1] : $data['secondary_image_error'] = $image[1];
-            }
-             // validate image
-             if (!empty($_FILES['secondary_image'])) {
+            // // validate secondary image 
+            // if ($_FILES['secondary_image']['error'] != 4) { // no file has uploaded
+            //     $image = $this->projectModel->validateImage('secondary_image');
+            //     ($image[0]) ? $data['secondary_image'] = $image[1] : $data['secondary_image_error'] = $image[1];
+            // }
+            
+            // validate image
+            if (!empty($_FILES['secondary_image'])) {
                 $image = uploadImage('secondary_image', ADMINROOT . '/../media/images/', 5000000, true);
                 if (empty($image['error'])) {
                     $data['secondary_image'] = $image['filename'];
@@ -450,15 +484,38 @@ class Albadal extends ControllerAdmin
                     }
                 }
             }
-
+            // validate image
+            if (!empty($_FILES['image'])) {
+                $image = uploadImage('image', ADMINROOT . '/../media/images/', 5000000, true);
+                if (empty($image['error'])) {
+                    $data['image'] = $image['filename'];
+                } else {
+                    if (!isset($image['error']['nofile'])) {
+                        $data['image_error'] = implode(',', $image['error']);
+                    }
+                }
+            }
+            
+            // validate image
+            if (!empty($_FILES['background_image'])) {
+                $image = uploadImage('background_image', ADMINROOT . '/../media/images/', 5000000, true);
+                if (empty($image['error'])) {
+                    $data['background_image'] = $image['filename'];
+                } else {
+                    if (!isset($image['error']['nofile'])) {
+                        $data['background_image_error'] = implode(',', $image['error']);
+                    }
+                }
+            }
+            
             // validate start and end date
             if ($data['end_date'] < 0 || $data['end_date'] > 2147483648) $data['end_date'] = 0;
             if ($data['start_date'] < 0 || $data['start_date'] > 2147483648) $data['start_date'] = 0;
             // validate background image
-            if ($_FILES['background_image']['error'] != 4) { // no file has uploaded
-                $image = $this->projectModel->validateImage('background_image');
-                ($image[0]) ? $data['background_image'] = $image[1] : $data['background_image_error'] = $image[1];
-            }
+            // if ($_FILES['background_image']['error'] != 4) { // no file has uploaded
+            //     $image = $this->projectModel->validateImage('background_image');
+            //     ($image[0]) ? $data['background_image'] = $image[1] : $data['background_image_error'] = $image[1];
+            // }
             // validate status
             if (isset($_POST['status'])) {
                 $data['status'] = trim($_POST['status']);

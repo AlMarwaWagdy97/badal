@@ -101,7 +101,24 @@ require ADMINROOT . '/views/inc/header.php';
                             <span class="form-control"><small><?php echo empty($data['secondary_image']) ? 'قم بأختيار صورة مناسبة' : $data['secondary_image']; ?></small></span>
                         </div>
                         <div class="help-block"><?php echo $data['secondary_image_error']; ?></div>
+                        <img class="img-responsive img-rounded" width="150px" src="<?php echo empty($data['secondary_image']) ? MEDIAURL . '/default.jpg' : MEDIAURL . '/' . $data['secondary_image']; ?>" />
                     </div>
+                    
+                   <div class="form-group <?php echo (empty($data['image_error'])) ?: 'has-error'; ?>">
+                        <label class="control-label" for="imageUpload"> صورة المشروع  الداخلية : </label>
+                        <div class="has-feedback input-group">
+                            <span class="input-group-btn">
+                                <span class="btn btn-dark" onclick="$(this).parent().find('input[type=file]').click();">اختار الملف</span>
+                                <input name="image" value="<?php echo ($data['image']); ?>" onchange="$(this).parent().parent().find('.form-control').html($(this).val().split(/[\\|/]/).pop());" style="display: none;" type="file">
+                                <input type="hidden" name="s_image" value="<?php echo ($data['image']); ?>">
+                            </span>
+                            <span class="form-control"><small><?php echo empty($data['image']) ? 'قم بأختيار صورة مناسبة' : $data['secondary_image']; ?></small></span>
+                        </div>
+                        <div class="help-block"><?php echo $data['image_error']; ?></div>
+                        <img class="img-responsive img-rounded" width="150px" src="<?php echo empty($data['image']) ? MEDIAURL . '/default.jpg' : MEDIAURL . '/' . $data['image']; ?>" />
+                    </div>
+                    
+                    
                     <div class="form-group">
                         <label class="control-label">وصف المشروع : </label>
                         <textarea rows="5" name="description" id="ckeditor" class="form-control ckeditor"><?php echo ($data['description']); ?></textarea>
@@ -271,6 +288,8 @@ require ADMINROOT . '/views/inc/header.php';
                                     <span class="form-control"><small><?php echo empty($data['background_image']) ? 'قم بأختيار صورة مناسبة' : $data['background_image']; ?></small></span>
                                 </div>
                                 <div class="help-block"><?php echo $data['background_image_error']; ?></div>
+                                <img class="img-responsive img-rounded" width="150px" src="<?php echo empty($data['background_image']) ? MEDIAURL . '/default.jpg' : MEDIAURL . '/' . $data['background_image']; ?>" />
+
                             </div>
                             <div class="form-group">
                                 <label>لون الخلفية : </label>
