@@ -161,7 +161,7 @@ require ADMINROOT . '/views/inc/header.php';
                                     <input type="submit" name="send" value="SMS" class="btn btn-success btn-sm" />
                                     <input type="submit" name="send" value="Email" class="btn btn-success btn-sm" />
                                     <input type="submit" name="export" value="Excel" class="btn btn-success btn-xs" />
-                                    <input type="submit" name="gift" value="ارسال الإهداء" class="btn btn-red btn-xs" />
+                                    <!--<input type="submit" name="gift" value="ارسال الإهداء" class="btn btn-red btn-xs" />-->
                                     <input type="submit" name="proof" value="طلب تأكيد التحويل" class="btn btn-info btn-xs" />
                                     <div class="btn-group d-inline">
                                         <span class="control-label">الوسوم : </span>

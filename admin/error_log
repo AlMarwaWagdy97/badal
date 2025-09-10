@@ -12438,3 +12438,16 @@ Stack trace:
 [09-Sep-2025 16:17:46 Asia/Kuwait] PHP Notice:  Undefined index: image in /home/e1s/public_html/demo/badal/admin/models/Project.php on line 95
 [09-Sep-2025 16:19:09 Asia/Kuwait] PHP Notice:  Undefined index: image in /home/e1s/public_html/demo/badal/admin/controllers/Albadal.php on line 382
 [09-Sep-2025 16:22:18 Asia/Kuwait] PHP Notice:  Undefined index: image_error in /home/e1s/public_html/demo/badal/admin/views/albadal/add.php on line 110
+[09-Sep-2025 17:53:47 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$response_code in /home/e1s/public_html/demo/badal/admin/views/orders/index.php on line 219
+[10-Sep-2025 12:07:27 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$response_code in /home/e1s/public_html/demo/badal/admin/views/orders/index.php on line 219
+[10-Sep-2025 12:07:37 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$response_code in /home/e1s/public_html/demo/badal/admin/views/orders/index.php on line 219
+[10-Sep-2025 12:09:44 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$response_code in /home/e1s/public_html/demo/badal/admin/views/orders/index.php on line 219
+[10-Sep-2025 12:10:51 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$response_code in /home/e1s/public_html/demo/badal/admin/views/orders/index.php on line 219
+[10-Sep-2025 12:11:23 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$response_code in /home/e1s/public_html/demo/badal/admin/views/orders/index.php on line 219
+[10-Sep-2025 12:12:06 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$response_code in /home/e1s/public_html/demo/badal/admin/views/orders/index.php on line 219
+[10-Sep-2025 12:13:51 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$response_code in /home/e1s/public_html/demo/badal/admin/views/orders/index.php on line 219
+[10-Sep-2025 12:15:19 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$response_code in /home/e1s/public_html/demo/badal/admin/views/orders/index.php on line 219
+[10-Sep-2025 12:16:24 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$response_code in /home/e1s/public_html/demo/badal/admin/views/orders/index.php on line 219
+[10-Sep-2025 12:18:06 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$response_code in /home/e1s/public_html/demo/badal/admin/views/orders/index.php on line 219
+[10-Sep-2025 12:18:41 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$response_code in /home/e1s/public_html/demo/badal/admin/views/orders/index.php on line 219
+[10-Sep-2025 12:23:33 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$response_code in /home/e1s/public_html/demo/badal/admin/views/orders/index.php on line 219
