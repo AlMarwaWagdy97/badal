@@ -582,7 +582,7 @@ class ModelAdmin
        
         $parameters = [
             ["name" => "name", "value" => $name],
-            ["name" => "order", "value" => $order->order_identifier],
+            ["name" => "order", "value" => $order->identifier],
             ["name" => "amount", "value" => $order->total],
             ["name" => "project", "value" => $order->projects??""],
             ["name" => "link", "value" => URLROOT .'/invoices/show/' . orderIdentifier($order->order_id)??""],
