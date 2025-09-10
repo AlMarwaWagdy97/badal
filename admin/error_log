@@ -12451,3 +12451,6 @@ Stack trace:
 [10-Sep-2025 12:18:06 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$response_code in /home/e1s/public_html/demo/badal/admin/views/orders/index.php on line 219
 [10-Sep-2025 12:18:41 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$response_code in /home/e1s/public_html/demo/badal/admin/views/orders/index.php on line 219
 [10-Sep-2025 12:23:33 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$response_code in /home/e1s/public_html/demo/badal/admin/views/orders/index.php on line 219
+[10-Sep-2025 12:38:58 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$show_news in /home/e1s/public_html/demo/badal/admin/views/settings/site.php on line 123
+[10-Sep-2025 12:38:58 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$show_news in /home/e1s/public_html/demo/badal/admin/views/settings/site.php on line 126
+[10-Sep-2025 12:46:52 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$response_code in /home/e1s/public_html/demo/badal/admin/views/orders/index.php on line 219
