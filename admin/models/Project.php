@@ -92,7 +92,7 @@ class Project extends ModelAdmin
         $this->db->bind(':name', $data['name']);
         $this->db->bind(':alias', $data['alias']);
         $this->db->bind(':description', $data['description']);
-        $this->db->bind(':image', str_replace('&#34;', '', $data['image']));
+        $this->db->bind(':image', $data['image']);
         $this->db->bind(':arrangement', $data['arrangement']);
         $this->db->bind(':kafara', $data['kafara']);
         $this->db->bind(':badal', $data['badal']);
@@ -123,7 +123,7 @@ class Project extends ModelAdmin
      */
     public function updateProject($data)
     {
-        $query = 'UPDATE projects SET name = :name, project_number= :project_number, beneficiary= :beneficiary, image = :image, description = :description, arrangement = :arrangement, kafara = :kafara, back_home = :back_home, meta_keywords = :meta_keywords, 
+        $query = 'UPDATE projects SET name = :name, project_number= :project_number, beneficiary= :beneficiary, description = :description, arrangement = :arrangement, kafara = :kafara, back_home = :back_home, meta_keywords = :meta_keywords, 
         alias = :alias, enable_cart = :enable_cart, gift = :gift, gift_card_title = :gift_card_title, mobile_confirmation = :mobile_confirmation, donation_type = :donation_type, target_price = :target_price,unit_price = :unit_price, 
         target_unit = :target_unit, payment_methods = :payment_methods, fake_target = :fake_target, min_price = :min_price, hidden = :hidden, thanks_message = :thanks_message, advertising_code = :advertising_code, 
         header_code = :header_code, whatsapp = :whatsapp, mobile = :mobile, end_date = :end_date, start_date = :start_date, category_id = :category_id, sms_msg = :sms_msg, badal_type = :badal_type,
@@ -131,6 +131,7 @@ class Project extends ModelAdmin
 
         (empty($data['background_image'])) ? null : $query .= ', background_image = :background_image';
         (empty($data['secondary_image'])) ? null : $query .= ', secondary_image = :secondary_image';
+        (empty($data['image'])) ? null : $query .= ', image = :image';
 
         $query .= ' WHERE project_id = :project_id';
         $this->db->query($query);
@@ -139,7 +140,6 @@ class Project extends ModelAdmin
         $this->db->bind(':name', $data['name']);
         $this->db->bind(':beneficiary', $data['beneficiary']);
         $this->db->bind(':project_number', $data['project_number']);
-        $this->db->bind(':image', $data['image']);
         $this->db->bind(':alias', $data['alias']);
         $this->db->bind(':description', $data['description']);
         $this->db->bind(':arrangement', $data['arrangement']);
@@ -176,6 +176,7 @@ class Project extends ModelAdmin
         $this->db->bind(':badal_type', @$data['badal_type']??NULL);
         empty($data['background_image']) ? null : $this->db->bind(':background_image', $data['background_image']);
         empty($data['secondary_image']) ? null : $this->db->bind(':secondary_image', $data['secondary_image']);
+        empty($data['image']) ? null : $this->db->bind(':image', $data['image']);
 
         // excute
         if ($this->db->excute()) {

@@ -77,6 +77,7 @@ class Projects extends ApiController
 
     public function albadal()
     {
+        dd("Adada");
         $setting = $this->BadalOrder->getSettingById(15);
         $setting = json_decode($setting->value);
         $types = [];

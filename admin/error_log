@@ -12454,3 +12454,27 @@ Stack trace:
 [10-Sep-2025 12:38:58 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$show_news in /home/e1s/public_html/demo/badal/admin/views/settings/site.php on line 123
 [10-Sep-2025 12:38:58 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$show_news in /home/e1s/public_html/demo/badal/admin/views/settings/site.php on line 126
 [10-Sep-2025 12:46:52 Asia/Kuwait] PHP Notice:  Undefined property: stdClass::$response_code in /home/e1s/public_html/demo/badal/admin/views/orders/index.php on line 219
+[10-Sep-2025 13:33:56 Asia/Kuwait] PHP Notice:  Undefined index: image in /home/e1s/public_html/demo/badal/admin/controllers/Albadal.php on line 397
+[10-Sep-2025 13:33:59 Asia/Kuwait] PHP Notice:  Undefined index: image in /home/e1s/public_html/demo/badal/admin/controllers/Albadal.php on line 397
+[10-Sep-2025 13:34:02 Asia/Kuwait] PHP Notice:  Undefined index: image in /home/e1s/public_html/demo/badal/admin/controllers/Albadal.php on line 397
+[10-Sep-2025 13:34:05 Asia/Kuwait] PHP Notice:  Undefined index: image in /home/e1s/public_html/demo/badal/admin/controllers/Albadal.php on line 397
+[10-Sep-2025 13:35:47 Asia/Kuwait] PHP Notice:  Undefined index: image in /home/e1s/public_html/demo/badal/admin/controllers/Albadal.php on line 397
+[11-Sep-2025 00:21:22 Asia/Kuwait] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/e1s/public_html/demo/badal/libraries/Database.php:97
+Stack trace:
+#0 /home/e1s/public_html/demo/badal/libraries/Database.php(97): PDOStatement->execute()
+#1 /home/e1s/public_html/demo/badal/admin/models/Project.php(182): Database->excute()
+#2 /home/e1s/public_html/demo/badal/admin/controllers/Albadal.php(544): Project->updateProject(Array)
+#3 /home/e1s/public_html/demo/badal/libraries/CoreAdmin.php(59): Albadal->edit(400)
+#4 /home/e1s/public_html/demo/badal/admin/index.php(20): CoreAdmin->__construct()
+#5 {main}
+  thrown in /home/e1s/public_html/demo/badal/libraries/Database.php on line 97
+[11-Sep-2025 00:23:28 Asia/Kuwait] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/e1s/public_html/demo/badal/libraries/Database.php:97
+Stack trace:
+#0 /home/e1s/public_html/demo/badal/libraries/Database.php(97): PDOStatement->execute()
+#1 /home/e1s/public_html/demo/badal/admin/models/Project.php(182): Database->excute()
+#2 /home/e1s/public_html/demo/badal/admin/controllers/Albadal.php(544): Project->updateProject(Array)
+#3 /home/e1s/public_html/demo/badal/libraries/CoreAdmin.php(59): Albadal->edit(400)
+#4 /home/e1s/public_html/demo/badal/admin/index.php(20): CoreAdmin->__construct()
+#5 {main}
+  thrown in /home/e1s/public_html/demo/badal/libraries/Database.php on line 97
+[11-Sep-2025 00:31:50 Asia/Kuwait] PHP Notice:  Undefined index: image in /home/e1s/public_html/demo/badal/admin/models/Project.php on line 95

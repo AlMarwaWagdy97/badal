@@ -445,6 +445,7 @@ class Project extends Model
                     WHERE `badal` = 1
                     AND `status` = 1
                     AND `badal_type` IN ( ' . implode(",", $types) . ')
+                    AND CURDATE() BETWEEN FROM_UNIXTIME(`start_date`) AND FROM_UNIXTIME(`end_date`);
         ';
         $this->db->query($query);
         return ($this->db->resultSet());
