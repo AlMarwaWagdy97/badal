@@ -487,7 +487,9 @@ class Project extends Model
             FROM `projects`
             WHERE `status` = 1 
             AND `badal` = 1
-            AND `badal_type` = "umrah"';
+            AND `badal_type` = "umrah"
+            AND CURDATE() BETWEEN FROM_UNIXTIME(`start_date`) AND FROM_UNIXTIME(`end_date`);
+            ';
 
         $this->db->query($query);
         //bind values
@@ -510,7 +512,9 @@ class Project extends Model
             FROM `projects`
             WHERE `status` = 1 
             AND `badal` = 1
-            AND `badal_type` = "hajj"';
+            AND `badal_type` = "hajj"
+            AND CURDATE() BETWEEN FROM_UNIXTIME(`start_date`) AND FROM_UNIXTIME(`end_date`);
+            ';
 
         $this->db->query($query);
         //bind values

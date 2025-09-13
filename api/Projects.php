@@ -122,15 +122,15 @@ class Projects extends ApiController
     public function umrah()
     {
         if ($umrah = $this->model->getUmrah()) {
-            foreach ($umrah as $project) {
-                $galery = str_replace('&quot;', '', trim(trim($project->image, ']'), '['));
-                $galery = str_replace('&#34;', '', trim(trim($galery, ']'), '['));
-                $galery = MEDIAURL . '/' . $galery;
-                $galery = str_replace(',', ',' . MEDIAURL . '/', trim($galery));
-                $project->image = array_filter(explode(',', $galery), 'strlen');
-                $projects[] = $project;
-            }
-            $this->response($projects);
+            // foreach ($umrah as $project) {
+            //     $galery = str_replace('&quot;', '', trim(trim($project->image, ']'), '['));
+            //     $galery = str_replace('&#34;', '', trim(trim($galery, ']'), '['));
+            //     $galery = MEDIAURL . '/' . $galery;
+            //     $galery = str_replace(',', ',' . MEDIAURL . '/', trim($galery));
+            //     $project->image = array_filter(explode(',', $galery), 'strlen');
+            //     $projects[] = $project;
+            // }
+            $this->response($umrah);
         } else {
             $this->error('Not found');
         }
@@ -144,15 +144,15 @@ class Projects extends ApiController
     public function hajj()
     {
         if ($hajj = $this->model->getHajj()) {
-            foreach ($hajj as $project) {
-                $galery = str_replace('&quot;', '', trim(trim($project->image, ']'), '['));
-                $galery = str_replace('&#34;', '', trim(trim($galery, ']'), '['));
-                $galery = MEDIAURL . '/' . $galery;
-                $galery = str_replace(',', ',' . MEDIAURL . '/', trim($galery));
-                $project->image = array_filter(explode(',', $galery), 'strlen');
-                $projects[] = $project;
-            }
-            $this->response($projects);
+            // foreach ($hajj as $project) {
+            //     $galery = str_replace('&quot;', '', trim(trim($project->image, ']'), '['));
+            //     $galery = str_replace('&#34;', '', trim(trim($galery, ']'), '['));
+            //     $galery = MEDIAURL . '/' . $galery;
+            //     $galery = str_replace(',', ',' . MEDIAURL . '/', trim($galery));
+            //     $project->image = array_filter(explode(',', $galery), 'strlen');
+            //     $projects[] = $project;
+            // }
+            $this->response($hajj);
         } else {
             $this->error('Not found');
         }
