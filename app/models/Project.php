@@ -375,9 +375,9 @@ class Project extends Model
     public function projectsByCategory($id)
     {
         $query = "SELECT pj.*, 
-            CONCAT(' ". MEDIAURL ."  '/, `pj`.`secondary_image` ) AS secondary_image, 
-            CONCAT(' ". MEDIAURL ."  '/, `pj`.`background_image` ) AS background_image, 
-            CONCAT(' ". MEDIAURL ."  '/, `pj`.`image` ) AS image, 
+            CONCAT(' ". MEDIAURL ."/', `pj`.`secondary_image` ) AS secondary_image, 
+            CONCAT(' ". MEDIAURL ."/', `pj`.`background_image` ) AS background_image, 
+            CONCAT(' ". MEDIAURL ."/', `pj`.`image` ) AS image, 
             (SELECT SUM(total) FROM donations WHERE pj.project_id = donations.project_id AND status = 1 LIMIT 1 ) as total
         FROM `projects` pj , project_categories cat
         WHERE (cat.kafara= 'app' OR cat.kafara= 'both') AND (pj.kafara= 'app' OR pj.kafara= 'both') AND pj.status =1 AND pj.category_id = :category_id 
