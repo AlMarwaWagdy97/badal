@@ -482,6 +482,7 @@ class Project extends Model
         $query = 'SELECT *,
                     CONCAT("' . MEDIAURL .  '/", `secondary_image` ) AS secondary_image, 
                     CONCAT("' . MEDIAURL .  '/", `background_image` ) AS background_image, 
+                    CONCAT("' . MEDIAURL .  '/", `background_image` ) AS image, 
                     from_unixtime(`start_date`) AS start_date , 
                     from_unixtime(`end_date`) AS end_date
             FROM `projects`
@@ -507,6 +508,7 @@ class Project extends Model
         $query = 'SELECT *,
                 CONCAT("' . MEDIAURL .  '/", `secondary_image` ) AS secondary_image, 
                 CONCAT("' . MEDIAURL .  '/", `background_image` ) AS background_image, 
+                CONCAT("' . MEDIAURL .  '/", `background_image` ) AS image, 
                 from_unixtime(`start_date`) AS start_date , 
                 from_unixtime(`end_date`) AS end_date
             FROM `projects`
