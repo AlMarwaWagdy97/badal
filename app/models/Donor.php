@@ -151,7 +151,7 @@ class Donor extends Model
         $query = 'SELECT * FROM `donors` WHERE mobile = :mobile AND `status` != 2 ';
         $this->db->query($query);
         $this->db->bind(':mobile', $mobile);
-        return$this->db->getSingle();
+        return $this->db->single();
     }
 
 

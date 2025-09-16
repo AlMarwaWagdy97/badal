@@ -125,7 +125,7 @@ class Donors extends ApiController
             $_POST['email'] = '';
         }
         //get all user data by mobile number
-        if ($donor = $this->model->getdonorByMobile($fields['mobile'])) {
+        if ($donor = $this->model->getdonorByMobileCustom($fields['mobile'])) {
             //update email address
             return $this->error('هذا الرقم مسجل من قبل');
 
