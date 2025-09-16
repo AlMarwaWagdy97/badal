@@ -189,7 +189,6 @@ class Donor extends Model
         $this->db->bind(':token', $data['token']);
         $this->db->bind(':otp', $data['otp']);
         $this->db->bind(':expiration', $data['expiration']);
-        $this->db->bind(':identity', $data['identity']);
         // excute
         if ($this->db->excute()) {
             return true;
