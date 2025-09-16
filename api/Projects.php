@@ -42,15 +42,15 @@ class Projects extends ApiController
     {
         $id = $this->required('category_id');
         if ($response = $this->model->projectsByCategory($id)) {
-            $projects = [];
-            foreach ($response as $project) {
-                $galery = str_replace('&quot;', '', trim(trim($project->image, ']'), '['));
-                $galery = str_replace('&#34;', '', trim(trim($galery, ']'), '['));
-                $project->image = array_filter(explode(',', $galery), 'strlen');
+            // $projects = [];
+            // foreach ($response as $project) {
+            //     $galery = str_replace('&quot;', '', trim(trim($project->image, ']'), '['));
+            //     $galery = str_replace('&#34;', '', trim(trim($galery, ']'), '['));
+            //     $project->image = array_filter(explode(',', $galery), 'strlen');
 
-                $projects[] = $project;
-            }
-            $this->response($projects);
+            //     $projects[] = $project;
+            // }
+            $this->response($response);
         } else {
             $this->error('Not found');
         }
