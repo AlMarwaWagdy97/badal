@@ -413,7 +413,7 @@ class Orders extends ApiController
         $this->CompleRitesNotify($sendData, $messaging);
 
         // send messages
-        $messaging->sendNotfication($sendData, 'complete_order');
+        // $messaging->sendNotfication($sendData, 'complete_order');
         $this->response($Badalorders);
     }
 
@@ -499,7 +499,7 @@ class Orders extends ApiController
             'notify'                => "تم بدء طلبك ",
         ];
         // send messages
-        $messaging->sendNotfication($sendData, 'start_order');
+        // $messaging->sendNotfication($sendData, 'start_order');
 
         $this->response($data['rituals']);
     }

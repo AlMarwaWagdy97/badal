@@ -41,20 +41,20 @@ class Reviews extends ApiController
         if($checkReviewExist){  $this->error('Review is already exist');}
         $review = $this->model->addReview($data);
         if($review == true){
-            $substitute =  $this->model->getSubstitute($data['badal_id']);
-            // send messages  (email - sms - whatsapp)
-            $messaging = $this->model('Messaging');
-            $sendData = [
-                'mailto'                => $substitute->full_name,
-                'mobile'                => $substitute->phone,
-                'identifier'            => $substitute->order_identifier,
-                'total'                 => $substitute->total,
-                'project'               => $substitute->projects,
-                'donor'                 => $substitute->donor_name,
-                'rate'                  => $data['rate'],
-            ];
-            // send messages
-            $messaging->sendNotfication($sendData, 'review');
+            // $substitute =  $this->model->getSubstitute($data['badal_id']);
+            // // send messages  (email - sms - whatsapp)
+            // $messaging = $this->model('Messaging');
+            // $sendData = [
+            //     'mailto'                => $substitute->full_name,
+            //     'mobile'                => $substitute->phone,
+            //     'identifier'            => $substitute->order_identifier,
+            //     'total'                 => $substitute->total,
+            //     'project'               => $substitute->projects,
+            //     'donor'                 => $substitute->donor_name,
+            //     'rate'                  => $data['rate'],
+            // ];
+            // // send messages
+            // $messaging->sendNotfication($sendData, 'review');
             $this->response("Review sent successfully");
         } 
         else {

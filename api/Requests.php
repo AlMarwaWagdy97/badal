@@ -101,7 +101,7 @@ class Requests extends ApiController
                 'notify'                => "يرغب في تنفيذ طلبكم",
             ];
             // send messages
-            $this->messaging->sendNotfication($sendData, 'newRequest');
+            // $this->messaging->sendNotfication($sendData, 'newRequest');
             //retrive all data
             $this->response("Request added successfully");
         } else {
@@ -153,24 +153,24 @@ class Requests extends ApiController
             
             $this->updateQueueNotify($order);
             // cancel others request
-            $otherRequests = $this->model->getOtherRequest($request->badal_id); // first select requests
-            if($otherRequests){
-                foreach($otherRequests as $req){
-                    $otherRequests = $this->model->cancelRequest($req->request_id); // cancel other request
-                    // send notfications -----------------------
-                    $substituteCancel = $this->model->getSubstituteByID($req->substitute_id); //get cancel substitute 
-                    // send messages  (email - sms - whatsapp)
-                    $sendData = [
-                        'mailto' => $substituteCancel->email,
-                        'mobile' => $substituteCancel->phone,
-                        'identifier' => $order->order_identifier,
-                        'total' => $order->total,
-                        'project' => $order->projects,
-                        'donor' => $substituteCancel->full_name,
-                    ];
-                    $this->messaging->sendNotfication($sendData, 'cancelRequest');
-                }
-            }
+            // $otherRequests = $this->model->getOtherRequest($request->badal_id); // first select requests
+            // if($otherRequests){
+            //     foreach($otherRequests as $req){
+            //         $otherRequests = $this->model->cancelRequest($req->request_id); // cancel other request
+            //         // send notfications -----------------------
+            //         $substituteCancel = $this->model->getSubstituteByID($req->substitute_id); //get cancel substitute 
+            //         // send messages  (email - sms - whatsapp)
+            //         $sendData = [
+            //             'mailto' => $substituteCancel->email,
+            //             'mobile' => $substituteCancel->phone,
+            //             'identifier' => $order->order_identifier,
+            //             'total' => $order->total,
+            //             'project' => $order->projects,
+            //             'donor' => $substituteCancel->full_name,
+            //         ];
+            //         $this->messaging->sendNotfication($sendData, 'cancelRequest');
+            //     }
+            // }
             // End ---------------------------
             if ($request == true) $this->response($request, 200, 'selected Sucessfully');
             else {
