@@ -142,6 +142,20 @@ class Donor extends Model
     }
 
     /**
+     * Find donor by email
+     * @param string $email
+     * @return boolean
+     */
+    public function getdonorByMobileCustom($mobile)
+    {
+        $query = 'SELECT * FROM `donors` WHERE mobile = :mobile AND `status` != 2 ';
+        $this->db->query($query);
+        $this->db->bind(':mobile', $mobile);
+        return$this->db->getSingle();
+    }
+
+
+    /**
      * get Donations By Mobail
      *
      * @param [string] $mobile
@@ -175,6 +189,7 @@ class Donor extends Model
         $this->db->bind(':token', $data['token']);
         $this->db->bind(':otp', $data['otp']);
         $this->db->bind(':expiration', $data['expiration']);
+        $this->db->bind(':identity', $data['identity']);
         // excute
         if ($this->db->excute()) {
             return true;
