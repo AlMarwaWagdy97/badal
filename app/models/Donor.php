@@ -169,13 +169,12 @@ class Donor extends Model
      */
     public function updateOTP($data)
     {
-        $query = 'UPDATE donors SET otp = :otp, token = :token, expiration = :expiration, `identity` = :identity WHERE donor_id = :donor_id';
+        $query = 'UPDATE donors SET otp = :otp, token = :token, expiration = :expiration WHERE donor_id = :donor_id';
         $this->db->query($query);
         $this->db->bind(':donor_id', $data['donor_id']);
         $this->db->bind(':token', $data['token']);
         $this->db->bind(':otp', $data['otp']);
         $this->db->bind(':expiration', $data['expiration']);
-        $this->db->bind(':identity', $data['identity']);
         // excute
         if ($this->db->excute()) {
             return true;
