@@ -865,80 +865,80 @@ require ADMINROOT . '/views/inc/header.php';
                                             <!-- </div> -->
 
                                             <!-- review ------------------------------------------------------------------------------- -->
-                                            <!-- <div class="x_panel tile ">
-                                <div class="select-request">
-                                    <div class="card-header" data-toggle="collapse" data-target="#collapseReviewr" aria-expanded="true" aria-controls="collapseReviewr">
-                                        <span>رساله لتقيم المتقدم ( ترسل للمتقدم ) </span>
-                                    </div>
-                                    <div id="collapseReviewr" class="collapse card-body" aria-labelledby="headingOne">
-                                        <div class="email-container">
-                                            <h3> البريد الاكتروني</h3>
-                                            <div class="form-group">
-                                                <label class="control-label">تفعيل الارسال :</label>
-                                                <div class="radio">
-                                                    <label>
-                                                        <input type="radio" class="flat" <?php echo (@$data['value']->review_enabled == 1) ? 'checked' : ''; ?> value="1" name="value[review_enabled]"> مفعلة
-                                                    </label>
-                                                    <label>
-                                                        <input type="radio" class="flat" <?php echo (@$data['value']->review_enabled == '0') ? 'checked' : ''; ?> value="0" name="value[review_enabled]"> معلقة
-                                                    </label>
+                                            <div class="x_panel tile ">
+                                                <div class="select-request">
+                                                    <div class="card-header" data-toggle="collapse" data-target="#collapseReviewr" aria-expanded="true" aria-controls="collapseReviewr">
+                                                        <span>رساله لتقيم المتقدم ( ترسل للمتقدم ) </span>
+                                                    </div>
+                                                    <div id="collapseReviewr" class="collapse card-body" aria-labelledby="headingOne">
+                                                        <div class="email-container">
+                                                            <h3> البريد الاكتروني</h3>
+                                                            <div class="form-group">
+                                                                <label class="control-label">تفعيل الارسال :</label>
+                                                                <div class="radio">
+                                                                    <label>
+                                                                        <input type="radio" class="flat" <?php echo (@$data['value']->review_enabled == 1) ? 'checked' : ''; ?> value="1" name="value[review_enabled]"> مفعلة
+                                                                    </label>
+                                                                    <label>
+                                                                        <input type="radio" class="flat" <?php echo (@$data['value']->review_enabled == '0') ? 'checked' : ''; ?> value="0" name="value[review_enabled]"> معلقة
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="control-label" for="inform_subject">عنوان الرسالة : </label>
+                                                                <div class="has-feedback">
+                                                                    <input type="text" id="inform_subject" class="form-control" name="value[review_subject]" placeholder="عنوان الرسالة" value="<?php echo @$data['value']->review_subject; ?>">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <br>
+                                                                <button type="button" class="btn btn-primary" onclick="$('#review_msg').val($('#review_msg').val() +'[[name]]') ;return false;" value="">ارفاق اسم المتطوع </button>
+                                                                <button type="button" class="btn btn-primary" onclick="$('#review_msg').val($('#review_msg').val() +'[[identifier]]') ;return false;" value="">ارفاق رقم الطلب </button>
+                                                                <button type="button" class="btn btn-primary" onclick="$('#review_msg').val($('#review_msg').val() +'[[total]]') ;return false;" value="">ارفاق المبلغ </button>
+                                                                <button type="button" class="btn btn-primary" onclick="$('#review_msg').val($('#review_msg').val() +'[[project]]') ;return false;" value="">ارفاق اسم المشروع </button>
+                                                                <button type="button" class="btn btn-primary" onclick="$('#review_msg').val($('#review_msg').val() +'[[rate]]') ;return false;" value=""> التقيم </button>
+                                                                <small class="red ">سيتم استبدال المتغير الخاص بالقيمة </small>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="control-label">المحتوي : </label>
+                                                                <div class="row">
+                                                                    <textarea id="review_msg" name="value[review_msg]" rows="6" class="form-control"><?php echo (@$data['value']->review_msg); ?></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="sms">
+                                                            <h3> رساله ال SMS</h3>
+                                                            <div class="form-group">
+                                                                <label class="control-label">تفعيل الارسال :</label>
+                                                                <div class="radio">
+                                                                    <label>
+                                                                        <input type="radio" class="flat" <?php echo (@$data['value']->review_sms == 1) ? 'checked' : ''; ?> value="1" name="value[review_sms]"> مفعلة
+                                                                    </label>
+                                                                    <label>
+                                                                        <input type="radio" class="flat" <?php echo (@$data['value']->review_sms == '0') ? 'checked' : ''; ?> value="0" name="value[review_sms]"> معلقة
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <br>
+                                                                <button type="button" class="btn btn-primary" onclick="$('#review_sms_msg').val($('#review_sms_msg').val() +'[[name]]') ;return false;" value="">ارفاق اسم المتطوع </button>
+                                                                <button type="button" class="btn btn-primary" onclick="$('#review_sms_msg').val($('#review_sms_msg').val() +'[[identifier]]') ;return false;" value="">ارفاق رقم الطلب </button>
+                                                                <button type="button" class="btn btn-primary" onclick="$('#review_sms_msg').val($('#review_sms_msg').val() +'[[total]]') ;return false;" value="">ارفاق المبلغ </button>
+                                                                <button type="button" class="btn btn-primary" onclick="$('#review_sms_msg').val($('#review_sms_msg').val() +'[[project]]') ;return false;" value="">ارفاق اسم المشروع </button>
+                                                                <button type="button" class="btn btn-primary" onclick="$('#review_sms_msg').val($('#review_sms_msg').val() +'[[rate]]') ;return false;" value=""> التقيم </button>
+                                                                <small class="red ">سيتم استبدال المتغير الخاص بالقيمة </small>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="control-label">المحتوي : </label>
+                                                                <div class="row">
+                                                                    <textarea id="review_sms_msg" name="value[review_sms_msg]" rows="6" class="form-control"><?php echo (@$data['value']->review_sms_msg); ?></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label" for="inform_subject">عنوان الرسالة : </label>
-                                                <div class="has-feedback">
-                                                    <input type="text" id="inform_subject" class="form-control" name="value[review_subject]" placeholder="عنوان الرسالة" value="<?php echo @$data['value']->review_subject; ?>">
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
                                                 <br>
-                                                <button type="button" class="btn btn-primary" onclick="$('#review_msg').val($('#review_msg').val() +'[[name]]') ;return false;" value="">ارفاق اسم المتطوع  </button>
-                                                <button type="button" class="btn btn-primary" onclick="$('#review_msg').val($('#review_msg').val() +'[[identifier]]') ;return false;" value="">ارفاق رقم الطلب </button>
-                                                <button type="button" class="btn btn-primary" onclick="$('#review_msg').val($('#review_msg').val() +'[[total]]') ;return false;" value="">ارفاق المبلغ </button>
-                                                <button type="button" class="btn btn-primary" onclick="$('#review_msg').val($('#review_msg').val() +'[[project]]') ;return false;" value="">ارفاق اسم المشروع </button>
-                                                <button type="button" class="btn btn-primary" onclick="$('#review_msg').val($('#review_msg').val() +'[[rate]]') ;return false;" value=""> التقيم </button>
-                                                <small class="red ">سيتم استبدال المتغير الخاص بالقيمة </small>
                                             </div>
-                                            <div class="form-group">
-                                                <label class="control-label">المحتوي : </label>
-                                                <div class="row">
-                                                    <textarea id="review_msg" name="value[review_msg]" rows="6" class="form-control"><?php echo (@$data['value']->review_msg); ?></textarea>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="sms">
-                                            <h3> رساله ال SMS</h3>
-                                            <div class="form-group">
-                                                <label class="control-label">تفعيل الارسال :</label>
-                                                <div class="radio">
-                                                    <label>
-                                                        <input type="radio" class="flat" <?php echo (@$data['value']->review_sms == 1) ? 'checked' : ''; ?> value="1" name="value[review_sms]"> مفعلة
-                                                    </label>
-                                                    <label>
-                                                        <input type="radio" class="flat" <?php echo (@$data['value']->review_sms == '0') ? 'checked' : ''; ?> value="0" name="value[review_sms]"> معلقة
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <br>
-                                                <button type="button" class="btn btn-primary" onclick="$('#review_sms_msg').val($('#review_sms_msg').val() +'[[name]]') ;return false;" value="">ارفاق اسم المتطوع  </button>
-                                                <button type="button" class="btn btn-primary" onclick="$('#review_sms_msg').val($('#review_sms_msg').val() +'[[identifier]]') ;return false;" value="">ارفاق رقم الطلب </button>
-                                                <button type="button" class="btn btn-primary" onclick="$('#review_sms_msg').val($('#review_sms_msg').val() +'[[total]]') ;return false;" value="">ارفاق المبلغ </button>
-                                                <button type="button" class="btn btn-primary" onclick="$('#review_sms_msg').val($('#review_sms_msg').val() +'[[project]]') ;return false;" value="">ارفاق اسم المشروع </button>
-                                                <button type="button" class="btn btn-primary" onclick="$('#review_sms_msg').val($('#review_sms_msg').val() +'[[rate]]') ;return false;" value=""> التقيم </button>
-                                                <small class="red ">سيتم استبدال المتغير الخاص بالقيمة </small>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label">المحتوي : </label>
-                                                <div class="row">
-                                                    <textarea id="review_sms_msg" name="value[review_sms_msg]" rows="6" class="form-control"><?php echo (@$data['value']->review_sms_msg); ?></textarea>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <br>
-                            </div> -->
 
                                         </div>
                                     </div>
