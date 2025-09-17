@@ -34,21 +34,41 @@ class Substitute extends ModelAdmin
      */
     public function getSubstitutes($cond = '', $bind = '', $limit = '', $bindLimit = 50)
     {
-        $query = 'SELECT *, 
-        (select  COUNT(*) 
-            FROM `badal_offers` 
-            WHERE `badal_offers`.substitute_id = `substitutes`.substitute_id ) AS offers ,
-            (select  COUNT(*) 
-            FROM `badal_orders` 
-            WHERE `badal_orders`.substitute_id = `substitutes`.substitute_id ) AS orders ,
-        (SELECT  round(AVG(`badal_review`.rate) * 2 , 0) / 2
-                        FROM `badal_review`, `badal_orders` 
-                        WHERE `badal_orders`.`substitute_id` = `substitutes`.`substitute_id`
-                        AND `badal_review`.`badal_id` = `badal_orders`.`badal_id`
-                    ) AS rate 
-        FROM substitutes ' . $cond . ' ORDER BY substitutes.create_date DESC ';
+        
+        // $query = 'SELECT *, 
+        // (select  COUNT(*) 
+        //     FROM `badal_offers` 
+        //     WHERE `badal_offers`.substitute_id = `substitutes`.substitute_id ) AS offers ,
+        //     (select  COUNT(*) 
+        //     FROM `orders` , badal_orders
+        //     WHERE `badal_orders`.substitute_id = `substitutes`.substitute_id
+        //     AND  `badal_orders`.order_id = `orders`.order_id) AS orders ,
+        // (SELECT  round(AVG(`badal_review`.rate) * 2 , 0) / 2
+        //                 FROM `badal_review`, `badal_orders` 
+        //                 WHERE `badal_orders`.`substitute_id` = `substitutes`.`substitute_id`
+        //                 AND `badal_review`.`badal_id` = `badal_orders`.`badal_id`
+        //             ) AS rate 
+        // FROM substitutes ' . $cond . ' ORDER BY substitutes.create_date DESC ';
+
+        $query = 'SELECT
+            s.*,
+            COUNT(DISTINCT ba.offer_id) AS offers, 
+            COUNT(DISTINCT bo.order_id) AS orders,
+            ROUND(AVG(br.rate) * 2, 0) / 2 AS rate
+        FROM substitutes s
+        LEFT JOIN badal_offers ba ON s.substitute_id = ba.substitute_id
+        LEFT JOIN  badal_orders bo ON s.substitute_id = bo.substitute_id AND bo.status = 1
+        LEFT JOIN orders o ON o.order_id = bo.order_id AND o.status = 1
+        LEFT JOIN  badal_review br ON bo.badal_id = br.badal_id
+        ' . $cond . ' 
+        GROUP BY  s.substitute_id
+        ORDER BY s.create_date DESC;';
+
         return $this->getAll($query, $bind, $limit, $bindLimit);
     }
+
+
+        
 
     /**
      * get count of all records
