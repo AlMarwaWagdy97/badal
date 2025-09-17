@@ -64,6 +64,8 @@ class Substitute extends ModelAdmin
         GROUP BY  s.substitute_id
         ORDER BY s.create_date DESC;';
 
+        dd($query);
+
         return $this->getAll($query, $bind, $limit, $bindLimit);
     }
 
