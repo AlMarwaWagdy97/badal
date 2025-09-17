@@ -34,7 +34,8 @@ class Offers extends ApiController
         $offer = $this->model->addOffer($data);
         if(!$offer) $this->error("There is a problem .. Please try again"); 
         // send messages  (email - sms - whatsapp)
-        $offerData = $this->model->getOfferByIdWithRelations($offer); // get offer
+        $offerData = $this->model->getOfferByIdWithRelationsNotiftAdd($offer); // get offer
+        
         $donors = $this->model->getAllDonors();   // get all donors to notify
         $messaging = $this->model('Messaging');
         foreach($donors as $donor){

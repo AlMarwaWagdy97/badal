@@ -146,6 +146,17 @@ class Offer extends Model
     }
 
     /**
+     * get Request by id 
+     * @param Array $id
+     */
+    public function getOfferByIdWithRelationsNotiftAdd($id)
+    {
+        $query = 'SELECT `badal_offers`.*, `projects`.name AS project_name, `substitutes`.full_name FROM  `badal_offers`, `projects`, `substitutes`  WHERE `badal_offers`.`offer_id` = ' . $id . '   AND  `badal_offers`.status NOT IN (2)  ';
+        $this->db->query($query);
+        return $this->db->single();
+    }
+
+    /**
      * get All Donors 
      */
     public function getAllDonors()

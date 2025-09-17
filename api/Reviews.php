@@ -43,7 +43,6 @@ class Reviews extends ApiController
         if($review == true){
             $substitute =  $this->model->getSubstitute($data['badal_id']);
             // send messages  (email - sms - whatsapp)
-            dd($substitute);
             $messaging = $this->model('Messaging');
             $sendData = [
                 'mailto'                => $substitute->full_name,
