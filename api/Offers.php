@@ -34,22 +34,22 @@ class Offers extends ApiController
         $offer = $this->model->addOffer($data);
         if(!$offer) $this->error("There is a problem .. Please try again"); 
         // send messages  (email - sms - whatsapp)
-        // $offerData = $this->model->getOfferByIdWithRelations($offer); // get offer
-        // $donors = $this->model->getAllDonors();   // get all donors to notify
-        // $messaging = $this->model('Messaging');
-        // foreach($donors as $donor){
-        //     $sendData = [
-        //         'mailto'            => $donor->email,
-        //         'mobile'            => $donor->mobile,
-        //         'total'             => $offerData->amount,
-        //         'donor'             => $donor->full_name,
-        //         'identifier'        => $offerData->project_name, //name of project 
-        //         'project'           => $offerData->project_name,
-        //         'substitute_name'   => $offerData->full_name,
-        //         'substitute_start'  => $offerData->start_at,
-        //     ];
-        //     $messaging->sendNotfication($sendData, 'newOffer');
-        // }
+        $offerData = $this->model->getOfferByIdWithRelations($offer); // get offer
+        $donors = $this->model->getAllDonors();   // get all donors to notify
+        $messaging = $this->model('Messaging');
+        foreach($donors as $donor){
+            $sendData = [
+                'mailto'            => $donor->email,
+                'mobile'            => $donor->mobile,
+                'total'             => $offerData->amount,
+                'donor'             => $donor->full_name,
+                'identifier'        => $offerData->project_name, //name of project 
+                'project'           => $offerData->project_name,
+                'substitute_name'   => $offerData->full_name,
+                'substitute_start'  => $offerData->start_at,
+            ];
+            $messaging->sendNotfication($sendData, 'newOffer');
+        }
         $this->response("Offer sent successfully");
     }
 
