@@ -52,6 +52,8 @@ class Reviews extends ApiController
                 'project'               => $substitute->projects,
                 'donor'                 => $substitute->donor_name,
                 'rate'                  => $data['rate'],
+                'notify_id'             => $substitute->donor_id,
+                'notify'                => "تم تقيم طلبك",
             ];
             // send messages
             $messaging->sendNotfication($sendData, 'review');
