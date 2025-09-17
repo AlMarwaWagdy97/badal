@@ -39,7 +39,7 @@ class Review extends Model
      */
     public function getSubstitute($badal_id){
         $this->db->query('SELECT
-        `badal_orders`.substitute_id , `substitutes`.*,
+        `badal_orders`.substitute_id , `substitutes`.*, `orders`.donor_id,
         `orders`.order_id,`orders`.order_identifier,`orders`.total,`orders`.projects,`orders`.donor_name
         FROM  `badal_orders`, `orders`, `substitutes` 
         WHERE `badal_orders`.badal_id = ' . $badal_id.'
