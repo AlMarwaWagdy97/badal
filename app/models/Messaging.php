@@ -259,6 +259,7 @@ class Messaging extends ModelAdmin
         $setting  = json_decode($this->getSettings('badal_notifications')->value);
         $optionSmsSetting = $data['type'] . '_sms';
         $sms_msgSetting = $data['type'] . '_sms_msg';
+        dd($sms_msgSetting);
         require_once APPROOT . '/app/models/Notification.php';
         $model = new Notification();
         $orderInfo =  $model->getOrderInfo( $data['identifier']);
