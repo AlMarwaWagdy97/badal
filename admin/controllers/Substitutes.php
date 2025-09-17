@@ -28,7 +28,7 @@ class Substitutes extends ControllerAdmin
     public function index($current = '', $perpage = 50)
     {
         // get substitutes
-        $cond = 'WHERE status <> 2 ';
+        $cond = 'WHERE s.status <> 2 ';
         $bind = [];
         //check user action if the form has submitted
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
