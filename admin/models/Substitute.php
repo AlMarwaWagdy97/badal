@@ -60,7 +60,7 @@ class Substitute extends ModelAdmin
         LEFT JOIN  badal_orders bo ON s.substitute_id = bo.substitute_id AND bo.status = 1
         LEFT JOIN orders o ON o.order_id = bo.order_id AND o.status = 1
         LEFT JOIN  badal_review br ON bo.badal_id = br.badal_id
-        ' . $cond . ' 
+        WHERE s.status <> 2 
         GROUP BY  s.substitute_id
         ORDER BY s.create_date DESC;';
 
