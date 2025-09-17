@@ -395,7 +395,6 @@ class Model
             flash('msg', 'هناك خطأ ما بوابة الارسال غير مفعلة', 'alert alert-danger');
             redirect('donations');
         }
-        dd($sms);
         return sendSMS($sms->sms_username, $sms->sms_password, $msg, $to, $sms->sender_name, $sms->gateurl, $sms->gateway);
     }
 

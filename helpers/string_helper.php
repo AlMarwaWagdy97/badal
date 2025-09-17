@@ -114,6 +114,8 @@ function sendSMS($username, $password, $messageContent, $mobileNumber, $senderna
     }
     // excution    
     $respond = curl_exec($ch);
+    dd($respond);
+
     // close connection    
     curl_close($ch);
     //using the return as a PHP array
