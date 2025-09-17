@@ -44,9 +44,9 @@ require ADMINROOT . '/views/inc/header.php';
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="control-label" for="settingTitle">بريد استقبال تنبيهات التبرعات : </label>
+                    <label class="control-label" for="settingTitle">بريد استقبال تنبيهات الطلبات : </label>
                     <div class="has-feedback">
-                        <input type="text" id="settingTitle" class="form-control" name="value[donation_email]" placeholder="بريد استقبال تنبيهات التبرعات" value="<?php echo $data['value']->donation_email; ?>">
+                        <input type="text" id="settingTitle" class="form-control" name="value[donation_email]" placeholder="بريد استقبال تنبيهات الطلبات" value="<?php echo $data['value']->donation_email; ?>">
                     </div>
                 </div>
                 <div class="form-group col-xs-12 ">

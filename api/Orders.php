@@ -262,8 +262,8 @@ class Orders extends ApiController
             'total' => $orderdata['total'],
             'project' => $orderdata['projects'],
             'donor' => $orderdata['donor_name'],
-            'subject' => 'تم تسجيل تبرع جديد ',
-            'msg' => "تم تسجيل تبرع جديد بمشروع : {$orderdata['projects']} <br/> بقيمة : " . $orderdata['total'],
+            'subject' => 'تم تسجيل طلب جديد ',
+            'msg' => "تم تسجيل طلب جديد بمشروع : {$orderdata['projects']} <br/> بقيمة : " . $orderdata['total'],
 
         ];
         //send Email and SMS confirmation

@@ -28,7 +28,7 @@ require ADMINROOT . '/views/inc/header.php';
     <?php flash('donation_msg');?>
     <div class="page-title">
         <div class="title_right">
-            <h3><?php echo $data['page_title']; ?> <small>التعديل علي التبرع </small></h3>
+            <h3><?php echo $data['page_title']; ?> <small>التعديل علي الطلب </small></h3>
         </div>
         <div class="title_left">
             <a href="<?php echo ADMINURL; ?>/donations" class="btn btn-success pull-left">عودة <i class="fa fa-reply"></i></a>
@@ -43,13 +43,13 @@ require ADMINROOT . '/views/inc/header.php';
 
             <div class="col-sm-12 col-xs-12">
                 <div class="form-group">
-                    <label class="control-label" for="pageTitle">معرف التبرع : </label>
+                    <label class="control-label" for="pageTitle">معرف الطلب : </label>
                     <div class="has-feedback">
                         <input type="text" class="form-control" name="donation_identifier" readonly value="<?php echo $data['donation_identifier']; ?>">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="control-label" for="pageTitle">قيمة التبرع : </label>
+                    <label class="control-label" for="pageTitle">قيمة الطلب : </label>
                     <div class="has-feedback">
                         <input type="number" class="form-control" name="amount" required value="<?php echo $data['amount']; ?>">
                     </div>
@@ -70,10 +70,10 @@ require ADMINROOT . '/views/inc/header.php';
                     <span class="help-block"><?php echo $data['project_id_error']; ?></span>
                 </div>
                 <div class="form-group <?php echo (!empty($data['payment_method_id_error'])) ? 'has-error' : ''; ?>">
-                    <label class="control-label">وسيلة التبرع</label>
+                    <label class="control-label">وسيلة الطلب</label>
                     <div class="has-feedback">
                         <select name="payment_method_id" class="form-control">
-                            <option value="">اختار وسيلة التبرع </option>
+                            <option value="">اختار وسيلة الطلب </option>
                             <?php foreach ($data['paymentMethodsList'] as $payment_method): ?>
                                 <option value="<?php echo $payment_method->payment_id; ?>" <?php echo ($payment_method->payment_id == $data['payment_method_id']) ? " selected " : ''; ?>>
                                     <?php echo $payment_method->title; ?>
@@ -95,10 +95,10 @@ require ADMINROOT . '/views/inc/header.php';
                     </select>
                 </div>
                 <div class="">
-                    <label class="control-label" for="imageUpload">اثبات التبرع : </label>
+                    <label class="control-label" for="imageUpload">اثبات الطلب : </label>
                     
                     <div class="form-group <?php echo (empty($data['banktransferproof_error'])) ?: 'has-error'; ?>">
-                        <label class="control-label" for="imageUpload"> اثبات التبرع : </label>
+                        <label class="control-label" for="imageUpload"> اثبات الطلب : </label>
                         <div class="has-feedback input-group">
                             <span class="input-group-btn">
                                 <span class="btn btn-dark" onclick="$(this).parent().find('input[type=file]').click();">اختار الملف</span>
@@ -111,7 +111,7 @@ require ADMINROOT . '/views/inc/header.php';
                 </div>
 
                 <div class="form-group col-xs-12 <?php echo (!empty($data['status_error'])) ? 'has-error' : ''; ?>">
-                    <label class="control-label">حالة التبرع :</label>
+                    <label class="control-label">حالة الطلب :</label>
                     <div class="radio">
                         <label>
                             <input type="radio" class="flat" <?php echo ($data['status'] == 1) ? 'checked' : ''; ?> value="1" name="status"> مؤكد

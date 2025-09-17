@@ -130,7 +130,7 @@ $("#pay").submit(function (event) {
   if (amount < 1) {
     event.preventDefault(); // stop form from submitting
     msg +=
-      '<div class="alert alert-danger text-danger"> من فضلك تأكد من اختيار مبلغ التبرع </div>';
+      '<div class="alert alert-danger text-danger"> من فضلك تأكد من اختيار مبلغ الطلب </div>';
   }
   $(".msg").html(msg);
 });
@@ -187,14 +187,14 @@ $("#addToCart").click(function (event) {
   if ($.trim(donation_type).length < 1 || donation_type == 0) {
     // validat donation_type
     $(".donation_type_error").html(
-      '<div class="alert alert-danger text-danger"> يجب اختيار نوع التبرع </div>'
+      '<div class="alert alert-danger text-danger"> يجب اختيار نوع الطلب </div>'
     );
     formValidation = false;
   }
   if ($.trim(amount).length < 1 || amount == 0) {
     // validat amount
     $(".amount_error").html(
-      '<div class="alert alert-danger text-danger"> يجب ان تكون قيمة التبرع اكبر من صفر </div>'
+      '<div class="alert alert-danger text-danger"> يجب ان تكون قيمة الطلب اكبر من صفر </div>'
     );
     formValidation = false;
   }
@@ -244,7 +244,7 @@ $(".product .card .cart-add").click(function (event) {
   }
   if ($.trim(amount).length < 1 || amount == 0) {
     // validat amount
-    alert('يجب ان تكون قيمة التبرع اكبر من صفر');
+    alert('يجب ان تكون قيمة الطلب اكبر من صفر');
     formValidation = false;
   }
   if (formValidation == true) {

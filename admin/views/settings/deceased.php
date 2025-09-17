@@ -86,7 +86,7 @@ require ADMINROOT . '/views/inc/header.php'; ?>
                                             </div>
                                             <div class="form-group">
                                                 <br>
-                                                <button type="button" class="btn btn-primary" onclick="$('#deceased_msg').val($('#deceased_msg').val() +'[[name]]') ;return false;" value="">ارفاق اسم المتطوع  </button>
+                                                <button type="button" class="btn btn-primary" onclick="$('#deceased_msg').val($('#deceased_msg').val() +'[[name]]') ;return false;" value="">ارفاق اسم المقدمي الخدمة  </button>
                                                 <button type="button" class="btn btn-primary" onclick="$('#deceased_msg').val($('#deceased_msg').val() +'[[identifier]]') ;return false;" value="">ارفاق اسم المتوفي </button>
                                                 <button type="button" class="btn btn-primary" onclick="$('#deceased_msg').val($('#deceased_msg').val() +'[[total]]') ;return false;" value=""> ارفاق المبلغ المستهدف </button>
                                                 <button type="button" class="btn btn-primary" onclick="$('#deceased_msg').val($('#deceased_msg').val() +'[[project]]') ;return false;" value="">ارفاق اسم المشروع </button>
@@ -114,8 +114,8 @@ require ADMINROOT . '/views/inc/header.php'; ?>
                                             </div>
                                             <div class="form-group">
                                                 <br>
-                                                <button type="button" class="btn btn-primary" onclick="$('#deceased_sms_msg').val($('#deceased_sms_msg').val() +'[[name]]') ;return false;" value="">ارفاق اسم المتطوع  </button>
-                                                <button type="button" class="btn btn-primary" onclick="$('#deceased_sms_msg').val($('#deceased_sms_msg').val() +'[[identifier]]') ;return false;" value="">ارفاق اسم المتطوع </button>
+                                                <button type="button" class="btn btn-primary" onclick="$('#deceased_sms_msg').val($('#deceased_sms_msg').val() +'[[name]]') ;return false;" value="">ارفاق اسم المقدمي الخدمة  </button>
+                                                <button type="button" class="btn btn-primary" onclick="$('#deceased_sms_msg').val($('#deceased_sms_msg').val() +'[[identifier]]') ;return false;" value="">ارفاق اسم المقدمي الخدمة </button>
                                                 <button type="button" class="btn btn-primary" onclick="$('#deceased_sms_msg').val($('#deceased_sms_msg').val() +'[[total]]') ;return false;" value=""> ارفاق المبلغ المستهدف </button>
                                                 <button type="button" class="btn btn-primary" onclick="$('#deceased_sms_msg').val($('#deceased_sms_msg').val() +'[[project]]') ;return false;" value="">ارفاق اسم المشروع </button>
                                                 <small class="red ">سيتم استبدال المتغير الخاص بالقيمة </small>

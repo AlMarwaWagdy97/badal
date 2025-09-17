@@ -38,7 +38,7 @@ require ADMINROOT . '/views/inc/header.php';
                 <div class="icon"><i class="glyphicon glyphicon-gift white"></i>
                 </div>
                 <div class="count"><?php echo $data['orderCount']; ?></div>
-                <h3 class=" white">تبرع جديد</h3>
+                <h3 class=" white">طلب جديد</h3>
                 <p class="tiles text-right"><a class="white" href="<?php echo ADMINURL; ?>/orders">عرض المزيد</a></p>
             </div>
         </div>
@@ -48,7 +48,7 @@ require ADMINROOT . '/views/inc/header.php';
                 <div class="icon"><i class="glyphicon glyphicon-user white"></i>
                 </div>
                 <div class="count"><?php echo $data['donorCount']; ?></div>
-                <h3 class=" white">متبرع</h3>
+                <h3 class=" white">طالب خدمة</h3>
                 <p class="tiles text-right"><a class="white" href="<?php echo ADMINURL; ?>/donors">عرض المزيد</a></p>
             </div>
         </div>
@@ -70,7 +70,7 @@ require ADMINROOT . '/views/inc/header.php';
         <div class="col-lg-12 col-xs-12">
             <div class="x_panel">
                 <div class="x_title">
-                    <h2 class="text-center">التبرعات <small>عدد التبرعات خلال الشهر الحالي</small></h2>
+                    <h2 class="text-center">الطلبات <small>عدد الطلبات خلال الشهر الحالي</small></h2>
                     <div class="clearfix"></div>
                 </div>
                 <div class="x_content2">
@@ -131,7 +131,7 @@ require ADMINROOT . '/views/inc/footer.php';
         ykeys: ['total', 'count'],
         // Labels for the ykeys -- will be displayed when you hover over the
         // chart.
-        labels: ['القيمة الاجمالية بالريال', ' عدد التبرعات '],
+        labels: ['القيمة الاجمالية بالريال', ' عدد الطلبات '],
         lineColors: ['#9B59B6', '#3498DB']
     });
 </script>

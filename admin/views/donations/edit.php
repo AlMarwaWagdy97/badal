@@ -25,7 +25,7 @@ require ADMINROOT . '/views/inc/header.php';
     <?php flash('donation_msg'); ?>
     <div class="page-title">
         <div class="title_right">
-            <h3><?php echo $data['page_title']; ?> <small>التعديل علي التبرع </small></h3>
+            <h3><?php echo $data['page_title']; ?> <small>التعديل علي الطلب </small></h3>
         </div>
         <div class="title_left">
             <a href="<?php echo ADMINURL; ?>/donations" class="btn btn-success pull-left">عودة <i class="fa fa-reply"></i></a>
@@ -37,7 +37,7 @@ require ADMINROOT . '/views/inc/header.php';
             <form action="<?php echo ADMINURL . '/donations/edit/' . $data['donation_id']; ?>" method="post" enctype="multipart/form-data" accept-charset="utf-8">
                 <div class="col-sm-12 col-xs-12">
                     <div class="form-group">
-                        <label class="control-label" for="amount">قيمة التبرع : </label>
+                        <label class="control-label" for="amount">قيمة الطلب : </label>
                         <div class="has-feedback">
                             <input type="number" class="form-control" name="amount" required value="<?php echo $data['amount']; ?>">
                         </div>

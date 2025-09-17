@@ -54,7 +54,7 @@ require ADMINROOT . '/views/inc/header.php';
                                 <!-- New Order ------------------------------------------------------------------------------- -->
                                 <div class="new-order-container">
                                     <div class="card-header" data-toggle="collapse" data-target="#collapseConfirmOrder" aria-expanded="true" aria-controls="collapseConfirmOrder">
-                                        <span> تاكيد الطلب جديد ( ترسل للمتبرع ) </span>
+                                        <span> تاكيد الطلب جديد ( ترسل للطالب الخدمة ) </span>
                                     </div>
                                     <div id="collapseConfirmOrder" class="collapse card-body" aria-labelledby="headingOne">
                                         <div class="email-container">
@@ -134,7 +134,7 @@ require ADMINROOT . '/views/inc/header.php';
                                                 <!-- New Order ------------------------------------------------------------------------------- -->
                                                 <div class="new-order-container">
                                                     <div class="card-header" data-toggle="collapse" data-target="#collapseOrder" aria-expanded="true" aria-controls="collapseOrder">
-                                                        <span> طلب جديد ( ترسل للمتطوعين ) </span>
+                                                        <span> طلب جديد ( ترسل للمقدمي الخدمة ) </span>
                                                     </div>
                                                     <div id="collapseOrder" class="collapse card-body" aria-labelledby="headingOne">
                                                         <div class="email-container">
@@ -206,7 +206,7 @@ require ADMINROOT . '/views/inc/header.php';
                                                 <!-- start Order ------------------------------------------------------------------------------- -->
                                                 <div class="new-order-container">
                                                     <div class="card-header" data-toggle="collapse" data-target="#collapseStarteOrder" aria-expanded="true" aria-controls="collapseStarteOrder">
-                                                        <span> رسالة بداء طلب ( ترسل للمتبرع ) </span>
+                                                        <span> رسالة بداء طلب ( ترسل للطالب الخدمة ) </span>
                                                     </div>
                                                     <div id="collapseStarteOrder" class="collapse card-body" aria-labelledby="headingOne">
                                                         <div class="email-container">
@@ -278,7 +278,7 @@ require ADMINROOT . '/views/inc/header.php';
                                                 <!-- completed Order ------------------------------------------------------------------------------- -->
                                                 <div class="new-order-container">
                                                     <div class="card-header" data-toggle="collapse" data-target="#collapseCompleteOrder" aria-expanded="true" aria-controls="collapseCompleteOrder">
-                                                        <span> رسالة اكتمال الطلب ( ترسل للمتبرع ) </span>
+                                                        <span> رسالة اكتمال الطلب ( ترسل للطالب الخدمة ) </span>
                                                     </div>
                                                     <div id="collapseCompleteOrder" class="collapse card-body" aria-labelledby="headingOne">
                                                         <div class="email-container">
@@ -351,7 +351,7 @@ require ADMINROOT . '/views/inc/header.php';
                                                 <!-- message to notify order today  ------------------------------------------------------------------------------- -->
                                                 <div class="new-order-container">
                                                     <div class="card-header" data-toggle="collapse" data-target="#collapseNotifyOrder" aria-expanded="true" aria-controls="collapseNotifyOrder">
-                                                        <span> رسالة لتنبيه الطلب ( ترسل للمتطوع ) </span>
+                                                        <span> رسالة لتنبيه الطلب ( ترسل للمقدمي الخدمة ) </span>
                                                     </div>
                                                     <div id="collapseNotifyOrder" class="collapse card-body" aria-labelledby="headingOne">
                                                         <div class="email-container">
@@ -379,7 +379,7 @@ require ADMINROOT . '/views/inc/header.php';
                                                                 <button type="button" class="btn btn-primary" onclick="$('#notify_order_msg').val($('#notify_order_msg').val() +'[[identifier]]') ;return false;" value="">ارفاق رقم الطلب </button>
                                                                 <button type="button" class="btn btn-primary" onclick="$('#notify_order_msg').val($('#notify_order_msg').val() +'[[total]]') ;return false;" value="">ارفاق المبلغ </button>
                                                                 <button type="button" class="btn btn-primary" onclick="$('#notify_order_msg').val($('#notify_order_msg').val() +'[[project]]') ;return false;" value="">ارفاق اسم المشروع </button>
-                                                                <button type="button" class="btn btn-primary" onclick="$('#notify_order_msg').val($('#notify_order_msg').val() +'[[substitute_start]]') ;return false;" value="">ارفاق موعد بداء للمتطوع </button>
+                                                                <button type="button" class="btn btn-primary" onclick="$('#notify_order_msg').val($('#notify_order_msg').val() +'[[substitute_start]]') ;return false;" value="">ارفاق موعد بداء للمقدمي الخدمة </button>
                                                                 <small class="red ">سيتم استبدال المتغير الخاص بالقيمة </small>
                                                             </div>
                                                             <div class="form-group col-md-12">
@@ -408,7 +408,7 @@ require ADMINROOT . '/views/inc/header.php';
                                                                 <button type="button" class="btn btn-primary" onclick="$('#notify_order_sms_msg').val($('notify_order_sms_msg').val() +'[[total]]') ;return false;" value="">ارفاق المبلغ </button>
                                                                 <button type="button" class="btn btn-primary" onclick="$('#notify_order_sms_msg').val($('notify_order_sms_msg').val() +'[[project]]') ;return false;" value="">ارفاق اسم المشروع </button>
                                                                 <button type="button" class="btn btn-primary" onclick="$('#notify_order_sms_msg').val($('notify_order_sms_msg').val() +'[[name]]') ;return false;" value="">ارفاق الاسم </button>
-                                                                <button type="button" class="btn btn-primary" onclick="$('#notify_order_sms_msg').val($('#notify_order_sms_msg').val() +'[[substitute_start]]') ;return false;" value="">ارفاق موعد بداء للمتطوع </button>
+                                                                <button type="button" class="btn btn-primary" onclick="$('#notify_order_sms_msg').val($('#notify_order_sms_msg').val() +'[[substitute_start]]') ;return false;" value="">ارفاق موعد بداء للمقدمي الخدمة </button>
                                                                 <small class="red ">سيتم استبدال المتغير الخاص بالقيمة </small>
                                                             </div>
                                                             <div class="form-group">
@@ -429,7 +429,7 @@ require ADMINROOT . '/views/inc/header.php';
                                                 <!-- New Request ------------------------------------------------------------------------------- -->
                                                 <div class="new-request-container">
                                                     <div class="card-header" data-toggle="collapse" data-target="#collapseNewRequest" aria-expanded="true" aria-controls="collapseNewRequest">
-                                                        <span> رساله المتقدمين لتنفيذ طلب البدل (ترسل للمتبرع) </span>
+                                                        <span> رساله المتقدمين لتنفيذ طلب البدل (ترسل للطالب الخدمة) </span>
                                                     </div>
                                                     <div id="collapseNewRequest" class="collapse card-body" aria-labelledby="headingOne">
                                                         <div class="email-container">
@@ -453,12 +453,12 @@ require ADMINROOT . '/views/inc/header.php';
                                                             </div>
                                                             <div class="form-group">
                                                                 <br>
-                                                                <button type="button" class="btn btn-primary" onclick="$('#inform_msg').val($('#inform_msg').val() +'[[name]]') ;return false;" value="">ارفاق الاسم المتبرع </button>
+                                                                <button type="button" class="btn btn-primary" onclick="$('#inform_msg').val($('#inform_msg').val() +'[[name]]') ;return false;" value="">ارفاق الاسم طالب الخدمة </button>
                                                                 <button type="button" class="btn btn-primary" onclick="$('#inform_msg').val($('#inform_msg').val() +'[[identifier]]') ;return false;" value="">ارفاق رقم الطلب </button>
                                                                 <button type="button" class="btn btn-primary" onclick="$('#inform_msg').val($('#inform_msg').val() +'[[total]]') ;return false;" value="">ارفاق المبلغ </button>
                                                                 <button type="button" class="btn btn-primary" onclick="$('#inform_msg').val($('#inform_msg').val() +'[[project]]') ;return false;" value="">ارفاق اسم المشروع </button>
-                                                                <button type="button" class="btn btn-primary" onclick="$('#inform_msg').val($('#inform_msg').val() +'[[substuites_name]]') ;return false;" value="">ارفاق الاسم المتطوع </button>
-                                                                <button type="button" class="btn btn-primary" onclick="$('#inform_msg').val($('#inform_msg').val() +'[[substuites_start]]') ;return false;" value="">ارفاق موعد بداء للمتطوع </button>
+                                                                <button type="button" class="btn btn-primary" onclick="$('#inform_msg').val($('#inform_msg').val() +'[[substuites_name]]') ;return false;" value="">ارفاق الاسم المقدمي الخدمة </button>
+                                                                <button type="button" class="btn btn-primary" onclick="$('#inform_msg').val($('#inform_msg').val() +'[[substuites_start]]') ;return false;" value="">ارفاق موعد بداء للمقدمي الخدمة </button>
                                                                 <small class="red ">سيتم استبدال المتغير الخاص بالقيمة </small>
                                                             </div>
                                                             <div class="form-group">
@@ -487,8 +487,8 @@ require ADMINROOT . '/views/inc/header.php';
                                                                 <button type="button" class="btn btn-primary" onclick="$('#newRequest_sms_msg').val($('#newRequest_sms_msg').val() +'[[identifier]]') ;return false;" value="">ارفاق رقم الطلب </button>
                                                                 <button type="button" class="btn btn-primary" onclick="$('#newRequest_sms_msg').val($('#newRequest_sms_msg').val() +'[[total]]') ;return false;" value="">ارفاق المبلغ </button>
                                                                 <button type="button" class="btn btn-primary" onclick="$('#newRequest_sms_msg').val($('#newRequest_sms_msg').val() +'[[project]]') ;return false;" value="">ارفاق اسم المشروع </button>
-                                                                <button type="button" class="btn btn-primary" onclick="$('#newRequest_sms_msg').val($('#newRequest_sms_msg').val() +'[[substitute_name]]') ;return false;" value="">ارفاق الاسم المتطوع </button>
-                                                                <button type="button" class="btn btn-primary" onclick="$('#newRequest_sms_msg').val($('#newRequest_sms_msg').val() +'[[substitute_start]]') ;return false;" value="">ارفاق موعد بداء للمتطوع </button>
+                                                                <button type="button" class="btn btn-primary" onclick="$('#newRequest_sms_msg').val($('#newRequest_sms_msg').val() +'[[substitute_name]]') ;return false;" value="">ارفاق الاسم المقدمي الخدمة </button>
+                                                                <button type="button" class="btn btn-primary" onclick="$('#newRequest_sms_msg').val($('#newRequest_sms_msg').val() +'[[substitute_start]]') ;return false;" value="">ارفاق موعد بداء للمقدمي الخدمة </button>
                                                                 <small class="red ">سيتم استبدال المتغير الخاص بالقيمة </small>
                                                             </div>
                                                             <div class="form-group">
@@ -722,7 +722,7 @@ require ADMINROOT . '/views/inc/header.php';
                                             <!-- <div class="x_panel tile "> -->
                                             <!-- <div class="select-request">
                                     <div class="card-header" data-toggle="collapse" data-target="#collapseNewOffer" aria-expanded="true" aria-controls="collapseNewOffer">
-                                        <span>رساله لعرض جديد ( ترسل للمتبرعين ) </span>
+                                        <span>رساله لعرض جديد ( ترسل للطالب الخدمةين ) </span>
                                     </div>
                                     <div id="collapseNewOffer" class="collapse card-body" aria-labelledby="headingOne">
                                         <div class="email-container">
@@ -746,10 +746,10 @@ require ADMINROOT . '/views/inc/header.php';
                                             </div>
                                             <div class="form-group">
                                                 <br>
-                                                <button type="button" class="btn btn-primary" onclick="$('#newOffer_msg').val($('#newOffer_msg').val() +'[[name]]') ;return false;" value="">ارفاق اسم للمتبرع  </button>
+                                                <button type="button" class="btn btn-primary" onclick="$('#newOffer_msg').val($('#newOffer_msg').val() +'[[name]]') ;return false;" value="">ارفاق اسم للطالب الخدمة  </button>
                                                 <button type="button" class="btn btn-primary" onclick="$('#newOffer_msg').val($('#newOffer_msg').val() +'[[total]]') ;return false;" value="">ارفاق المبلغ </button>
                                                 <button type="button" class="btn btn-primary" onclick="$('#newOffer_msg').val($('#newOffer_msg').val() +'[[project]]') ;return false;" value="">ارفاق اسم المشروع </button>
-                                                <button type="button" class="btn btn-primary" onclick="$('#newOffer_msg').val($('#newOffer_msg').val() +'[[substuites_name]]') ;return false;" value="">ارفاق اسم للمتطوع  </button>
+                                                <button type="button" class="btn btn-primary" onclick="$('#newOffer_msg').val($('#newOffer_msg').val() +'[[substuites_name]]') ;return false;" value="">ارفاق اسم للمقدمي الخدمة  </button>
                                                 <button type="button" class="btn btn-primary" onclick="$('#newOffer_msg').val($('#newOffer_msg').val() +'[[substuites_start]]') ;return false;" value="">ارفاق موعد البداء  </button>
                                                 <small class="red ">سيتم استبدال المتغير الخاص بالقيمة </small>
                                             </div>
@@ -775,10 +775,10 @@ require ADMINROOT . '/views/inc/header.php';
                                             </div>
                                             <div class="form-group">
                                                 <br>
-                                                <button type="button" class="btn btn-primary" onclick="$('newOffer_sms_msg').val($('#newOffer_sms_msg').val() +'[[name]]') ;return false;" value="">ارفاق اسم للمتبرع  </button>
+                                                <button type="button" class="btn btn-primary" onclick="$('newOffer_sms_msg').val($('#newOffer_sms_msg').val() +'[[name]]') ;return false;" value="">ارفاق اسم للطالب الخدمة  </button>
                                                 <button type="button" class="btn btn-primary" onclick="$('newOffer_sms_msg').val($('#newOffer_sms_msg').val() +'[[total]]') ;return false;" value="">ارفاق المبلغ </button>
                                                 <button type="button" class="btn btn-primary" onclick="$('newOffer_sms_msg').val($('#newOffer_sms_msg').val() +'[[project]]') ;return false;" value="">ارفاق اسم المشروع </button>
-                                                <button type="button" class="btn btn-primary" onclick="$('newOffer_sms_msg').val($('#newOffer_sms_msg').val() +'[[substuites_name]]') ;return false;" value="">ارفاق اسم للمتطوع  </button>
+                                                <button type="button" class="btn btn-primary" onclick="$('newOffer_sms_msg').val($('#newOffer_sms_msg').val() +'[[substuites_name]]') ;return false;" value="">ارفاق اسم للمقدمي الخدمة  </button>
                                                 <button type="button" class="btn btn-primary" onclick="$('newOffer_sms_msg').val($('#newOffer_sms_msg').val() +'[[substuites_start]]') ;return false;" value="">ارفاق موعد البداء  </button>
                                                 <small class="red ">سيتم استبدال المتغير الخاص بالقيمة </small>
                                             </div>
@@ -795,7 +795,7 @@ require ADMINROOT . '/views/inc/header.php';
                                             <!-- select Offer ------------------------------------------------------------------------------- -->
                                             <!-- <div class="select-request">
                                     <div class="card-header" data-toggle="collapse" data-target="#collapseSelectOffer" aria-expanded="true" aria-controls="collapseSelectOffer">
-                                        <span> select Offer  (للمتطوع)</span>
+                                        <span> select Offer  (للمقدمي الخدمة)</span>
                                     </div>
                                     <div id="collapseSelectOffer" class="collapse card-body" aria-labelledby="headingOne">
                                         <div class="email-container">
@@ -892,7 +892,7 @@ require ADMINROOT . '/views/inc/header.php';
                                                             </div>
                                                             <div class="form-group">
                                                                 <br>
-                                                                <button type="button" class="btn btn-primary" onclick="$('#review_msg').val($('#review_msg').val() +'[[name]]') ;return false;" value="">ارفاق اسم المتطوع </button>
+                                                                <button type="button" class="btn btn-primary" onclick="$('#review_msg').val($('#review_msg').val() +'[[name]]') ;return false;" value="">ارفاق اسم المقدمي الخدمة </button>
                                                                 <button type="button" class="btn btn-primary" onclick="$('#review_msg').val($('#review_msg').val() +'[[identifier]]') ;return false;" value="">ارفاق رقم الطلب </button>
                                                                 <button type="button" class="btn btn-primary" onclick="$('#review_msg').val($('#review_msg').val() +'[[total]]') ;return false;" value="">ارفاق المبلغ </button>
                                                                 <button type="button" class="btn btn-primary" onclick="$('#review_msg').val($('#review_msg').val() +'[[project]]') ;return false;" value="">ارفاق اسم المشروع </button>
@@ -921,7 +921,7 @@ require ADMINROOT . '/views/inc/header.php';
                                                             </div>
                                                             <div class="form-group">
                                                                 <br>
-                                                                <button type="button" class="btn btn-primary" onclick="$('#review_sms_msg').val($('#review_sms_msg').val() +'[[name]]') ;return false;" value="">ارفاق اسم المتطوع </button>
+                                                                <button type="button" class="btn btn-primary" onclick="$('#review_sms_msg').val($('#review_sms_msg').val() +'[[name]]') ;return false;" value="">ارفاق اسم المقدمي الخدمة </button>
                                                                 <button type="button" class="btn btn-primary" onclick="$('#review_sms_msg').val($('#review_sms_msg').val() +'[[identifier]]') ;return false;" value="">ارفاق رقم الطلب </button>
                                                                 <button type="button" class="btn btn-primary" onclick="$('#review_sms_msg').val($('#review_sms_msg').val() +'[[total]]') ;return false;" value="">ارفاق المبلغ </button>
                                                                 <button type="button" class="btn btn-primary" onclick="$('#review_sms_msg').val($('#review_sms_msg').val() +'[[project]]') ;return false;" value="">ارفاق اسم المشروع </button>

@@ -27,7 +27,7 @@ require ADMINROOT . '/views/inc/header.php';
     <?php flash('donor_msg');?>
     <div class="page-title">
         <div class="title_right">
-            <h3><?php echo $data['page_title']; ?> <small>عرض تفاصيل المتبرع </small></h3>
+            <h3><?php echo $data['page_title']; ?> <small>عرض تفاصيل طالب الخدمة </small></h3>
         </div>
         <div class="title_left">
             <a href="<?php echo ADMINURL; ?>/donors" class="btn btn-success pull-left">عودة <i class="fa fa-reply"></i></a>
@@ -41,7 +41,7 @@ require ADMINROOT . '/views/inc/header.php';
                     <p class="h5"><i class="fa fa-envelope"></i> <strong>البريد الالكتروني : </strong><?php echo $data['donor']->email; ?></p>
                     <p class="h5"><i class="fa fa-mobile"></i> <strong>الجوال : </strong><?php echo $data['donor']->mobile; ?></p>
                     <p class="h5"><i class="fa fa-credit-card"></i> <strong>رقم الهوية : </strong><?php echo $data['donor']->identity; ?></p>
-                    <p class="h5"><i class="fa fa-toggle-on"> </i> <strong>حالة المتبرع : </strong>
+                    <p class="h5"><i class="fa fa-toggle-on"> </i> <strong>حالة طالب الخدمة : </strong>
                         <?php
                         if ($data['donor']->status == 1) {
                             echo '<span class="btn btn-sm btn-success">نشط</span>';
@@ -75,15 +75,15 @@ require ADMINROOT . '/views/inc/header.php';
                     </div>
                 </div>
                 <div class="col-xs-8">
-                <h2 class=" x_title">سجل التبرعات</h2>
+                <h2 class=" x_title">سجل الطلبات</h2>
                 <div class="table-responsive">
                     <table class="table table-striped jambo_table bulk_action">
                         <thead>
                             <tr class="headings">
-                                <th class="column-title">معرف التبرع </th>
+                                <th class="column-title">معرف الطلب </th>
                                 <th class="column-title">القيمة </th>
                                 <th class="column-title">المشروع </th>
-                                <th class="column-title">تاريخ التبرع </th>
+                                <th class="column-title">تاريخ الطلب </th>
                                 <th class="column-title">آخر تحديث </th>
                             </tr>
                         </thead>

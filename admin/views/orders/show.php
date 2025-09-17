@@ -27,7 +27,7 @@ require ADMINROOT . '/views/inc/header.php';
     <?php flash('order_msg'); ?>
     <div class="page-title">
         <div class="title_right">
-            <h3><?php echo $data['page_title']; ?> <small>عرض محتوي التبرع </small></h3>
+            <h3><?php echo $data['page_title']; ?> <small>عرض محتوي الطلب </small></h3>
         </div>
         <div class="title_left">
             <a href="<?php echo ADMINURL; ?>/orders" class="btn btn-success pull-left">عودة <i class="fa fa-reply"></i></a>
@@ -44,11 +44,11 @@ require ADMINROOT . '/views/inc/header.php';
                 </h3>
             </div>
             <div class="form-groupcol-xs-12">
-                <label class="control-label">قيمة التبرع : </label>
+                <label class="control-label">قيمة الطلب : </label>
                 <p><?php echo $data['order']->total; ?></p>
             </div>
             <div class="form-groupcol-xs-12">
-                <label class="control-label">وسيلة التبرع : </label>
+                <label class="control-label">وسيلة الطلب : </label>
                 <p class="ltr"><?php echo $data['order']->title; ?></p>
             </div>
             <div class="form-groupcol-xs-12">
@@ -84,11 +84,11 @@ require ADMINROOT . '/views/inc/header.php';
                                         ?></p>
             </div>
             <div class="form-groupcol-xs-12">
-                <label class="control-label">اسم المتبرع : </label>
+                <label class="control-label">اسم طالب الخدمة : </label>
                 <p><?php echo $data['order']->donor_id; ?></p>
             </div>
             <div class="form-groupcol-xs-12">
-                <label class="control-label">حالة التبرع : </label>
+                <label class="control-label">حالة الطلب : </label>
                 <p><?php echo $data['order']->status ? 'مؤكد' : 'غير مؤكد'; ?></p>
             </div>
             <div class="form-groupcol-xs-12">
@@ -100,7 +100,7 @@ require ADMINROOT . '/views/inc/header.php';
                 <p><?php echo $data['order']->create_date ? date('d/ M/ Y', $data['order']->create_date) : 'لا'; ?></p>
             </div>
             <div class="form-group">
-                <label class="control-label">المشروعات المتبرع لها </label>
+                <label class="control-label">المشروعات طالب الخدمة لها </label>
                 <div class="has-feedback">
                     <table class="table table-striped jambo_table bulk_action">
                         <thead>

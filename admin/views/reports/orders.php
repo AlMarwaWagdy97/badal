@@ -38,8 +38,8 @@ require ADMINROOT . '/views/inc/header.php';
                     <tr class="headings">
                         <th>اسم المشروع</th>
                         <th>المتجر</th>
-                        <th>معرف التبرع </th>
-                        <th> اسم المتبرع </th>
+                        <th>معرف الطلب </th>
+                        <th> اسم طالب الخدمة </th>
                         <th> رقم الجوال </th>
                         <th> البريد الالكتروني </th>
                         <th>القيمة</th>
@@ -50,8 +50,8 @@ require ADMINROOT . '/views/inc/header.php';
                         <th>merchant_reference</th>
                         <th>اهداء</th>
                         <th>الحالة</th>
-                        <th>حالة التبرع</th>
-                        <th>تاريخ التبرع </th>
+                        <th>حالة الطلب</th>
+                        <th>تاريخ الطلب </th>
                         <th>آخر تحديث </th>
                     </tr>
                 </thead>

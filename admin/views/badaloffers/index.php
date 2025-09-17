@@ -34,7 +34,7 @@ require ADMINROOT . '/views/inc/header.php';
         <div class="col-md-12 col-sm-12 col-xs-12">
             <form action="" method="post">
                 <div class="row">
-                    <div class="col-xs-6 form-group"><span class="title">بحث بالمتطوع :</span>
+                    <div class="col-xs-6 form-group"><span class="title">بحث بالمقدمي الخدمة :</span>
                         <select class="form-control" name="search[substitute_id]" style="width: 100%;">
                             <option value=""></option>
                             <?php foreach ($data['substitutes'] as $substitute) {
@@ -77,10 +77,10 @@ require ADMINROOT . '/views/inc/header.php';
                                 </th>
                                 <th class="column-title">رقم العرض </th>
                                 <th class="column-title">المشروع </th>
-                                <th class="column-title">المتطوع </th>
+                                <th class="column-title">المقدمي الخدمة </th>
                                 <th class="column-title">القيمه </th>
                                 <th class="column-title">بداء من </th>
-                                <th class="column-title">تاريخ التبرع </th>
+                                <th class="column-title">تاريخ الطلب </th>
                                 <th class="column-title">آخر تحديث </th>
                                 <th class="column-title no-link last" width="140"><span class="nobr">اجراءات</span></th>
                                 <th class="bulk-actions" colspan="9">

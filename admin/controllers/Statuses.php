@@ -156,7 +156,7 @@ class Statuses extends ControllerAdmin
             }
         } else {
             $data = [
-                'page_title' => 'حالات التبرعات',
+                'page_title' => 'حالات الطلبات',
                 'name' => '',
                 'description' => '',
                 'status' => 0,

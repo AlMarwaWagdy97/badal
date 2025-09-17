@@ -47,7 +47,7 @@ require ADMINROOT . '/views/inc/header.php';
                     <!-- <div class="col-xs-3 form-group"><span class="title"> تم اختياره :</span>
                         <select class="form-control" name="search[type]" style="width: 100%;">
                             <option value=""></option>
-                            <option value="donor">متبرع</option>
+                            <option value="donor">طالب خدمة</option>
                             <option value="substitute">متطوع</option>
                         </select>
                     </div> -->
@@ -70,7 +70,7 @@ require ADMINROOT . '/views/inc/header.php';
                                 <!-- <th class="column-title"> رقم  </th> -->
                                 <th class="column-title"> النسبة </th>
                                 <th class="column-title"> وصف </th>
-                                <th class="column-title">تاريخ التبرع </th>
+                                <th class="column-title">تاريخ الطلب </th>
                                 <th class="column-title no-link last" width="140"><span class="nobr">اجراءات</span></th>
                                 <th class="bulk-actions" colspan="9">
                                     <span> تنفيذ علي الكل :</span>
@@ -86,7 +86,7 @@ require ADMINROOT . '/views/inc/header.php';
                                     </td>
                                     <td><?php echo $badalreview->review_id; ?></td>
                                     <td><?php  echo '<a href="' . ADMINURL . '/badalorders/show/' . $badalreview->badal_id . '" >'. $badalreview->badal_id .'</a>';?></td>
-                                    <!-- <td><?php echo $badalreview->type == "donor"? "متبرع" : "متطوع"; ?></td> -->
+                                    <!-- <td><?php echo $badalreview->type == "donor"? "طالب خدمة" : "مقدمي الخدمة"; ?></td> -->
                                     <!-- <td><?php echo $badalreview->type_id; ?></td> -->
                                     <td><?php echo $badalreview->description; ?></td>
                                     <td><?php echo @$data['reviews'][$badalreview->rate]; ?></td>

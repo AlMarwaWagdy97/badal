@@ -92,7 +92,7 @@ class Substitutes extends ControllerAdmin
             'current' => $current,
             'perpage' => $perpage,
             'header' => '',
-            'title' => 'المتطوعون',
+            'title' => 'مقدمي الخدمة ',
             'substitutes' => $substitutes,
             'recordsCount' => $recordsCount->count,
             'footer' => '',
@@ -109,7 +109,7 @@ class Substitutes extends ControllerAdmin
             // sanitize POST array
             $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
             $data = [
-                'page_title' => 'المتطوعون',
+                'page_title' => 'مقدمي الخدمة ',
                 'identity' => trim($_POST['identity']),
                 'image' => '',
                 'full_name' => trim($_POST['full_name']),
@@ -182,7 +182,7 @@ class Substitutes extends ControllerAdmin
             }
         } else {
             $data = [
-                'page_title' => 'المتطوعون',
+                'page_title' => 'مقدمي الخدمة ',
                 'identity' => '',
                 'image' => '',
                 'nationality' => '',
@@ -222,7 +222,7 @@ class Substitutes extends ControllerAdmin
             // sanitize POST array
             $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
             $data = [
-                'page_title' => 'المتطوعون',
+                'page_title' => 'مقدمي الخدمة ',
                 'substitute_id' => $id,
                 'identity' => trim($_POST['identity']),
                 'image' => '',
@@ -298,7 +298,7 @@ class Substitutes extends ControllerAdmin
                 redirect('substitutes');
             }
             $data = [
-                'page_title' => 'المتطوعون',
+                'page_title' => 'مقدمي الخدمة ',
                 'substitute_id' => $id,
                 'full_name' => $substitute->full_name,
                 'identity' => $substitute->identity,
@@ -339,7 +339,7 @@ class Substitutes extends ControllerAdmin
         $reviews = $this->substituteModel->getReviewBySubstituteId($substitute->substitute_id);
 
         $data = [
-            'page_title' => 'المتطوعون',
+            'page_title' => 'مقدمي الخدمة ',
             'substitute' => $substitute,
             'offers' => $offers,
             'reviews' => $reviews,

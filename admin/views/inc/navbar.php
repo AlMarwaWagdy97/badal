@@ -44,7 +44,7 @@
                             <li><a href="<?php echo ADMINURL; ?>/albadal">مشروعات البدل </a></li>
                             <li><a href="<?php echo ADMINURL; ?>/rites"> مناسك الحج والعمره </a></li>
                             <li><a href="<?php echo ADMINURL; ?>/badalorders">سجل العمليات  <span class="number"><?= badalOrderCount() ?></span> </a></li>
-                            <li><a href="<?php echo ADMINURL; ?>/substitutes">المتطوعين </a></li>
+                            <li><a href="<?php echo ADMINURL; ?>/substitutes"> مقدمي الخدمة </a></li>
                             <li><a href="<?php echo ADMINURL; ?>/badaloffers">  العروض <span class="number"><?= badalOfferCount() ?></span> </a></li>
                             <li><a href="<?php echo ADMINURL; ?>/badalrequests"> طلبات المتقدمين  </a></li>
                             <li><a href="<?php echo ADMINURL; ?>/badalreviews">  التقييمات  </a></li>
@@ -52,11 +52,11 @@
                         </ul>
                     </li>
              
-                    <li><a><i class="glyphicon glyphicon-gift"></i> التبرعات <span class="fa fa-chevron-down"></span></a>
+                    <li><a><i class="glyphicon glyphicon-gift"></i> الطلبات <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                            <li><a href="<?php echo ADMINURL; ?>/orders">عمليات التبرع </a></li>
-                            <!--<li><a href="<?php echo ADMINURL; ?>/donations">سجل التبرعات</a></li>-->
-                            <li><a href="<?php echo ADMINURL; ?>/donors">قائمة المتبرعين </a></li>
+                            <li><a href="<?php echo ADMINURL; ?>/orders">عمليات الطلب </a></li>
+                            <!--<li><a href="<?php echo ADMINURL; ?>/donations">سجل الطلبات</a></li>-->
+                            <li><a href="<?php echo ADMINURL; ?>/donors">قائمة طالب الخدمة </a></li>
                         </ul>
                     </li>
 
@@ -75,7 +75,7 @@
                             <li>
                                 <form action="<?= ADMINURL ?>/orders" method="POST">
                                     <input type="hidden" name="search[submit]">
-                                    <button type="submit" name="search[app]" value="kafara" class="btn-dark b-0" href="<?php echo ADMINURL; ?>/notifications">عمليات التبرع</button>
+                                    <button type="submit" name="search[app]" value="kafara" class="btn-dark b-0" href="<?php echo ADMINURL; ?>/notifications">عمليات الطلب</button>
                                 </form>
                             </li>
                         </ul>

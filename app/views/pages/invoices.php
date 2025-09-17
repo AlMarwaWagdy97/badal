@@ -158,16 +158,16 @@
 
             <div class="user-info col-lg-6 col-12 col-md-6 col-sm-6 row justify-content-center align-content-center text-center ">
               <div class="col-12 UserName row justify-content-center align-content-center justify-content-center align-items-center">
-                <label for="" class="col-lg-3 col-12 text-dark fs-5">اسم المتبرع</label>
+                <label for="" class="col-lg-3 col-12 text-dark fs-5">اسم طالب الخدمة</label>
                 <input type="text" value="<?= $data['order']->donor_name ?>" class="col-md-9  col-12 usernameFlied" disabled />
               </div>
               <div class="col-12 ValueOfDontaion row  justify-content-center align-items-center">
-                <label for="" class=" col-lg-3 col-12 text-dark fs-5 "> إجمالي قيمة التبرع </label>
+                <label for="" class=" col-lg-3 col-12 text-dark fs-5 "> إجمالي قيمة الطلب </label>
                 <input type="text" value="<?= $data['order']->total ?>" class="col-md-9 col-12 usernameFlied " disabled style="width: 60%" />
                 <img src="<?php echo MEDIAURL . '/rayal.png'; ?>" class="col-md-1" style="width: 50px; height: 20px;">
               </div>
               <div class="DateOfDonation col-12 rowjustify-content-center align-items-center">
-                <label for="" class="col-lg-3 col-12 text-dark fs-5"> تاريخ التبرع </label>
+                <label for="" class="col-lg-3 col-12 text-dark fs-5"> تاريخ الطلب </label>
                 <input type="text" value="<?php echo date('d-m-y', $data['order']->create_date) ?>" class="col-lg-5 col-12 usernameFlied ms-lg-0 mb-3 mb-md-0" />
                 <input type="text" value="<?php echo date('H:i:s', $data['order']->create_date) ?>" class="col-lg-3 col-12 usernameFlied me-lg-3" disabled />
               </div>

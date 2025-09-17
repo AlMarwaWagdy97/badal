@@ -172,7 +172,7 @@ class Projects extends ControllerAdmin
                 'gift_card_title' => trim($_POST['gift_card_title']),
                 'mobile_confirmation' => trim($_POST['mobile_confirmation']),
                 'donation_type' => $_POST['donation_type'],
-                'donation_type_list' => ['share' => 'تبرع بالاسهم', 'fixed' => 'قيمة ثابته', 'open' => 'تبرع مفتوح', 'unit' => 'فئات'],
+                'donation_type_list' => ['share' => 'طلب بالاسهم', 'fixed' => 'قيمة ثابته', 'open' => 'طلب مفتوح', 'unit' => 'فئات'],
                 'payment_methods' => [],
                 'paymentMethodsList' => $this->projectModel->paymentMethodsList(' WHERE status <> 2 '),
                 'target_price' => trim($_POST['target_price']),
@@ -216,10 +216,10 @@ class Projects extends ControllerAdmin
             !(empty($data['name'])) ?: $data['name_error'] = 'هذا الحقل مطلوب';
             //validate donation type
             if (empty($data['donation_type']['type'])) {
-                $data['donation_type_error'] = 'برجاء اختيار نوع التبرع';
+                $data['donation_type_error'] = 'برجاء اختيار نوع الطلب';
             } else {
                 if (empty($data['donation_type']['value']) && $data['donation_type']['type'] != 'open') {
-                    $data['donation_type_error'] = 'برجاء اختيار قيمة التبرع';
+                    $data['donation_type_error'] = 'برجاء اختيار قيمة الطلب';
                 }
             }
             //validate project number
@@ -281,7 +281,7 @@ class Projects extends ControllerAdmin
                 'gift_card_title' => '',
                 'mobile_confirmation' => '',
                 'donation_type' => ['type' => ''],
-                'donation_type_list' => ['share' => 'تبرع بالاسهم', 'fixed' => 'قيمة ثابته', 'open' => 'تبرع مفتوح', 'unit' => 'فئات'],
+                'donation_type_list' => ['share' => 'طلب بالاسهم', 'fixed' => 'قيمة ثابته', 'open' => 'طلب مفتوح', 'unit' => 'فئات'],
                 'payment_methods' => array(),
                 'paymentMethodsList' => $this->projectModel->paymentMethodsList(' WHERE status <> 2 '),
                 'target_price' => '',
@@ -357,7 +357,7 @@ class Projects extends ControllerAdmin
                 'gift_card_title' => trim($_POST['gift_card_title']),
                 'mobile_confirmation' => trim($_POST['mobile_confirmation']),
                 'donation_type' => $_POST['donation_type'],
-                'donation_type_list' => ['share' => 'تبرع بالاسهم', 'fixed' => 'قيمة ثابته', 'open' => 'تبرع مفتوح', 'unit' => 'فئات'],
+                'donation_type_list' => ['share' => 'طلب بالاسهم', 'fixed' => 'قيمة ثابته', 'open' => 'طلب مفتوح', 'unit' => 'فئات'],
                 'payment_methods' => [],
                 'paymentMethodsList' => $this->projectModel->paymentMethodsList(' WHERE status <> 2 '),
                 'target_price' => trim($_POST['target_price']),
@@ -402,10 +402,10 @@ class Projects extends ControllerAdmin
             !(empty($data['name'])) ?: $data['name_error'] = 'هذا الحقل مطلوب';
             //validate donation type
             if (empty($data['donation_type']['type'])) {
-                $data['donation_type_error'] = 'برجاء اختيار نوع التبرع';
+                $data['donation_type_error'] = 'برجاء اختيار نوع الطلب';
             } else {
                 if (empty($data['donation_type']['value']) && $data['donation_type']['type'] != 'open') {
-                    $data['donation_type_error'] = 'برجاء اختيار قيمة التبرع';
+                    $data['donation_type_error'] = 'برجاء اختيار قيمة الطلب';
                 }
             }
             //validate project number
@@ -519,7 +519,7 @@ class Projects extends ControllerAdmin
                 'gift_card_title' => $project->gift_card_title,
                 'mobile_confirmation' => $project->mobile_confirmation,
                 'donation_type' => json_decode($project->donation_type, true),
-                'donation_type_list' => ['share' => 'تبرع بالاسهم', 'fixed' => 'قيمة ثابته', 'open' => 'تبرع مفتوح', 'unit' => 'فئات'],
+                'donation_type_list' => ['share' => 'طلب بالاسهم', 'fixed' => 'قيمة ثابته', 'open' => 'طلب مفتوح', 'unit' => 'فئات'],
                 'payment_methods' => json_decode($project->payment_methods, true),
                 'paymentMethodsList' => $this->projectModel->paymentMethodsList(' WHERE status <> 2 '),
                 'target_price' => $project->target_price,
@@ -565,7 +565,7 @@ class Projects extends ControllerAdmin
         }
         $data = [
             'page_title' => 'المشروعات',
-            'donation_type_list' => ['share' => 'تبرع بالاسهم', 'fixed' => 'قيمة ثابته', 'open' => 'تبرع مفتوح', 'unit' => 'فئات'],
+            'donation_type_list' => ['share' => 'طلب بالاسهم', 'fixed' => 'قيمة ثابته', 'open' => 'طلب مفتوح', 'unit' => 'فئات'],
             'project' => $project,
             'paymentMethodsList' => $this->projectModel->paymentMethodsList(' WHERE payment_id IN (' . implode(',', json_decode($project->payment_methods, true)) . ') '),
 

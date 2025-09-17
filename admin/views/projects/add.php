@@ -166,10 +166,10 @@ require ADMINROOT . '/views/inc/header.php';
                         </div>
                         <div id="collapseZero" class="collapse in card-body" aria-labelledby="headingZero">
                             <div class="form-group <?php echo (!empty($data['donation_type_error'])) ? 'has-error' : ''; ?>">
-                                <label class="control-label">نوع التبرع</label>
+                                <label class="control-label">نوع الطلب</label>
                                 <div class="has-feedback">
                                     <select name="donation_type[type]" class="form-control type-change">
-                                        <option value="">اختار نوع التبرع </option>
+                                        <option value="">اختار نوع الطلب </option>
                                         <?php
                                         foreach ($data['donation_type_list'] as $donationtype => $value) {
                                             echo '<option value="' . $donationtype . '"';
@@ -231,7 +231,7 @@ require ADMINROOT . '/views/inc/header.php';
                             </div>
                             <div class="form-group">
                                 <label>القيم المؤقته لما تم جمعه : </label>
-                                <input type="number" class="form-control" name="fake_target" value="<?php echo $data['fake_target']; ?>" placeholder="رقم مؤقت يظهر للمتبرع">
+                                <input type="number" class="form-control" name="fake_target" value="<?php echo $data['fake_target']; ?>" placeholder="رقم مؤقت يظهر للمطلب">
                             </div>
                             <div class="form-group <?php echo (!empty($data['payment_methods_error'])) ? 'has-error' : ''; ?>">
                                 <label class="control-label">وسائل الدفع المعتمدة للمشروع :</label>
@@ -289,7 +289,7 @@ require ADMINROOT . '/views/inc/header.php';
                             </div>
                             <div class="form-group">
                                 <div class="radio">
-                                    <label class="control-label">اغلاق التبرع :</label>
+                                    <label class="control-label">اغلاق الطلب :</label>
                                     <label><input type="radio" class="flat" <?php echo ($data['finished'] == 1) ? 'checked' : ''; ?> value="1" name="finished"> اغلاق </label>
                                     <label><input type="radio" class="flat" <?php echo ($data['finished'] == 0) ? 'checked' : ''; ?> value="0" name="finished"> فتح </label>
                                 </div>
@@ -375,7 +375,7 @@ require ADMINROOT . '/views/inc/header.php';
                                 <label class="control-label">رسالة الشكر التلقائية : </label>
                                 <div class="text-warning ">رسالة تظهر للمستخدم بعد اتمام عملية الدفع</div>
                                 <div class=" form-group">
-                                    <textarea name="thanks_message" class="form-control description" placeholder="شكرا جزيلا لتبرعكم"><?php echo $data['thanks_message']; ?></textarea>
+                                    <textarea name="thanks_message" class="form-control description" placeholder="شكرا جزيلا لطلبكم"><?php echo $data['thanks_message']; ?></textarea>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -388,7 +388,7 @@ require ADMINROOT . '/views/inc/header.php';
                                 </div>
                                 <div class="text-warning ">رسالة ترسل للمستخدم عند تأكيد الطلب</div>
                                 <div class=" form-group">
-                                    <textarea name="sms_msg" class="form-control description" id="message" placeholder="تم استلام تبرعكم بنجاح"><?php echo $data['sms_msg']; ?></textarea>
+                                    <textarea name="sms_msg" class="form-control description" id="message" placeholder="تم استلام طلبكم بنجاح"><?php echo $data['sms_msg']; ?></textarea>
                                 </div>
                             </div>
                         </div>

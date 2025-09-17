@@ -24,7 +24,7 @@ require ADMINROOT . '/views/inc/header.php';
     <?php flash('substitute_msg'); ?>
     <div class="page-title">
         <div class="title_right">
-            <h3><?php echo $data['page_title']; ?> <small>اضافة متطوع جديد </small></h3>
+            <h3><?php echo $data['page_title']; ?> <small>اضافة مقدمي الخدمة جديد </small></h3>
         </div>
         <div class="title_left">
             <a href="<?php echo ADMINURL; ?>/substitutes" class="btn btn-success pull-left">عودة <i class="fa fa-reply"></i></a>

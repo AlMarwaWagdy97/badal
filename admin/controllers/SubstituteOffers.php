@@ -34,7 +34,7 @@ class SubstituteOffers extends ControllerAdmin
             redirect('substitutes');
         }
         $data = [
-            'title' => 'عروض المتطوع',
+            'title' => 'عروض مقدمي الخدمة',
             'badaloffers' => $substituteOffer,
         ];
         $this->view('substitutes/offers', $data);

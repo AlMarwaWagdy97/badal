@@ -326,10 +326,10 @@ class SubstitutesOrders extends ControllerAdmin
                         'total'         => $order->total,
                         'project'       => $order->projects,
                         'donor'         => $subsitue->full_name,
-                        'subject'       => 'تم تسجيل تبرع جديد ',
-                        'msg'           => "تم تسجيل تبرع جديد بمشروع : {$order->projects} <br/> بقيمة : " . $order->total,
+                        'subject'       => 'تم تسجيل طلب جديد ',
+                        'msg'           => "تم تسجيل طلب جديد بمشروع : {$order->projects} <br/> بقيمة : " . $order->total,
                         // 'notify_id'     => $substitute->subsitude_donor_id,
-                        // 'notify'        => 'تم تسجيل تبرع جديد ',
+                        // 'notify'        => 'تم تسجيل طلب جديد ',
                     ];
 
                     $messaging->sendNotfication($subsitueData, 'newOrder');

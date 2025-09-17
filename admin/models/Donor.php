@@ -166,7 +166,7 @@ class Donor extends ModelAdmin
         }
         $results = $this->getDonors($cond, $bind, '', '');
         $data[] = [
-            "donor_id" => "رقم المتبرع",
+            "donor_id" => "رقم طالب الخدمة",
             "mobile" => "الجوال",
             "full_name" => "الاسم بالكامل",
             "email" => "الايميل",

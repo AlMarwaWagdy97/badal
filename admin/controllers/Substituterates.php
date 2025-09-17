@@ -36,7 +36,7 @@ class SubstituteRates extends ControllerAdmin
             redirect('substitutes');
         }
         $data = [
-            'title' => 'تقيممات المتطوع',
+            'title' => 'تقيممات مقدمي الخدمة ',
             'badalreviews' => $substituterates,
         ];
         $this->view('substitutes/review', $data);

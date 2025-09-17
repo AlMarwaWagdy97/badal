@@ -27,7 +27,7 @@ require ADMINROOT . '/views/inc/header.php';
     <?php flash('donor_msg'); ?>
     <div class="page-title">
         <div class="title_right">
-            <h3><?php echo $data['page_title']; ?> <small>اضافة  متبرع جديد </small></h3>
+            <h3><?php echo $data['page_title']; ?> <small>اضافة  طالب خدمة جديد </small></h3>
         </div>
         <div class="title_left">
             <a href="<?php echo ADMINURL; ?>/donors" class="btn btn-success pull-left">عودة <i class="fa fa-reply"></i></a>
@@ -39,9 +39,9 @@ require ADMINROOT . '/views/inc/header.php';
     <div class="row">
         <form action="<?php echo ADMINURL . '/donors/add'; ?>" method="post" enctype="multipart/form-data" accept-charset="utf-8" >
             <div class="col-xs-12 form-group <?php echo (!empty($data['full_name_error'])) ? 'has-error' : ''; ?>">
-                <label class="control-label" for="pageTitle">اسم المتبرع : </label>
+                <label class="control-label" for="pageTitle">اسم طالب الخدمة : </label>
                 <div class="has-feedback">
-                    <input type="text" id="pageTitle" class="form-control" name="full_name" placeholder="اسم المتبرع" value="<?php echo $data['full_name']; ?>">
+                    <input type="text" id="pageTitle" class="form-control" name="full_name" placeholder="اسم طالب الخدمة" value="<?php echo $data['full_name']; ?>">
                     <span class="fa fa-edit form-control-feedback" aria-hidden="true"></span>
                     <span class="help-block"><?php echo $data['full_name_error']; ?></span>
                 </div>
@@ -49,7 +49,7 @@ require ADMINROOT . '/views/inc/header.php';
             <div class="col-xs-12 form-group ">
                 <label class="control-label" for="email">البريد الالكتروني : </label>
                 <div class="has-feedback">
-                    <input type="email" id="email" class="form-control" name="email" placeholder="بريد المتبرع" value="<?php echo $data['email']; ?>">
+                    <input type="email" id="email" class="form-control" name="email" placeholder="بريد طالب الخدمة" value="<?php echo $data['email']; ?>">
                     <span class="fa fa-envelope form-control-feedback" aria-hidden="true"></span>
                 </div>
             </div>
@@ -81,7 +81,7 @@ require ADMINROOT . '/views/inc/header.php';
                 </div>
             </div>
             <div class="col-xs-12 form-group <?php echo (!empty($data['status_error'])) ? 'has-error' : ''; ?>">
-                <label class="control-label">حالة المتبرع :</label>
+                <label class="control-label">حالة طالب الخدمة :</label>
                 <div class="radio">
                     <label>
                         <input type="radio" class="flat" <?php echo ($data['status'] == 1) ? 'checked' : ''; ?> value="1" name="status"> نشط

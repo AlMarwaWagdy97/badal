@@ -41,12 +41,12 @@ require ADMINROOT . '/views/inc/header.php';
                                 <th>
                                     <input type="checkbox" id="check-all" class="flat">
                                 </th>
-                                <th class="column-title">معرف التبرع <input type="search" placeholder="بحث بالمعرف" name="search[order_identifier]" value="<?php printIsset(cleanSearchVar('order_identifier')); ?>" class="w100"></th>
+                                <th class="column-title">معرف الطلب <input type="search" placeholder="بحث بالمعرف" name="search[order_identifier]" value="<?php printIsset(cleanSearchVar('order_identifier')); ?>" class="w100"></th>
                                 <th class="column-title">القيمة <br>
                                     <input type="search" placeholder="من" name="search[total_from]" value="<?php printIsset(cleanSearchVar('total_from')); ?>" class="w50">
                                     <input type="search" placeholder="الي" name="search[total_to]" value="<?php printIsset(cleanSearchVar('total_to')); ?>" class="w50">
                                 </th>
-                                <th class="column-title">تبرع بأسم <input type="search" placeholder="بحث بالمتبرع" name="search[donor_name]" value="<?php printIsset(cleanSearchVar('donor_name')); ?>" class="w100"></th>
+                                <th class="column-title">طلب بأسم <input type="search" placeholder="بحث بطالب الخدمة" name="search[donor_name]" value="<?php printIsset(cleanSearchVar('donor_name')); ?>" class="w100"></th>
                                 <th class="column-title">اسم المستخدم <input type="search" placeholder="بحث بالمستخدم" name="search[full_name]" value="<?php printIsset(cleanSearchVar('full_name')); ?>" class="w100"></th>
                                 <th class="column-title">الجوال <input type="search" placeholder="بحث بالجوال" name="search[mobile]" value="<?php printIsset(cleanSearchVar('mobile')); ?>" class="w100"></th>
                                 <th class="column-title">نيابة عن<input type="search" placeholder="بحث بنيابة عن" name="search[behafeof]" value="<?php printIsset(cleanSearchVar('behafeof')); ?>" class="w100"></th>
@@ -64,9 +64,9 @@ require ADMINROOT . '/views/inc/header.php';
                                         } ?>
                                     </select>
                                 </th>
-                                <th class="column-title">وسيلة التبرع <br>
+                                <th class="column-title">وسيلة الطلب <br>
                                     <div class="dropdown check-list">
-                                        <a href="#" data-toggle="dropdown" class="dropdown-toggle btn-default"> وسيلة التبرع <b class="caret"></b></a>
+                                        <a href="#" data-toggle="dropdown" class="dropdown-toggle btn-default"> وسيلة الطلب <b class="caret"></b></a>
                                         <ul class="dropdown-menu">
                                             <?php foreach ($data['paymentMethodsList'] as $pm) {
                                                 echo '<li><label class="btn-default"><input class="flat" name="search[payment_method][]"';
@@ -84,7 +84,7 @@ require ADMINROOT . '/views/inc/header.php';
                                     </select>
                                 </th>
                                 <th class="column-title">تفاصيل Payfort </th>
-                                <th class="column-title">تاريخ التبرع <br>
+                                <th class="column-title">تاريخ الطلب <br>
                                     <input type="date" placeholder=" من" name="search[date_from]" value="<?php if (returnIsset(cleanSearchVar('date_from'))) echo date('Y-m-d', returnIsset(cleanSearchVar('date_from'))); ?>" class="">
                                     <input type="date" placeholder=" الي" name="search[date_to]" value="<?php if (returnIsset(cleanSearchVar('date_to'))) echo date('Y-m-d', (int) returnIsset(cleanSearchVar('date_to')) - 86400); ?>" class="">
                                 </th>

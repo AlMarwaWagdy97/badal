@@ -27,7 +27,7 @@ require ADMINROOT . '/views/inc/header.php';
     <?php flash('donation_msg'); ?>
     <div class="page-title">
         <div class="title_right">
-            <h3><?php echo $data['page_title']; ?> <small>عرض محتوي التبرع </small></h3>
+            <h3><?php echo $data['page_title']; ?> <small>عرض محتوي الطلب </small></h3>
         </div>
         <div class="title_left">
             <a href="<?php echo ADMINURL; ?>/donations" class="btn btn-success pull-left">عودة <i class="fa fa-reply"></i></a>
@@ -39,7 +39,7 @@ require ADMINROOT . '/views/inc/header.php';
     <div class="row">
         <div class="col-md-12 col-sm-12">
             <div class="form-groupcol-xs-12">
-                <label class="control-label">قيمة التبرع : </label>
+                <label class="control-label">قيمة الطلب : </label>
                 <p><?php echo $data['donation']->amount; ?></p>
             </div>
             <div class="form-groupcol-xs-12">

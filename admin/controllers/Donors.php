@@ -56,7 +56,7 @@ class Donors extends ControllerAdmin
             if (isset($_POST['publish'])) {
                 if (isset($_POST['record'])) {
                     if ($row_num = $this->donorModel->publishById($_POST['record'], 'donor_id')) {
-                        flash('donor_msg', 'تم تفعيل المتبرع ' . $row_num . ' بنجاح');
+                        flash('donor_msg', 'تم تفعيل الطالب خدمة ' . $row_num . ' بنجاح');
                     } else {
                         flash('donor_msg', 'هناك خطأ ما يرجي المحاولة لاحقا', 'alert alert-danger');
                     }
@@ -69,7 +69,7 @@ class Donors extends ControllerAdmin
 
                 if (isset($_POST['record'])) {
                     if ($row_num = $this->donorModel->unpublishById($_POST['record'], 'donor_id')) {
-                        flash('donor_msg', 'تم تعليق المتبرع ' . $row_num . ' بنجاح');
+                        flash('donor_msg', 'تم تعليق الطالب خدمة ' . $row_num . ' بنجاح');
                     } else {
                         flash('donor_msg', 'هناك خطأ ما يرجي المحاولة لاحقا', 'alert alert-danger');
                     }
@@ -128,7 +128,7 @@ class Donors extends ControllerAdmin
             'current' => $current,
             'perpage' => $perpage,
             'header' => '',
-            'title' => 'المتبرعين',
+            'title' => 'طالبين خدمة',
             'donors' => $donors,
             'recordsCount' => $recordsCount->count,
             'footer' => '',
@@ -146,7 +146,7 @@ class Donors extends ControllerAdmin
             // sanitize POST array
             $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
             $data = [
-                'page_title' => 'المتبرعين',
+                'page_title' => 'طالبين خدمة',
                 'full_name' => trim($_POST['full_name']),
                 'email' => trim($_POST['email']),
                 'mobile_confirmed' => trim($_POST['mobile_confirmed']),
@@ -160,19 +160,19 @@ class Donors extends ControllerAdmin
             ];
             // validate name
             if (empty($data['full_name'])) {
-                $data['full_name_error'] = 'من فضلك اختار اسم للمتبرع';
+                $data['full_name_error'] = 'من فضلك اختار اسم للطالب خدمة';
             }
             // validate mobile
             if (empty($data['mobile'])) {
-                $data['mobile_error'] = 'من فضلك اضف رقم جوال للمتبرع';
+                $data['mobile_error'] = 'من فضلك اضف رقم جوال للطالب خدمة';
             }
             // validate identity
             if (empty($data['identity'])) {
-                $data['identity_error'] = 'من فضلك اضف رقم الهوية للمتبرع';
+                $data['identity_error'] = 'من فضلك اضف رقم الهوية للطالب خدمة';
             }
             // validate status
             if ($data['status'] == '') {
-                $data['status_error'] = 'من فضلك اختار حالة المتبرع';
+                $data['status_error'] = 'من فضلك اختار حالة الطالب خدمة';
             }
             //make sure there is no errors
             if (empty($data['full_name_error']) && empty($data['status_error']) && empty($data['identity_error']) && empty($data['mobile_error'])) {
@@ -188,7 +188,7 @@ class Donors extends ControllerAdmin
             $this->view('donors/add', $data);
         } else {
             $data = [
-                'page_title' => 'المتبرعين',
+                'page_title' => 'طالب خدمة',
                 'full_name' => '',
                 'email' => '',
                 'mobile' => '',
@@ -219,7 +219,7 @@ class Donors extends ControllerAdmin
             $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
             $data = [
                 'donor_id' => $id,
-                'page_title' => 'المتبرعين',
+                'page_title' => 'طالب خدمة',
                 'full_name' => trim($_POST['full_name']),
                 'email' => trim($_POST['email']),
                 'mobile_confirmed' => trim($_POST['mobile_confirmed']),
@@ -235,19 +235,19 @@ class Donors extends ControllerAdmin
             ];
             // validate name
             if (empty($data['full_name'])) {
-                $data['full_name_error'] = 'من فضلك اختار اسم للمتبرع';
+                $data['full_name_error'] = 'من فضلك اختار اسم للطالب خدمة';
             }
             // validate mobile
             if (empty($data['mobile'])) {
-                $data['mobile_error'] = 'من فضلك اضف رقم جوال للمتبرع';
+                $data['mobile_error'] = 'من فضلك اضف رقم جوال للطالب خدمة';
             }
             // validate status
             if ($data['status'] == '') {
-                $data['status_error'] = 'من فضلك اختار حالة المتبرع';
+                $data['status_error'] = 'من فضلك اختار حالة الطالب خدمة';
             }
              // validate identity
              if (empty($data['identity'])) {
-                $data['identity_error'] = 'من فضلك اضف رقم الهوية للمتبرع';
+                $data['identity_error'] = 'من فضلك اضف رقم الهوية للطالب خدمة';
             }
             //make sure there is no errors
             if (empty($data['full_name_error']) && empty($data['mobile_error']) && empty($data['identity_error']) && empty($data['status_error'])) {
@@ -271,7 +271,7 @@ class Donors extends ControllerAdmin
 
             $data = [
                 'donor_id' => $id,
-                'page_title' => 'المتبرعين',
+                'page_title' => 'طالب خدمة',
                 'full_name' => $donor->full_name,
                 'email' => $donor->email,
                 'mobile' => $donor->mobile,
@@ -301,7 +301,7 @@ class Donors extends ControllerAdmin
         }
         $data = [
             'donor_id' => $id,
-            'page_title' => 'المتبرعين',
+            'page_title' => 'طالب خدمة',
             'donor' => $donor,
             'donations' => $this->donorModel->getDonerDonations($id),
         ];

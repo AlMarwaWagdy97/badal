@@ -43,7 +43,7 @@ require ADMINROOT . '/views/inc/header.php';
                         <thead>
                             <tr class=" form-group-sm">
                                 <th width="50px"><input type="submit" name="search[submit]" value="بحث" class="btn btn-sm btn-primary search-query" /></th>
-                                <th class=""><input type="search" class="form-control" placeholder="بحث بالمتطوع" name="search[full_name]" value=""></th>
+                                <th class=""><input type="search" class="form-control" placeholder="بحث بالمقدمي الخدمة" name="search[full_name]" value=""></th>
                                 <th colspan="2"><input type="search" class="form-control" placeholder="بحث بالهوية" name="search[identity]" value=""></th>
                                 <th class=""><input type="search" class="form-control" placeholder="بحث بالهاتف" name="search[phone]" value=""></th>
                                 <th class=""><input type="search" class="form-control" placeholder="بحث بالبريد" name="search[email]" value=""></th>
@@ -62,7 +62,7 @@ require ADMINROOT . '/views/inc/header.php';
                                 <th>
                                     <input type="checkbox" id="check-all" class="flat">
                                 </th>
-                                <th class="column-title">اسم المتطوع </th>
+                                <th class="column-title">اسم المقدمي الخدمة </th>
                                 <th class="column-title">الهوية </th>
                                 <th class="column-title">صورة الهوية </th>
                                 <th class="column-title">الهاتف </th>

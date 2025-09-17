@@ -36,7 +36,7 @@ require ADMINROOT . '/views/inc/header.php';
             <table class="table table-striped jambo_table bulk_action">
                 <thead>
                     <tr class="headings">
-                        <th>اسم المتبرع </th>
+                        <th>اسم الطالب الخدمة </th>
                         <th>الهاتف</th>
                         <th>عنوان الرسالة</th>
                         <th>الغرض</th>

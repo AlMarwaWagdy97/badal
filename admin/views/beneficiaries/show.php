@@ -28,7 +28,7 @@ $beneficiary = (object) $data['beneficiary'];
     <?php flash('beneficiary_msg'); ?>
     <div class="page-title">
         <div class="title_right">
-            <h3><?php echo $data['page_title']; ?> <small>عرض محتوي التبرع العيني </small></h3>
+            <h3><?php echo $data['page_title']; ?> <small>عرض محتوي الطلب العيني </small></h3>
         </div>
         <div class="title_left">
             <a href="<?php echo ADMINURL; ?>/beneficiaries" class="btn btn-success pull-left">عودة <i class="fa fa-reply"></i></a>

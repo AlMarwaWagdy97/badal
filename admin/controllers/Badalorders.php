@@ -102,7 +102,7 @@ class Badalorders extends ControllerAdmin
             'current' => $current,
             'perpage' => $perpage,
             'header' => '',
-            'title' => 'التبرعات',
+            'title' => 'الطلبات',
             'statuses' => $this->badalorderModel->statusesList(' WHERE status = 1'),
             'paymentMethodsList' => $this->badalorderModel->paymentMethodsList(' WHERE status <> 2 '),
             'projects' => $this->badalorderModel->projectsList(' WHERE status = 1'),
@@ -127,7 +127,7 @@ class Badalorders extends ControllerAdmin
 
             $data = [
                 'badal_id' => $id,
-                'page_title' => ' التبرعات',
+                'page_title' => ' الطلبات',
                 'amount' => $_POST['amount'],
                 'total' => $_POST['total'],
                 'quantity' => $_POST['quantity'],
@@ -174,7 +174,7 @@ class Badalorders extends ControllerAdmin
                 redirect('badalorders');
             }
             $data = [
-                'page_title' => 'التبرعات',
+                'page_title' => 'الطلبات',
                 'badal_id' => $id,
                 'amount' => $badalorder->amount,
                 'total' => $badalorder->total,
@@ -241,8 +241,8 @@ class Badalorders extends ControllerAdmin
             redirect('badalorders');
         }
         $data = [
-            'page_title' => 'التبرعات',
-            'badalorder_type_list' => ['share' => 'تبرع بالاسهم', 'fixed' => 'قيمة ثابته', 'open' => 'تبرع مفتوح', 'unit' => 'فئات'],
+            'page_title' => 'الطلبات',
+            'badalorder_type_list' => ['share' => 'طلب بالاسهم', 'fixed' => 'قيمة ثابته', 'open' => 'طلب مفتوح', 'unit' => 'فئات'],
             'badalorder' => $badalorder,
         ];
         $this->view('badalorders/show', $data);

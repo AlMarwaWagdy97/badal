@@ -293,7 +293,7 @@ class Orders extends ControllerAdmin
                     ];
                     return $this->view('messagings/index', $data);
                 } else {
-                    flash('order_msg', 'لم تقم بأختيار اي تبرع', 'alert alert-danger');
+                    flash('order_msg', 'لم تقم بأختيار اي طلب', 'alert alert-danger');
                 }
             }
             //handling status
@@ -480,7 +480,7 @@ class Orders extends ControllerAdmin
         }
         $data = [
             'page_title' => 'الطلبات',
-            'donation_type_list' => ['share' => 'تبرع بالاسهم', 'fixed' => 'قيمة ثابته', 'open' => 'تبرع مفتوح', 'unit' => 'فئات'],
+            'donation_type_list' => ['share' => 'طلب بالاسهم', 'fixed' => 'قيمة ثابته', 'open' => 'طلب مفتوح', 'unit' => 'فئات'],
             'donations' => $this->orderModel->getDonationsByOrderId($id),
             'order' => $order,
         ];
@@ -586,8 +586,8 @@ class Orders extends ControllerAdmin
                         'total'         => $order->total,
                         'project'       => $order->projects,
                         'donor'         => $order->donor_name,
-                        'subject'       => 'تم تسجيل تبرع جديد ',
-                        'msg'           => "تم تسجيل تبرع جديد بمشروع : {$order->projects}"  ,
+                        'subject'       => 'تم تسجيل طلب جديد ',
+                        'msg'           => "تم تسجيل طلب جديد بمشروع : {$order->projects}"  ,
                         'notify_id'     => $subsitue->subsitude_donor_id,
                         'notify'        => " يوجد طلب جديد",
                     ];

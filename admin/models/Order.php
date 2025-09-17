@@ -344,7 +344,7 @@ class Order extends ModelAdmin
                 $message = str_replace('[[identifier]]', $send->order_identifier, $message); // replace identifier string with order identifier
                 $message = str_replace('[[total]]', $send->total, $message); // replace total string with order total
                 $message = str_replace('[[project]]', $send->projects, $message); // replace name string with project
-                sendPush('تأكيد التبرع ', $message, $send->donor_id);
+                sendPush('تأكيد الطلب ', $message, $send->donor_id);
             }
 
             //  check if special message -----------------------------------
@@ -495,12 +495,12 @@ class Order extends ModelAdmin
             "store_id" => "store_id",
             "API_status" => "APIحالة ال ",
             "status_id" => "وسم الحالة",
-            "donor_name" => "اسم المتبرع",
+            "donor_name" => "اسم طالب الخدمة",
             "status" => "status",
             "modified_date" => "عدل في",
             "create_date" => "اضيف في",
-            "payment_method" => "وسيلة التبرع",
-            "donor" => "تبرع بأسم",
+            "payment_method" => "وسيلة الطلب",
+            "donor" => "طلب بأسم",
             "mobile" => "الجوال",
             "email" => "البريد الالكتروني",
             "status_name" => "وسم الحالة ",
@@ -535,7 +535,7 @@ class Order extends ModelAdmin
                 "total" => "المجموع",
                 "payment_method_key" => "وسيلة الدفع",
                 "projects" => "المشروعات",
-                "donor_name" => "اسم المتبرع",
+                "donor_name" => "اسم طالب الخدمة",
                 "mobile" => "الجوال",
                 "email" => "البريد الالكتروني",
                 "status" => "الحاله",
@@ -554,11 +554,11 @@ class Order extends ModelAdmin
                 // "store_id" => "store_id",
                 // "API_status" => "APIحالة ال ",
                 // "status_id" => "وسم الحالة",
-                // "donor_name" => "اسم المتبرع",
+                // "donor_name" => "اسم المطلب",
                 // "modified_date" => "عدل في",
                 // "create_date" => "اضيف في",
-                // "payment_method" => "وسيلة التبرع",
-                // "donor" => "تبرع بأسم",
+                // "payment_method" => "وسيلة الطلب",
+                // "donor" => "طلب بأسم",
               
             ];
             $results = array_merge($data, $results);
@@ -883,7 +883,7 @@ class Order extends ModelAdmin
         $data[] = [
             "order_identifier" => "الرقم التعريفي",
             "total" => "المجموع",
-            "donor" => "تبرع بأسم",
+            "donor" => "طلب بأسم",
             "mobile" => "الجوال",
             "email" => "البريد الاكتيروني",
             "behafeof" => "نيابة عن",
@@ -940,7 +940,7 @@ class Order extends ModelAdmin
             $data[] = [
                 "order_identifier" => "الرقم التعريفي",
                 "total" => "المجموع",
-                "donor" => "تبرع بأسم",
+                "donor" => "طلب بأسم",
                 "mobile" => "الجوال",
                 "email" => "البريد الاكتيروني",
                 "behafeof" => "نيابة عن",

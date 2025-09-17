@@ -128,13 +128,13 @@ require ADMINROOT . '/views/inc/header.php';
                     </div>
                 </div>
                 <div class="form-group col-xs-12 ">
-                    <label class="control-label">حالة التبرع السريع :</label>
+                    <label class="control-label">حالة الطلب السريع :</label>
                     <div class="radio">
                         <label>
-                            <input type="radio" class="flat" <?php echo ($data['value']->showQuickDonation == 1) ? 'checked' : ''; ?> value="1" name="value[showQuickDonation]"> اظهار التبرع السريع
+                            <input type="radio" class="flat" <?php echo ($data['value']->showQuickDonation == 1) ? 'checked' : ''; ?> value="1" name="value[showQuickDonation]"> اظهار الطلب السريع
                         </label>
                         <label>
-                            <input type="radio" class="flat" <?php echo ($data['value']->showQuickDonation == '0') ? 'checked' : ''; ?> value="0" name="value[showQuickDonation]"> اخفاء التبرع السريع
+                            <input type="radio" class="flat" <?php echo ($data['value']->showQuickDonation == '0') ? 'checked' : ''; ?> value="0" name="value[showQuickDonation]"> اخفاء الطلب السريع
                         </label>
                     </div>
                 </div>

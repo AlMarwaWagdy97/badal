@@ -28,7 +28,7 @@ $substitute = (object) $data['substitute'];
     <?php flash('substitute_msg'); ?>
     <div class="page-title">
         <div class="title_right">
-            <h3><?php echo $data['page_title']; ?> <small>عرض متطوع </small></h3>
+            <h3><?php echo $data['page_title']; ?> <small>عرض مقدمي الخدمة </small></h3>
         </div>
         <div class="title_left">
             <a href="<?php echo ADMINURL; ?>/substitutes" class="btn btn-success pull-left">عودة <i class="fa fa-reply"></i></a>
@@ -108,10 +108,10 @@ $substitute = (object) $data['substitute'];
                             <tr class="headings">
                                 <th class="column-title">رقم العرض </th>
                                 <th class="column-title">المشروع </th>
-                                <th class="column-title">المتطوع </th>
+                                <th class="column-title">المقدمي الخدمة </th>
                                 <th class="column-title">القيمه </th>
                                 <th class="column-title">بداء من </th>
-                                <th class="column-title">تاريخ التبرع </th>
+                                <th class="column-title">تاريخ الطلب </th>
                                 <th class="column-title">آخر تحديث </th>
                                 <th class="column-title">آخر تحديث </th>
                             </tr>
@@ -156,7 +156,7 @@ $substitute = (object) $data['substitute'];
                                 <th class="column-title">العمليه </th>
                                 <th class="column-title"> النسبة </th>
                                 <th class="column-title"> وصف </th>
-                                <th class="column-title">تاريخ التبرع </th>
+                                <th class="column-title">تاريخ الطلب </th>
                                 <th class="column-title no-link last" width="140"><span class="nobr">اجراءات</span></th>
                             </tr>
                         </thead>
@@ -166,7 +166,7 @@ $substitute = (object) $data['substitute'];
                                 
                                     <td><?php echo $review->review_id; ?></td>
                                     <td><?php echo '<a href="' . ADMINURL . '/badalorders/show/' . $review->badal_id . '" >' . $review->badal_id . '</a>'; ?></td>
-                                    <!-- <td><?php echo $review->type == "donor" ? "متبرع" : "متطوع"; ?></td> -->
+                                    <!-- <td><?php echo $review->type == "donor" ? "طالب الخدمة" : "مقدمي الخدمة"; ?></td> -->
                                     <!-- <td><?php echo $review->type_id; ?></td> -->
                                     <td><?php echo $review->description; ?></td>
                                     <td><?php echo @$data['reviews'][$review->rate]; ?></td>

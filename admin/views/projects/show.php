@@ -89,7 +89,7 @@ require ADMINROOT . '/views/inc/header.php';
                 <p><?php echo $data['project']->gift ? 'نعم' : 'لا'; ?></p>
             </div>
             <div class="form-group col-md-6 col-xs-6">
-                <label class="control-label">نوع التبرع : </label>
+                <label class="control-label">نوع الطلب : </label>
                 <p><?php
                     $donation_type = json_decode($data['project']->donation_type, true);
                     echo $data['donation_type_list'][$donation_type['type']];
@@ -122,7 +122,7 @@ require ADMINROOT . '/views/inc/header.php';
                 <p><?php echo $data['project']->featured ? 'نعم' : 'لا'; ?></p>
             </div>
             <div class="form-group col-md-6 col-xs-6">
-                <label class="control-label">اغلاق التبرع : </label>
+                <label class="control-label">اغلاق الطلب : </label>
                 <p><?php echo $data['project']->finished ? 'نعم' : 'لا'; ?></p>
             </div>
             <div class="form-group col-md-6 col-xs-6">

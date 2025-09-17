@@ -235,8 +235,8 @@ class Requests extends ApiController
                     'total' => $order->total,
                     'project' => $order->projects,
                     'donor' => $subsitue->full_name,
-                    'subject' => 'تم تسجيل تبرع جديد ',
-                    'msg' => "تم تسجيل تبرع جديد بمشروع : {$order->projects} <br/> بقيمة : " . $order->total,
+                    'subject' => 'تم تسجيل طلب جديد ',
+                    'msg' => "تم تسجيل طلب جديد بمشروع : {$order->projects} <br/> بقيمة : " . $order->total,
                 ];
                 $messaging->sendNotfication($subsitueData, 'newOrder');
             }
@@ -280,8 +280,8 @@ class Requests extends ApiController
     //                 'total' => $order->total,
     //                 'project' => $order->projects,
     //                 'donor' => $subsitue->full_name,
-    //                 'subject' => 'تم تسجيل تبرع جديد ',
-    //                 'msg' => "تم تسجيل تبرع جديد بمشروع : {$order->projects} <br/> بقيمة : " . $order->total,
+    //                 'subject' => 'تم تسجيل طلب جديد ',
+    //                 'msg' => "تم تسجيل طلب جديد بمشروع : {$order->projects} <br/> بقيمة : " . $order->total,
 
     //             ];
     //             $messaging->sendNotfication($subsitueData, 'newOrder');

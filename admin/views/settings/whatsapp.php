@@ -182,7 +182,7 @@ require ADMINROOT . '/views/inc/header.php';
                                         <div class="row badal">
                                             <!-- New order ( Badal ) ----------------------------------------------------------------------------------- -->
                                             <div class="box-badal col-md-5">
-                                                <h4 class="x_title"> رسالة بريدية لطلب بدل جديد ( ترسل للمتطوعين ) </h4>
+                                                <h4 class="x_title"> رسالة بريدية لطلب بدل جديد ( ترسل لمقدمي الخدمة ) </h4>
                                                 <div class="form-group">
                                                     <label class="control-label" for="settingTitle"> اسم template </label>
                                                     <div class="has-feedback">
@@ -199,7 +199,7 @@ require ADMINROOT . '/views/inc/header.php';
 
                                             <!-- start Order ------------------------------------------------------------------------------- -->
                                             <div class="box-badal col-md-5">
-                                                <h4 class="x_title"> رسالة بداء طلب البدل ( ترسل للمتبرع ) </h4>
+                                                <h4 class="x_title"> رسالة بداء طلب البدل ( ترسل للطالب الخدمة ) </h4>
                                                 <div class="form-group">
                                                     <label class="control-label" for="settingTitle"> اسم template </label>
                                                     <div class="has-feedback">
@@ -216,7 +216,7 @@ require ADMINROOT . '/views/inc/header.php';
 
                                             <!-- completed Order ------------------------------------------------------------------------------- -->
                                             <div class="box-badal col-md-5">
-                                                <h4 class="x_title"> رسالة انتهاء الطلب ( ترسل للمتبرع ) </h4>
+                                                <h4 class="x_title"> رسالة انتهاء الطلب ( ترسل للطالب الخدمة ) </h4>
                                                 <div class="form-group">
                                                     <label class="control-label" for="settingTitle"> اسم template </label>
                                                     <div class="has-feedback">
@@ -233,7 +233,7 @@ require ADMINROOT . '/views/inc/header.php';
 
                                             <!-- New request ( Badal ) ----------------------------------------------------------------------------------- -->
                                             <div class="box-badal col-md-5">
-                                                <h4 class="x_title"> رساله المتقدمين لتنفيذ طلب البدل (ترسل للمتبرع) </h4>
+                                                <h4 class="x_title"> رساله المتقدمين لتنفيذ طلب البدل (ترسل للطالب الخدمة) </h4>
                                                 <div class="form-group">
                                                     <label class="control-label" for="settingTitle"> اسم template </label>
                                                     <div class="has-feedback">
@@ -267,7 +267,7 @@ require ADMINROOT . '/views/inc/header.php';
 
                                             <!-- Notify subsitute for Orders ----------------------------------------------------------------------------------- -->
                                             <div class="box-badal col-md-5">
-                                                <h4 class="x_title"> رساله المتقدمين لتنبيه الطلب اليوم   (ترسل للمتطوع) </h4>
+                                                <h4 class="x_title"> رساله المتقدمين لتنبيه الطلب اليوم   (ترسل للمقدمي الخدمة) </h4>
                                                 <div class="form-group">
                                                     <label class="control-label" for="settingTitle"> اسم template </label>
                                                     <div class="has-feedback">
@@ -320,7 +320,7 @@ require ADMINROOT . '/views/inc/header.php';
                                             
                                             <!-- completed Order ------------------------------------------------------------------------------- -->
                                             <div class="box-badal col-md-5">
-                                                <h4 class="x_title"> رسالة اكتمال المناسك  ( ترسل للمتبرع والمتطوع ) </h4>
+                                                <h4 class="x_title"> رسالة اكتمال المناسك  ( ترسل للطالب الخدمة والمقدمي الخدمة ) </h4>
                                                 <div class="form-group">
                                                     <label class="control-label" for="settingTitle"> اسم template </label>
                                                     <div class="has-feedback">
@@ -337,7 +337,7 @@ require ADMINROOT . '/views/inc/header.php';
 
                                             <!-- new offer  ----------------------------------------------------------------------------------- -->
                                             <!-- <div class="box-badal col-md-5">
-                                            <h4 class="x_title">رساله لعرض جديد ( ترسل للمتبرعين ) </h4>
+                                            <h4 class="x_title">رساله لعرض جديد ( ترسل للطالب الخدمةين ) </h4>
                                             <div class="form-group">
                                                 <label class="control-label" for="settingTitle"> عرض  template </label>
                                                 <div class="has-feedback">
@@ -354,7 +354,7 @@ require ADMINROOT . '/views/inc/header.php';
 
                                             <!-- new review  ----------------------------------------------------------------------------------- -->
                                             <!-- <div class="box-badal col-md-5">
-                                            <h4 class="x_title">رساله لعرض جديد ( ترسل للمتبرعين ) </h4>
+                                            <h4 class="x_title">رساله لعرض جديد ( ترسل للطالب الخدمةين ) </h4>
                                             <div class="form-group">
                                                 <label class="control-label" for="settingTitle"> عرض  template </label>
                                                 <div class="has-feedback">

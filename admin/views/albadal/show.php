@@ -90,7 +90,7 @@ require ADMINROOT . '/views/inc/header.php';
                 <p><?php echo $data['project']->featured ? 'نعم' : 'لا'; ?></p>
             </div>
             <div class="form-group col-md-6 col-xs-6">
-                <label class="control-label">اغلاق التبرع : </label>
+                <label class="control-label">اغلاق الطلب : </label>
                 <p><?php echo $data['project']->finished ? 'نعم' : 'لا'; ?></p>
             </div>
             <div class="form-group col-md-6 col-xs-6">

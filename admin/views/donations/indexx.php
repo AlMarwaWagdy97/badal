@@ -63,7 +63,7 @@ require ADMINROOT . '/views/inc/header.php';
                                 <th class="column-title">الاجمالي </th>
                                 <th class="column-title">النوع </th>
                                 <th class="column-title">المشروع </th>
-                                <th class="column-title">تاريخ التبرع </th>
+                                <th class="column-title">تاريخ الطلب </th>
                                 <th class="column-title">آخر تحديث </th>
                                 <th class="column-title no-link last" width="140"><span class="nobr">اجراءات</span></th>
                                 <th class="bulk-actions" colspan="9">

@@ -79,7 +79,7 @@ require ADMINROOT . '/views/inc/header.php';
                     </div>
                 </div>
                 <div class="x_panel tile ">
-                    <h4 class="x_title">رسالة بريديه تنبيه باستلام طلب تبرع</h4>
+                    <h4 class="x_title">رسالة بريديه تنبيه باستلام طلب طلب</h4>
                     <div class="form-group col-xs-12 ">
                         <label class="control-label">تفعيل الارسال :</label>
                         <div class="radio">
@@ -113,7 +113,7 @@ require ADMINROOT . '/views/inc/header.php';
                     </div>
                 </div>
                 <div class="x_panel tile ">
-                    <h4 class="x_title">رسالة SMS لتأكيد التبرع</h4>
+                    <h4 class="x_title">رسالة SMS لتأكيد الطلب</h4>
                     <div class="form-group col-xs-12 ">
                         <label class="control-label">تفعيل الارسال :</label>
                         <div class="radio">
@@ -181,7 +181,7 @@ require ADMINROOT . '/views/inc/header.php';
                     </div>
                 </div>
                 <div id="inkind" class="x_panel tile ">
-                    <h4 class="x_title">اعدادات نموزج التبرع العيني</h4>
+                    <h4 class="x_title">اعدادات نموزج الطلب العيني</h4>
                     <div class="form-group">
                         <label class="control-label" for="inkindEmail">البريد الخاص بتلقي التنبيهات : </label>
                         <div class="has-feedback">

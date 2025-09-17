@@ -36,15 +36,15 @@ require ADMINROOT . '/views/inc/header.php';
         <div class="accordion">
             <div class="card">
                 <div class="card-header" data-toggle="collapse" data-target="#collapseZero" aria-expanded="true" aria-controls="collapseZero">
-                    <span> تقارير التبرعات </span>
+                    <span> تقارير الطلبات </span>
                 </div>
                 <div id="collapseZero" class="collapse in card-body" aria-labelledby="headingZero">
                     <form action="<?php echo ADMINURL ?>/reports/show/orders" method="post" class="row">
-                        <div class="form-group col-lg-6 col-xs-12">معرف التبرع
+                        <div class="form-group col-lg-6 col-xs-12">معرف الطلب
                             <input class="form-control" type="search" placeholder="بحث بالمعرف" name="search[order_identifier]">
                         </div>
-                        <div class="form-group col-lg-6 col-xs-12">اسم المتبرع
-                            <input class="form-control" type="search" placeholder="بحث بالمتبرع" name="search[full_name]">
+                        <div class="form-group col-lg-6 col-xs-12">اسم طالب الخدمة
+                            <input class="form-control" type="search" placeholder="بحث بطالب الخدمة" name="search[full_name]">
                         </div>
                         <div class="form-group col-lg-6 col-xs-12">الجوال <input class="form-control" type="search" placeholder="بحث بالجوال" name="search[mobile]"></div>
                         <div class="form-group col-lg-6 col-xs-12">المشروع
@@ -58,9 +58,9 @@ require ADMINROOT . '/views/inc/header.php';
                                 </ul>
                             </div>
                         </div>
-                        <div class="form-group col-lg-6 col-xs-12">وسيلة التبرع <br>
+                        <div class="form-group col-lg-6 col-xs-12">وسيلة الطلب <br>
                             <div class="dropdown ">
-                                <a href="#" data-toggle="dropdown" class="dropdown-toggle btn-default form-control"> وسيلة التبرع <b class="caret"></b></a>
+                                <a href="#" data-toggle="dropdown" class="dropdown-toggle btn-default form-control"> وسيلة الطلب <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     <?php foreach ($data['paymentMethods'] as $pm) {
                                         echo '<li><label class="btn-default"><input class="flat" name="search[payment_method][]"';
@@ -84,7 +84,7 @@ require ADMINROOT . '/views/inc/header.php';
                             <input class="" type="search" placeholder="من" name="search[total_from]">
                             <input class="" type="search" placeholder="الي" name="search[total_to]">
                         </div>
-                        <div class="form-group col-lg-6 col-xs-12">تاريخ التبرع <br>
+                        <div class="form-group col-lg-6 col-xs-12">تاريخ الطلب <br>
                             <input type="date" placeholder=" من" name="search[date_from]" class="">
                             <input type="date" placeholder=" الي" name="search[date_to]" class="">
                         </div>
@@ -108,13 +108,13 @@ require ADMINROOT . '/views/inc/header.php';
             </div>
             <div class="card">
                 <div class="card-header" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    <span> تقارير المتبرعين </span>
+                    <span> تقارير طالب الخدمة </span>
                 </div>
                 <div id="collapseOne" class="collapse card-body" aria-labelledby="headingOne">
                     <form action="<?php echo ADMINURL ?>/reports/show/donors" method="post" class="row">
                         <div class="form-group col-xs-12 ">
-                            <label for="donor" class="">اسم المتبرع </label>
-                            <input class="form-control" type="text" name="donor" placeholder="المتبرع">
+                            <label for="donor" class="">اسم طالب الخدمة </label>
+                            <input class="form-control" type="text" name="donor" placeholder="طالب الخدمة">
                         </div>
                         <div class="form-group col-xs-12 ">
                             <label for="mobile" class="">رقم الجوال </label>
@@ -125,9 +125,9 @@ require ADMINROOT . '/views/inc/header.php';
                             <input class="form-control" type="text" name="email" placeholder=" البريد الالكتروني ">
                         </div>
                         <div class="form-group col-lg-6 col-xs-12">
-                            <label for="status">حالة المتبرع</label>
+                            <label for="status">حالة طالب الخدمة</label>
                             <select id="status" class="form-control " name="status">
-                                <option value="">اختار حالة المتبرع</option>
+                                <option value="">اختار حالة طالب الخدمة</option>
                                 <option value="1">مفعل</option>
                                 <option value="0">غير مفعل</option>
                                 <option value="2">محذوف</option>

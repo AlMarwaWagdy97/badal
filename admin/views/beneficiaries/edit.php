@@ -27,7 +27,7 @@ require ADMINROOT . '/views/inc/header.php';
     <?php flash('beneficiary_msg'); ?>
     <div class="page-title">
         <div class="title_right">
-            <h3><?php echo $data['page_title']; ?> <small>التعديل علي التبرع </small></h3>
+            <h3><?php echo $data['page_title']; ?> <small>التعديل علي الطلب </small></h3>
         </div>
         <div class="title_left">
             <a href="<?php echo ADMINURL; ?>/beneficiaries" class="btn btn-success pull-left">عودة <i class="fa fa-reply"></i></a>

@@ -66,7 +66,7 @@ require ADMINROOT . '/views/inc/header.php';
                                 <th>
                                     <input type="checkbox" id="check-all" class="flat">
                                 </th>
-                                <th class="column-title">اسم المتبرع </th>
+                                <th class="column-title">اسم طالب الخدمة </th>
                                 <th class="column-title">رقم الجوال </th>
                                 <th class="column-title">رقم الهوية </th>
                                 <th class="column-title">الجوال مؤكد </th>

@@ -48,7 +48,7 @@ require ADMINROOT . '/views/inc/header.php';
                             } ?>
                         </select>
                     </div>
-                    <div class="col-xs-6 form-group"><span class="title">بحث بالمتطوع :</span>
+                    <div class="col-xs-6 form-group"><span class="title">بحث بالمقدمي الخدمة :</span>
                         <select class="form-control" name="search[subsitute]" style="width: 100%;">
                         <option value=""></option>
                             <?php foreach ($data['subsitutes'] as $subsitute) {
@@ -91,7 +91,7 @@ require ADMINROOT . '/views/inc/header.php';
                                 <th class="column-title">اكتمل </th>
                                 <th class="column-title">المناسك </th>
                                 <th class="column-title">التقيم </th>
-                                <th class="column-title">تاريخ التبرع </th>
+                                <th class="column-title">تاريخ الطلب </th>
                                 <th class="column-title">آخر تحديث </th>
                                 <th class="column-title no-link last" width="140"><span class="nobr">اجراءات</span></th>
                                 <th class="bulk-actions" colspan="16">

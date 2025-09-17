@@ -95,7 +95,7 @@ class Donations extends ControllerAdmin
             'current' => $current,
             'perpage' => $perpage,
             'header' => '',
-            'title' => 'التبرعات',
+            'title' => 'الطلبات',
             'statuses' => $this->donationModel->statusesList(' WHERE status = 1'),
             'paymentMethodsList' => $this->donationModel->paymentMethodsList(' WHERE status <> 2 '),
             'projects' => $this->donationModel->projectsList(' WHERE status = 1'),
@@ -119,7 +119,7 @@ class Donations extends ControllerAdmin
 
             $data = [
                 'donation_id' => $id,
-                'page_title' => ' التبرعات',
+                'page_title' => ' الطلبات',
                 'amount' => $_POST['amount'],
                 'total' => $_POST['total'],
                 'quantity' => $_POST['quantity'],
@@ -166,7 +166,7 @@ class Donations extends ControllerAdmin
                 redirect('donations');
             }
             $data = [
-                'page_title' => 'التبرعات',
+                'page_title' => 'الطلبات',
                 'donation_id' => $id,
                 'amount' => $donation->amount,
                 'total' => $donation->total,
@@ -233,8 +233,8 @@ class Donations extends ControllerAdmin
             redirect('donations');
         }
         $data = [
-            'page_title' => 'التبرعات',
-            'donation_type_list' => ['share' => 'تبرع بالاسهم', 'fixed' => 'قيمة ثابته', 'open' => 'تبرع مفتوح', 'unit' => 'فئات'],
+            'page_title' => 'الطلبات',
+            'donation_type_list' => ['share' => 'طلب بالاسهم', 'fixed' => 'قيمة ثابته', 'open' => 'طلب مفتوح', 'unit' => 'فئات'],
             'donation' => $donation,
         ];
         $this->view('donations/show', $data);

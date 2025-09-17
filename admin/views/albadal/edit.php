@@ -226,7 +226,7 @@ require ADMINROOT . '/views/inc/header.php';
                             </div>
                             <div class="form-group">
                                 <div class="radio">
-                                    <label class="control-label">اغلاق التبرع :</label>
+                                    <label class="control-label">اغلاق الطلب :</label>
                                     <label><input type="radio" class="flat" <?php echo ($data['finished'] == 1) ? 'checked' : ''; ?> value="1" name="finished"> اغلاق </label>
                                     <label><input type="radio" class="flat" <?php echo ($data['finished'] == 0) ? 'checked' : ''; ?> value="0" name="finished"> فتح </label>
                                 </div>
@@ -314,7 +314,7 @@ require ADMINROOT . '/views/inc/header.php';
                                 <label class="control-label">رسالة الشكر التلقائية : </label>
                                 <div class="text-warning ">رسالة تظهر للمستخدم بعد اتمام عملية الدفع</div>
                                 <div class=" form-group">
-                                    <textarea name="thanks_message" class="form-control description" placeholder="شكرا جزيلا لتبرعكم"><?php echo $data['thanks_message']; ?></textarea>
+                                    <textarea name="thanks_message" class="form-control description" placeholder="شكرا جزيلا لطلبكم"><?php echo $data['thanks_message']; ?></textarea>
                                 </div>
                             </div>
 
@@ -328,7 +328,7 @@ require ADMINROOT . '/views/inc/header.php';
                                 </div>
                                 <div class="text-warning ">رسالة ترسل للمستخدم عند تأكيد الطلب</div>
                                 <div class=" form-group">
-                                    <textarea name="sms_msg" class="form-control description" id="message" placeholder="تم استلام تبرعكم بنجاح"><?php echo $data['sms_msg']; ?></textarea>
+                                    <textarea name="sms_msg" class="form-control description" id="message" placeholder="تم استلام طلبكم بنجاح"><?php echo $data['sms_msg']; ?></textarea>
                                 </div>
                             </div>
 

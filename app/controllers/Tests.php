@@ -128,9 +128,9 @@ class Tests extends Controller
 
             'donor' => $donor,
 
-            'subject' => 'تم تجربة تبرع جديد ',
+            'subject' => 'تم تجربة طلب جديد ',
 
-            'msg' => "تم تسجيل تبرع جديد بمشروع : ",
+            'msg' => "تم تسجيل طلب جديد بمشروع : ",
 
         ]);
 
