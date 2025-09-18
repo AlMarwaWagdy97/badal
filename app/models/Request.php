@@ -13,7 +13,8 @@ class Request extends Model
      */
     public function getRequestByBadalId($badal_id)
     {
-        $query = 'SELECT `requests`.*,   from_unixtime(`requests`.start_at) as start_at,
+        // $query = 'SELECT `requests`.*,   from_unixtime(`requests`.start_at) as start_at,
+        $query = 'SELECT `requests`.*, 
                  `substitutes`.full_name, `substitutes`.nationality, `substitutes`.gender,  `substitutes`.languages,
                  CONCAT("' . MEDIAURL . '/../files/substitutes/", `substitutes`.`image` ) AS image,
                 (SELECT  round(AVG(`badal_review`.rate) * 2 , 0) / 2

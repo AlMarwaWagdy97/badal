@@ -48,7 +48,13 @@ class Requests extends ApiController
         if(@$badal->substitute_id != null) $this->response('لقد تم اختيار المتقدمين مسبقًا');
         // if($badal->substitute_id != null) $this->response('The applicants have been pre-selected');
         $request = $this->model->getRequestByBadalId($badal_id);
-        if(count( $request) == 1 && $request[0]->is_selected == 1){
+         $response = [];
+            foreach ($request as $req) {
+                $req->start_at =  date('Y/ m/ d | H:i a', $req->start_at);
+                $response[] = $req;
+            }
+       
+        if(count( $response) == 1 && $response[0]->is_selected == 1){
             $this->error("subsitutes already selected");
         }
         $this->response($request);
