@@ -206,9 +206,8 @@ class Badalorder extends Model
         orders.donor_id,
         orders.order_identifier,  orders.donor_name, 
         badal_orders.*,
-        CASE WHEN true THEN "0" ELSE orders.total END AS total,
-        CASE WHEN true THEN "0" ELSE badal_orders.amount END AS amount,
-
+        orders.total AS total,
+        badal_orders.amount AS amount,
         from_unixtime( badal_orders.create_date) AS time
         FROM  badal_orders, projects, orders 
         WHERE substitute_id IS NULL 
