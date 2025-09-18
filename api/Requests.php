@@ -50,7 +50,7 @@ class Requests extends ApiController
         $request = $this->model->getRequestByBadalId($badal_id);
          $response = [];
             foreach ($request as $req) {
-                $req->start_at =  date('Y-m-d | H:i a', $req->start_at);
+                $req->start_at =  date('Y-m-d | h:i a', $req->start_at);
                 $response[] = $req;
             }
        
