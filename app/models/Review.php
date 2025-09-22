@@ -56,7 +56,7 @@ class Review extends Model
     public function getSubstituteNew($substitute){
         $this->db->query('
         SELECT
-        `substitutes`.* , `donors`.* 
+        `donors`.donor_id 
         FROM `substitutes`, `donors` 
         WHERE `substitutes`.substitute_id = ' . $substitute.'
         AND `substitutes`.phone  =  `donors`.mobile
