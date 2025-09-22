@@ -59,7 +59,8 @@ class Review extends Model
         `substitutes`.* , `donors`.* 
         FROM `substitutes`, `donors` 
         WHERE `substitutes`.substitute_id = ' . $substitute.'
-        AND `substitutes`.phone  =  `donors`.mobile'
+        AND `substitutes`.phone  =  `donors`.mobile
+        AND `substitutes`.status  !=  0'
         );
        return $this->db->single();
     }
