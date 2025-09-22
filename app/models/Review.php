@@ -53,12 +53,13 @@ class Review extends Model
      * @param array $data
      * @return boolean
      */
-    public function getSubstituteNew($substitute){
+    public function getSubstituteNew($badal_id){
         $this->db->query('
         SELECT
-        `donors`.donor_id 
-        FROM `substitutes`, `donors` 
-        WHERE `substitutes`.substitute_id = ' . $substitute.'
+        `donors`.* 
+        FROM `substitutes`, `donors` , `badal_orders`
+        WHERE `badal_orders`.badal_id = ' . $badal_id.'
+        AND `substitutes`.substitute_id = `badal_orders`.substitute_id 
         AND `substitutes`.phone  =  `donors`.mobile
         AND `substitutes`.status  !=  0'
         );

@@ -42,12 +42,12 @@ class Reviews extends ApiController
         $review = $this->model->addReview($data);
         if($review == true){
             $substitute =  $this->model->getSubstitute($data['badal_id']);
-            $notifyData =  $this->model->getSubstituteNew($substitute->substitute_id);
+            $notifyData =  $this->model->getSubstituteNew($data['badal_id']);
             // send messages  (email - sms - whatsapp)
             $messaging = $this->model('Messaging');
             $sendData = [
-                'mailto'                => $substitute->full_name,
-                'mobile'                => $substitute->phone,
+                'mailto'                => $notifyData->full_name,
+                'mobile'                => $notifyData->mobile,
                 'identifier'            => $substitute->order_identifier,
                 'total'                 => $substitute->total,
                 'project'               => $substitute->projects,
