@@ -14,44 +14,39 @@ class Tokens extends ApiController
     public function send()
     {
         $fields = $this->requiredArray(['title', 'body']);
-        if (isset($_POST['donor_id'])) {
-            $data = $this->model->getDonorToken($_POST['donor_id']);
-        } else {
-            $data = $this->model->getFcmTokens();
-        }
+
         $title = $fields['title'];
         $body = $fields['body'];
 
-        foreach ($data as $user) {
-            $token = $user->fcm_token;
+        $data = [
+            'title'    => $title,
+            'body'     => $body,
+            'donor_id' => $_POST['donor_id']
+        ];
 
-            $payload = [
-                "to" => $token,
-                "notification" =>
-                [
-                    "title" => $title,
-                    "body" => $body,
-                ],
-            ];
+        $jsonData = json_encode($data);
 
-            $dataString = json_encode($payload);
 
-            $headers = [
-                'Authorization: key=AAAA2IStuMw:APA91bFgHxCs1Sb2zoF0NfDeprLK3RZ3jMUi1AAj-E7gFUesf2hXDsEQSOEAa1dxUQyidnpiSy8YuJKNItdPhasjgJa8jV06EVHZAmhRp0q_LXq1m_XYkl1d7ANVd10PKfpLYBx-pSiG',
+        $curl = curl_init();
+        curl_setopt_array($curl, array(
+            CURLOPT_URL => NOTIFICATION_DOMAIN . '/api/sendPush',
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => '',
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 0,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => 'POST',
+            CURLOPT_POSTFIELDS => $jsonData,
+            CURLOPT_HTTPHEADER => array(
                 'Content-Type: application/json',
-            ];
+                'Cookie: PHPSESSID=d27f437f16b9e581731a8a46da6e1832'
+            ),
+        ));
 
-            $ch = curl_init();
-
-            curl_setopt($ch, CURLOPT_URL, 'https://fcm.googleapis.com/fcm/send');
-            curl_setopt($ch, CURLOPT_POST, true);
-            curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-            curl_setopt($ch, CURLOPT_POSTFIELDS, $dataString);
-
-            curl_exec($ch);
-        }
-
+        $response = curl_exec($curl);
+        $err = curl_error($curl);
+        curl_close($curl);
 
 
         $this->response($data);
