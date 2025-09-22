@@ -49,6 +49,22 @@ class Review extends Model
     }
 
     /**
+     * insert new review
+     * @param array $data
+     * @return boolean
+     */
+    public function getSubstituteNew($substitute){
+        $this->db->query('
+        SELECT
+        `substitutes`.* , `donors`.* 
+        FROM `substitutes`, `donors` 
+        WHERE `substitutes`.substitute_id = ' . $substitute.'
+        AND `substitutes`.phone  =  `donors`.mobile'
+        );
+       return $this->db->single();
+    }
+
+    /**
      * check if review is exist 
      * @param array $data
      * @return boolean

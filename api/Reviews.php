@@ -42,6 +42,7 @@ class Reviews extends ApiController
         $review = $this->model->addReview($data);
         if($review == true){
             $substitute =  $this->model->getSubstitute($data['badal_id']);
+            $notifyData =  $this->model->getSubstituteNew($substitute->substitute_id);
             // send messages  (email - sms - whatsapp)
             $messaging = $this->model('Messaging');
             $sendData = [
@@ -52,7 +53,7 @@ class Reviews extends ApiController
                 'project'               => $substitute->projects,
                 'donor'                 => $substitute->donor_name,
                 'rate'                  => $data['rate'],
-                'notify_id'             => $substitute->donor_id,
+                'notify_id'             => $notifyData->donor_id,
                 'notify'                => "تم تقيم طلبك",
             ];
             // send messages
