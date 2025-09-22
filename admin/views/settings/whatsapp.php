@@ -336,8 +336,8 @@ require ADMINROOT . '/views/inc/header.php';
                                             </div>
 
                                             <!-- new offer  ----------------------------------------------------------------------------------- -->
-                                            <!-- <div class="box-badal col-md-5">
-                                            <h4 class="x_title">رساله لعرض جديد ( ترسل للطالب الخدمةين ) </h4>
+                                         <div class="box-badal col-md-5">
+                                            <h4 class="x_title">رساله لعرض جديد ( ترسل للطالب الخدمة ) </h4>
                                             <div class="form-group">
                                                 <label class="control-label" for="settingTitle"> عرض  template </label>
                                                 <div class="has-feedback">
@@ -350,11 +350,11 @@ require ADMINROOT . '/views/inc/header.php';
                                                     <input type="text" id="" class="form-control" name="value[broadcast_name_new_offer]" placeholder="broadcast name" value="<?= @$data['value']->broadcast_name_new_offer; ?>">
                                                 </div>
                                             </div>
-                                        </div> -->
+                                        </div> 
 
                                             <!-- new review  ----------------------------------------------------------------------------------- -->
-                                            <!-- <div class="box-badal col-md-5">
-                                            <h4 class="x_title">رساله لعرض جديد ( ترسل للطالب الخدمةين ) </h4>
+                                          <div class="box-badal col-md-5">
+                                            <h4 class="x_title">رساله لتقيم ( ترسل للطالب الخدمة ) </h4>
                                             <div class="form-group">
                                                 <label class="control-label" for="settingTitle"> عرض  template </label>
                                                 <div class="has-feedback">
@@ -367,7 +367,7 @@ require ADMINROOT . '/views/inc/header.php';
                                                     <input type="text" id="" class="form-control" name="value[broadcast_name_review]" placeholder="broadcast name" value="<?= @$data['value']->broadcast_name_review; ?>">
                                                 </div>
                                             </div>
-                                        </div> -->
+                                        </div> 
                                         </div>
                                     </div>
                                     <br>
