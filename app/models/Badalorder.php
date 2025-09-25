@@ -163,9 +163,8 @@ class Badalorder extends Model
         $query .= ', from_unixtime( `badal_orders`.start_at) AS start_at
             , from_unixtime( `badal_orders`.complete_at) AS complete_at
             ,(SELECT rate FROM `badal_review` WHERE `badal_review`.badal_id = `badal_orders`.badal_id) AS review 
-            ,`requests`.request_id,
-            CASE WHEN true THEN "0" ELSE orders.total END AS total,
-            CASE WHEN true THEN "0" ELSE badal_orders.amount END AS amount
+            ,`requests`.request_id
+     
         FROM  `badal_orders`, `projects`, orders, `requests`
         WHERE badal_orders.substitute_id = :substitute_id 
         AND `requests`.badal_id = `badal_orders`.badal_id AND `requests`.status = 1 AND `requests`.is_selected = 1
