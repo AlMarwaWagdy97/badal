@@ -46,8 +46,8 @@ class Donors extends ApiController
                     $setting  = $this->model->getSettings('notifications');
                     $smsSendCode = json_decode($setting->value)->sendcode;
                     $this->model->SMS($mobile, SITENAME . ' ' . $smsSendCode . ' : ' . $data['otp']);
-                    $messaging = $this->model('Messaging');
-                    $messaging->mobileCodeSend(['mobile' => $mobile, 'msg' =>   $smsSendCode . $data['otp'] . " \n "  ]);
+                    // $messaging = $this->model('Messaging');
+                    // $messaging->mobileCodeSend(['mobile' => $mobile, 'msg' =>   $smsSendCode . $data['otp'] . " \n "  ]);
                 }
 
                 //save data to donors table
