@@ -218,6 +218,35 @@ class Badalorder extends Model
         return $this->db->resultSet();
     }
 
+
+    /**
+     * get list of pending that has no substitute badalOrders except donor_id
+     * @param Array $ids
+     */
+    public function getBadalOrderPendingForOthers($id)
+    {
+        $query = 'SELECT
+        projects.name as project_name,
+        projects.project_id,
+        CONCAT("' . MEDIAURL .  '/", projects.secondary_image ) AS secondary_image,
+        orders.order_id,
+        orders.donor_id,
+        orders.order_identifier,  orders.donor_name, 
+        badal_orders.*,
+        orders.total AS total,
+        badal_orders.amount AS amount,
+        from_unixtime( badal_orders.create_date) AS time
+        FROM  badal_orders, projects, orders 
+        WHERE substitute_id IS NULL 
+        AND badal_orders.project_id = projects.project_id 
+        AND orders.order_id = badal_orders.order_id  
+        AND orders.donor_id !=  ' . $id . ' 
+        AND badal_orders.status = 1';
+
+        $this->db->query($query);
+        return $this->db->resultSet();
+    }
+
     /**
      * update badalOrders by id 
      * @param Array $ids

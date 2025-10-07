@@ -367,6 +367,21 @@ class Orders extends ApiController
     }
 
     /**
+     * get all badalOrder with no Substitute 
+     *@param integar $substitute_id
+     *
+     * @return response
+     */
+    public function pendingOrders()
+    {
+        $data = $this->requiredArray(['donor_id']);
+
+        $Badalorders = $this->BadalOrder->getBadalOrderPendingForOthers($data['donor_id']);
+        if ($Badalorders == null) $this->error('No data');
+        $this->response($Badalorders);
+    }
+
+    /**
      * update completed of badalOrder by id 
      *@param integar $substitute_id
      *
