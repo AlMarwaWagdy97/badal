@@ -218,6 +218,25 @@ class Badalorder extends Model
         return $this->db->resultSet();
     }
 
+    /**
+     * get subsitude by donor
+     * @param Array $badal_id
+     */
+    public function getSubsituteByDonor($donor_id)
+    {
+        $query = 'SELECT substitutes.*
+        FROM substitutes
+        JOIN donors ON substitutes.phone = donors.mobile
+        WHERE donors.donor_id = :donor_id
+        AND donors.is_substitute = 1
+        AND substitutes.status = 1; ';
+
+        $this->db->query($query);
+        $this->db->bind(':donor_id', $donor_id);
+        return $this->db->single();
+    }
+
+
 
     /**
      * get list of pending that has no substitute badalOrders except donor_id
@@ -226,22 +245,30 @@ class Badalorder extends Model
     public function getBadalOrderPendingForOthers($id)
     {
         $query = 'SELECT
+        substitutes.substitute_id,substitutes.full_name, substitutes.phone,
         projects.name as project_name,
         projects.project_id,
-        CONCAT("' . MEDIAURL .  '/", projects.secondary_image ) AS secondary_image,
+        CONCAT("' . MEDIAURL . '/", projects.secondary_image ) AS secondary_image,
         orders.order_id,
         orders.donor_id,
-        orders.order_identifier,  orders.donor_name, 
+        orders.order_identifier, orders.donor_name,
         badal_orders.*,
         orders.total AS total,
         badal_orders.amount AS amount,
         from_unixtime( badal_orders.create_date) AS time
-        FROM  badal_orders, projects, orders 
-        WHERE substitute_id IS NULL 
-        AND badal_orders.project_id = projects.project_id 
-        AND orders.order_id = badal_orders.order_id  
-        AND orders.donor_id !=  ' . $id . ' 
-        AND badal_orders.status = 1';
+        FROM badal_orders
+        
+        JOIN projects ON badal_orders.project_id = projects.project_id
+        JOIN orders ON orders.order_id = badal_orders.order_id
+        INNER JOIN substitutes ON 1=1
+        INNER JOIN donors  ON substitutes.phone = donors.mobile AND donors.donor_id = ' . $id . '
+        
+        WHERE badal_orders.substitute_id IS NULL
+        AND badal_orders.status = 1
+        AND orders.donor_id != ] ' . $id . '
+        AND badal_orders.gender = substitutes.gender
+        AND FIND_IN_SET(badal_orders.language, substitutes.languages);
+       ';
 
         $this->db->query($query);
         return $this->db->resultSet();

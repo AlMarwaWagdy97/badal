@@ -101,17 +101,18 @@ require ADMINROOT . '/views/inc/header.php';
                             <span class="help-block"><?php echo $data['nationality_error']; ?></span>
                         </div>
                     </div>
+                    
                     <div class="form-group  <?php echo (empty($data['languages_error'])) ?: 'has-error'; ?>">
                         <label class="control-label" for="pageTitle">اللغة : </label>
                         <div class="has-feedback">
                         <div class="row">
                             <div class="col-md-3">
-                                <input type="checkbox" id="languages" name="languages[]" value="عربي" <?php if (in_array( "عربي", $data['languages']) ) echo  'checked'; ?> >
-                                <label for="عربي"> عربي</label><br>
+                                <input type="checkbox" id="languages" name="languages[]" value="العربية" <?php if (in_array( "العربية", $data['languages']) ) echo  'checked'; ?> >
+                                <label for="العربية"> العربية</label><br>
                             </div>
                             <div class="col-md-3">
-                                <input type="checkbox" id="languages" name="languages[]" value="انجليزي" <?php if (in_array( "انجليزي", $data['languages']) ) echo  'checked'; ?> >
-                                <label for="انجليزي"> انجليزي </label><br>
+                                <input type="checkbox" id="languages" name="languages[]" value="الانجليزية" <?php if (in_array( "الانجليزية", $data['languages']) ) echo  'checked'; ?> >
+                                <label for="الانجليزية"> الانجليزية </label><br>
                             </div>
                             <div class="col-md-3">
                                 <input type="checkbox" id="languages" name="languages[]" value="اوردو" <?php if (in_array( "اوردو", $data['languages']) ) echo  'checked'; ?> >

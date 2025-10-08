@@ -231,7 +231,8 @@ class Requests extends ApiController
             // get all subsitutes to send (sms - whatsapp - email)
         $order = $this->model->getOrderByBadalID($request->badal_id); // get get badal by id
         $messaging = $this->model('Messaging');
-        $subsitues =  $this->model->getAllSubstitutes();
+        $subsitues =  $this->model->getAllSubstitutesByDonors();
+  
         if ($subsitues) {
             foreach ($subsitues as $subsitue) {
                 $subsitueData = [
@@ -243,6 +244,8 @@ class Requests extends ApiController
                     'donor' => $subsitue->full_name,
                     'subject' => 'تم تسجيل طلب جديد ',
                     'msg' => "تم تسجيل طلب جديد بمشروع : {$order->projects} <br/> بقيمة : " . $order->total,
+                    'notify_id' => @$subsitue->donor_id,
+                    'notify' => "تم تسجيل طلب جديد بمشروع : {$order->projects} <br/> بقيمة : " . $order->total,
                 ];
                 $messaging->sendNotfication($subsitueData, 'newOrder');
             }

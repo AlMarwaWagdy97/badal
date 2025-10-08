@@ -267,6 +267,24 @@ class Request extends Model
     }
 
     /**
+     * get all Substitutes with donor
+     *
+     * @param [int] $id
+     * @return object
+     */
+    public function getAllSubstitutesByDonors()
+    {
+        $query = 'SELECT substitutes.*, donors.is_substitute, donors.donor_id
+                FROM substitutes
+                JOIN donors ON substitutes.phone = donors.mobile  
+                WHERE substitutes.status <> 2 AND donors.is_substitute = 1 AND donors.status = 1 
+                ORDER BY substitutes.create_date DESC; ';
+        $this->db->query($query);
+        $results = $this->db->resultSet();
+        return $results;
+    }
+
+    /**
      * get th request of this badal 
      * @param mixed $badal_id
      * @param mixed $substitute_id
