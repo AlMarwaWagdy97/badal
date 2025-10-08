@@ -265,7 +265,7 @@ class Badalorder extends Model
         
         WHERE badal_orders.substitute_id IS NULL
         AND badal_orders.status = 1
-        AND orders.donor_id != ] ' . $id . '
+        AND orders.donor_id !=  ' . $id . '
         AND badal_orders.gender = substitutes.gender
         AND FIND_IN_SET(badal_orders.language, substitutes.languages);
        ';
