@@ -244,37 +244,45 @@ class Badalorder extends Model
      */
     public function getBadalOrderPendingForOthers($id)
     {
-        $query = 'SELECT
-                projects.name AS project_name,
-                projects.project_id,
-                CONCAT("' . MEDIAURL . '/", projects.secondary_image ) AS secondary_image,
-                orders.order_id,
-                orders.donor_id,
-                orders.order_identifier, orders.donor_name,
-                badal_orders.*,
-                orders.total AS total,
-                badal_orders.amount AS amount,
-                FROM_UNIXTIME(badal_orders.create_date) AS time
-            FROM
-                badal_orders
-            JOIN
-                projects ON badal_orders.project_id = projects.project_id
-            JOIN
-                orders ON orders.order_id = badal_orders.order_id
-            JOIN
-                donors ON donors.donor_id = ' . $id . '
-            WHERE
-                badal_orders.substitute_id IS NULL
-                AND badal_orders.status = 1
-                AND orders.donor_id != ' . $id . '
-                AND EXISTS (
-                    SELECT 1
-                    FROM substitutes
-                    WHERE
-                        substitutes.phone = donors.mobile
-                        AND badal_orders.gender = substitutes.gender
-                        AND FIND_IN_SET(badal_orders.language, substitutes.languages)
-                );    
+        $query = '  
+        SELECT
+            projects.name AS project_name,
+            projects.project_id,
+            CONCAT("' . MEDIAURL . '/", projects.secondary_image ) AS secondary_image,
+            orders.order_id,
+            orders.donor_id,
+            orders.order_identifier, orders.donor_name,
+            badal_orders.*,
+            orders.total AS total,
+            badal_orders.amount AS amount,
+            FROM_UNIXTIME(badal_orders.create_date) AS time
+        FROM
+            badal_orders
+        JOIN
+            projects ON badal_orders.project_id = projects.project_id
+        JOIN
+            orders ON orders.order_id = badal_orders.order_id
+        JOIN
+            donors ON donors.donor_id = 42975 
+        WHERE
+            badal_orders.substitute_id IS NULL
+            AND badal_orders.status = 1
+            AND orders.donor_id != 42975
+            AND EXISTS (
+                SELECT 1
+                FROM substitutes
+                WHERE
+                    substitutes.phone = donors.mobile
+                    AND badal_orders.gender = substitutes.gender
+                    AND FIND_IN_SET(badal_orders.language, substitutes.languages)
+                    AND NOT EXISTS (
+                        SELECT 1
+                        FROM requests 
+                        WHERE
+                            requests.badal_id = badal_orders.badal_id
+                            AND requests.substitute_id = substitutes.substitute_id
+                    )
+            );
        ';
 
         $this->db->query($query);
