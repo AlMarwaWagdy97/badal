@@ -263,11 +263,11 @@ class Badalorder extends Model
         JOIN
             orders ON orders.order_id = badal_orders.order_id
         JOIN
-            donors ON donors.donor_id = 42975 
+            donors ON donors.donor_id = '. $id .'
         WHERE
             badal_orders.substitute_id IS NULL
             AND badal_orders.status = 1
-            AND orders.donor_id != 42975
+            AND orders.donor_id != '. $id .'
             AND EXISTS (
                 SELECT 1
                 FROM substitutes
