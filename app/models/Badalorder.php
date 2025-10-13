@@ -46,6 +46,8 @@ class Badalorder extends Model
         $query = 'SELECT `projects`.name as project_name, `badal_orders`.*,  from_unixtime( `badal_orders`.create_date) AS time, orders.donor_id
             , from_unixtime( `badal_orders`.start_at) AS start_at
             , from_unixtime( `badal_orders`.complete_at) AS complete_at
+            , from_unixtime( `badal_orders`.create_date) AS create_date
+            , from_unixtime( `badal_orders`.modified_date) AS modified_date
             ,`requests`.request_id 
         FROM  `badal_orders`, `projects`, orders, `requests`
         WHERE badal_orders.order_id = :order_id 
