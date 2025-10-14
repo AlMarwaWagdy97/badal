@@ -14,17 +14,17 @@ class PayfortIntegration
     /**
      * @var string your Merchant Identifier account (mid)
      */
-    public $merchantIdentifier = 'KTToIJFr';
+    public $merchantIdentifier = 'reBWkbQY';
 
     /**
      * @var string your access code
      */
-    public $accessCode = 'N0qFZwdUYTxibxDpnsef';
+    public $accessCode = '8BvWIrSl2QmuMSeqC44m';
 
     /**
      * @var string SHA Request passphrase
      */
-    public $SHARequestPhrase = 'vuyculflgluv';
+    public $SHARequestPhrase = '52RP2V6tz1bOBeU60tPG/x[(';
 
     /**
      * @var string SHA Response passphrase

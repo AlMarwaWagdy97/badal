@@ -69,9 +69,9 @@ class PayfortMerchant{
 
     public function CustomMerchantToken($cardInfo = null) {
         if ($this->testMode) {
-            $identifier = 'KTToIJFr';
-            $accessCode = 'N0qFZwdUYTxibxDpnsef';
-            $this->SHARequestPhrase = 'vuyculflgluv';
+            $identifier = 'reBWkbQY';
+            $accessCode = '8BvWIrSl2QmuMSeqC44m';
+            $this->SHARequestPhrase = '52RP2V6tz1bOBeU60tPG/x[(';
             $url = 'https://sbpaymentservices.payfort.com/FortAPI/paymentApi';
         } else {
             $identifier = 'BiZjlLxK';
@@ -99,7 +99,7 @@ class PayfortMerchant{
     
     public function CustomMerchantPurchase($fortParams, $donor = null ){
         if ($this->testMode) {
-            $this->SHARequestPhrase = 'vuyculflgluv';
+            $this->SHARequestPhrase = '52RP2V6tz1bOBeU60tPG/x[(';
             $url = 'https://sbpaymentservices.payfort.com/FortAPI/paymentApi';
         } else {
             $this->SHARequestPhrase = 'egvierrbvjb';

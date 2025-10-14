@@ -62,12 +62,12 @@ class Payment extends ApiController
         $test = false;
 
         if ($test) {
-            $identifier = 'KTToIJFr';
+            $identifier = 'reBWkbQY';
             $url = 'https://sbpaymentservices.payfort.com/FortAPI/paymentApi';
 
             if ($data['isApplePay'] == 'false') {
-                $accessCode = 'N0qFZwdUYTxibxDpnsef';
-                $this->SHARequestPhrase = 'vuyculflgluv';
+                $accessCode = '8BvWIrSl2QmuMSeqC44m';
+                $this->SHARequestPhrase = '52RP2V6tz1bOBeU60tPG/x[(';
             } else {
                 $accessCode = '3SVETdHDjxuJrhF099qX';
                 $this->SHARequestPhrase = '65TNlKz4amrEH9TVJkIzEJ_?';
@@ -129,8 +129,8 @@ class Payment extends ApiController
     {
         $data = [
             'command'               => 'PURCHASE',
-            "access_code"           => "N0qFZwdUYTxibxDpnsef",
-            "merchant_identifier"   => "KTToIJFr",
+            "access_code"           => "8BvWIrSl2QmuMSeqC44m",
+            "merchant_identifier"   => "reBWkbQY",
             'merchant_reference'    =>  'XYZ' . rand(1000, 9999) . '-' . generateRandomString(2) . rand(100, 999),
             'amount'                => '200',
             'currency'              => 'SAR',
@@ -142,7 +142,7 @@ class Payment extends ApiController
         ];
         //   cal signature -----------------------------
         ksort($data);
-        $this->SHARequestPhrase = 'vuyculflgluv';
+        $this->SHARequestPhrase = '52RP2V6tz1bOBeU60tPG/x[(';
         $shaString  = '';
         foreach ($data as $k => $v) {
             $shaString .= "$k=$v";
@@ -175,8 +175,8 @@ class Payment extends ApiController
 //  start test --------------------------------------------------------------------------------------
         $requestParams = array(
             'command' => 'AUTHORIZATION',
-            'access_code'           => 'N0qFZwdUYTxibxDpnsef',
-            'merchant_identifier'   => 'KTToIJFr',
+            'access_code'           => '8BvWIrSl2QmuMSeqC44m',
+            'merchant_identifier'   => 'reBWkbQY',
             'merchant_reference'    =>  'XYZ' . rand(1000, 9999) . '-' . generateRandomString(2) . rand(100, 999),
             'amount'                => '10000',
             'currency' => 'AED',
@@ -186,7 +186,7 @@ class Payment extends ApiController
             'order_description' => 'iPhone 6-S'
             );
             ksort($requestParams);
-            $this->SHARequestPhrase = 'vuyculflgluv';
+            $this->SHARequestPhrase = '52RP2V6tz1bOBeU60tPG/x[(';
             $shaString  = '';
             foreach ($requestParams as $k => $v) {
                 $shaString .= "$k=$v";
@@ -210,8 +210,8 @@ class Payment extends ApiController
 
         // $data = [
         //     'service_command'       => 'CREATE_TOKEN',
-        //     "access_code"           => "N0qFZwdUYTxibxDpnsef",
-        //     "merchant_identifier"   => "KTToIJFr",
+        //     "access_code"           => "8BvWIrSl2QmuMSeqC44m",
+        //     "merchant_identifier"   => "reBWkbQY",
         //     'merchant_reference'    =>  'XYZ' . rand(1000, 9999) . '-' . generateRandomString(2) . rand(100, 999),
         //     'amount'                => '200',
         //     'currency'              => 'SAR',
@@ -220,7 +220,7 @@ class Payment extends ApiController
        
         // //   cal signature -----------------------------
         // ksort($data);
-        // $this->SHARequestPhrase = 'vuyculflgluv';
+        // $this->SHARequestPhrase = '52RP2V6tz1bOBeU60tPG/x[(';
         // $shaString  = '';
         // foreach ($data as $k => $v) {
         //     $shaString .= "$k=$v";

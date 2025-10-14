@@ -48,7 +48,6 @@ class Tokens extends ApiController
         $err = curl_error($curl);
         curl_close($curl);
 
-
         $this->response($data);
     }
 
@@ -76,6 +75,7 @@ class Tokens extends ApiController
             'fcm_token' => $_POST['fcm_token'],
             'donor_id' => $_POST['donor_id'],
         ];
+
         //save donor
         $data['token_id'] = $this->model->addToken($data);
 
