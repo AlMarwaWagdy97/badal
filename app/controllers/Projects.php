@@ -4,15 +4,11 @@ class Projects extends Controller
 {
     private $projectsModel;
     public $donorModel;
-    public $settings;
-    public $menu;
     public $testMode = TEST_MODE;
 
     public function __construct()
     {
         $this->projectsModel = $this->model('Project');
-        $this->menu = $this->projectsModel->getMenu();
-        $this->settings = $this->projectsModel->getSettings();
     }
 
 
