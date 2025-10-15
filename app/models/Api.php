@@ -98,30 +98,40 @@ class Api extends Model
 
  
      public function getOrders($start = 0, $count = 20, $status, $order_identifier, $order_id, $API_status, $API_odoo, $custom_status_id, $payment_method, $store_id, $start_date, $end_date)
-
      {
- 
+
          return $this->queryResult(
+            'SELECT ord.*, 
+            CONCAT("' . MEDIAURL . '/../files/banktransfer/", `banktransferproof`) as banktransferproof,
+            payment_methods.title AS payment_method,
+            payment_methods.payment_key, 
+            donors.full_name AS donor, 
+            donors.mobile, 
+            donors.identity,
+            donors.email,
+            FROM_UNIXTIME(ord.create_date) AS create_date, 
+            FROM_UNIXTIME(ord.modified_date) AS modified_date,
+            (SELECT statuses.name FROM statuses WHERE statuses.status_id = ord.status_id) AS custom_status,
+            ord.status_id AS custom_status_id,
+            substitutes.full_name AS substitute_name,
+            substitutes.phone AS substitute_mobile,
+            substitutes.email AS substitute_email
+        
+        FROM orders ord USE INDEX (create_date)
+        
+        INNER JOIN donors ON donors.donor_id = ord.donor_id 
+        INNER JOIN payment_methods ON ord.payment_method_id = payment_methods.payment_id
+        INNER JOIN badal_orders ON badal_orders.order_id = ord.order_id 
+        LEFT JOIN substitutes  ON substitutes.substitute_id = badal_orders.substitute_id 
+        
+        WHERE ord.status <> 2  
+        ' . $status . ' ' . $order_identifier . ' ' . $order_id . ' ' . $API_status . ' ' . $store_id . ' ' . $custom_status_id . ' ' . $payment_method 
+        . ' ' . $start_date . ' ' . $end_date . ' ' . $API_odoo . ' AND
+        donors.donor_id = ord.donor_id AND ord.payment_method_id = payment_methods.payment_id 
+
+        ORDER BY ord.create_date LIMIT ' . $start . ' , ' . $count
  
-             'SELECT ord.*, CONCAT("' . MEDIAURL . '/../files/banktransfer/", `banktransferproof`) as banktransferproof,
- 
-              payment_methods.title as payment_method,payment_methods.payment_key, donors.full_name as donor, donors.mobile, donors.identity,
- 
-              from_unixtime(ord.create_date) as create_date, from_unixtime(ord.modified_date) as modified_date,
- 
-              (SELECT statuses.name FROM statuses WHERE statuses.status_id = ord.status_id ) as custom_status,
- 
-              ord.status_id as custom_status_id
- 
-              FROM orders ord use INDEX (create_date), donors, payment_methods 
- 
-              WHERE ord.status <> 2 ' . $status . ' ' . $order_identifier . ' ' . $order_id . ' ' . $API_status . ' ' . $store_id . ' ' . $custom_status_id . ' ' . $payment_method 
-              . ' ' . $start_date . ' ' . $end_date . ' ' . $API_odoo . ' AND
-             donors.donor_id = ord.donor_id AND ord.payment_method_id = payment_methods.payment_id 
- 
-              ORDER BY ord.create_date LIMIT ' . $start . ' , ' . $count
- 
-         );
+        );
  
      }
 
