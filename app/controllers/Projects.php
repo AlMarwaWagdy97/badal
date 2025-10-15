@@ -18,7 +18,6 @@ class Projects extends Controller
 
     public function PurchaseResponse($fortParams = null)
     { // filter get respond
-       
         if ($fortParams == null) {
             require_once APPROOT . '/helpers/PayfortIntegration.php';
             $objFort = new PayfortIntegration();
@@ -66,7 +65,7 @@ class Projects extends Controller
             $order = $this->projectsModel->getSingle('*', ['order_identifier' => $fortParams['merchant_reference']], 'orders');
             $projects_id  = str_replace(")", "", $order->projects_id);
             $projects_id  = str_replace("(", "", $projects_id);
-            flashRedirect('projects/show/' . $projects_id, 'msg',  $fortParams['response_message'], 'alert alert-danger');
+            echo "the status is 0";
         }
     }
 
