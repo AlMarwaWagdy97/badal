@@ -78,8 +78,38 @@ class Tokens extends ApiController
 
         //save donor
         $data['token_id'] = $this->model->addToken($data);
-
-
+        
         $this->response($data);
     }
+
+    // public function save()
+    // {
+    //     //validate all data
+    //     $fields = $this->requiredArray(['device_id', 'fcm_token']);
+
+    //     if ($this->model->getToken($_POST['device_id'])) {
+
+    //         $data = [
+    //             'device_id' => $_POST['device_id'],
+    //             'fcm_token' => $_POST['fcm_token'],
+    //             'donor_id' => $_POST['donor_id'],
+    //         ];
+
+    //         //save donor
+    //         $data['token_id'] = $this->model->updateToken($data);
+    //         $this->response($data);
+    //     }
+    //     //prepar data for save
+    //     $data = [
+    //         'device_id' => $_POST['device_id'],
+    //         'fcm_token' => $_POST['fcm_token'],
+    //         'donor_id' => $_POST['donor_id'],
+    //     ];
+
+    //     //save donor
+    //     $data['token_id'] = $this->model->addToken($data);
+
+
+    //     $this->response($data);
+    // }
 }

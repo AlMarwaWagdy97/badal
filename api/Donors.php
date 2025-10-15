@@ -53,13 +53,13 @@ class Donors extends ApiController
                 //save data to donors table
                 $this->model->updateOTP($data);
 
-                $tokenData = [
-                    'device_id' => @$_POST['device_id'],
-                    'donor_id' => $donor->donor_id,
-                ];
+                // $tokenData = [
+                //     'device_id' => @$_POST['device_id'],
+                //     'donor_id' => $donor->donor_id,
+                // ];
 
-                //save donor
-                $this->tokenModel->updateDonorId($tokenData);
+                // //save donor
+                // // $this->tokenModel->updateDonorId($tokenData);
 
                 $response = array_merge($data, [
                     'message' => 'تم ارسال كود التحقق بنجاح',
@@ -161,13 +161,13 @@ class Donors extends ApiController
         //update donor OTP
         $this->model->updateOTP($data);
 
-        $tokenData = [
-            'device_id' => $_POST['device_id'],
-            'donor_id' => $donor->donor_id,
-        ];
+        // $tokenData = [
+        //     'device_id' => $_POST['device_id'],
+        //     'donor_id' => $donor->donor_id,
+        // ];
 
-        //save donor
-        $this->tokenModel->updateDonorId($tokenData);
+        // //save donor
+        // $this->tokenModel->updateDonorId($tokenData);
 
         $this->response($data);
     }
